@@ -17,7 +17,7 @@ build-repo:
     - echo "//${JFROG_URL}/${JFROG_REPO}/:_authToken=${JFROG_AUTHTOKEN}" >> .npmrc
     - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
     - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
-    - echo "@design:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
+    - echo "@dasdigitalplatform:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
     - echo "//git.web.boeing.com/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
     - echo "Created the following .npmrc:"; cat .npmrc
     - npm install --loglevel silly
@@ -41,7 +41,7 @@ build-static-site:
     - echo "//${JFROG_URL}/${JFROG_REPO}/:_authToken=${JFROG_AUTHTOKEN}" >> .npmrc
     - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
     - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
-    - echo "@design:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
+    - echo "@dasdigitalplatform:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
     - echo "//git.web.boeing.com/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
     - echo "Created the following .npmrc:"; cat .npmrc
     - npm install --loglevel silly
@@ -186,7 +186,7 @@ pr-develop:
     - echo "//${JFROG_URL}/${JFROG_REPO}/:_authToken=${JFROG_AUTHTOKEN}" >> .npmrc
     - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
     - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
-    - echo "@design:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
+    - echo "@dasdigitalplatform:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
     - echo "//git.web.boeing.com/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
     - echo "Created the following .npmrc:"; cat .npmrc
 

@@ -1,13 +1,13 @@
-@import '@design/dls-global-assets/dist/scss/base/_variables.scss';
-@import '@design/dls-global-assets/dist/scss/base/_variablesBase.scss';
-@import '@design/dls-global-assets/dist/scss/base/_bootstrapMixins.scss';
-@import '@design/dls-global-assets/dist/scss/base/_compositionMixins.scss';
-@import '@design/dls-global-assets/dist/scss/base/_typographyMixins.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variablesBase.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_bootstrapMixins.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_compositionMixins.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_typographyMixins.scss';
 
 .app-container {
-  display: flex; 
-  height: 100vh; 
-  position: relative; 
+  display: flex;
+  height: 100vh;
+  position: relative;
   mat-sidenav-container {
     flex-grow: 1;
   }
@@ -73,7 +73,7 @@ header {
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
-  
+
     > div {
       display: flex;
       padding: $size-relaxed-spacing-none $size-relaxed-spacing-8xl;
@@ -104,7 +104,7 @@ header {
       }
     }
   }
-  
+
 }
 
 .intro-list {
@@ -154,7 +154,7 @@ header {
     }
   }
   header & {
-    @include media-breakpoint-up(sm) { 
+    @include media-breakpoint-up(sm) {
       flex-direction: row;
     }
     text-align: left;
@@ -284,7 +284,7 @@ main {
       }
     }
 
-    @include media-breakpoint-up(sm) { 
+    @include media-breakpoint-up(sm) {
       .col {
         &:first-child {
           margin-bottom: 0;
@@ -354,7 +354,7 @@ main {
     .row + .col__content {
       margin-top: $size-relaxed-spacing-xl;
     }
-    
+
   }
 }
 

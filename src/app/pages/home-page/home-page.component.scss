@@ -1,6 +1,6 @@
-@import '@design/dls-global-assets/dist/scss/base/_variables.scss';
-@import '@design/dls-global-assets/dist/scss/base/_compositionMixins.scss';
-@import '@design/dls-global-assets/dist/scss/base/_typographyMixins.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_compositionMixins.scss';
+@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_typographyMixins.scss';
 
 header {
   display: flex;
@@ -35,5 +35,5 @@ header {
       gap: $size-relaxed-spacing-2xl;
     }
   }
-  
+
 }
