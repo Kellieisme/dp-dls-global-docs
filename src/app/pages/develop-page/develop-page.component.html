@@ -1,0 +1,47 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>
+  </header>
+
+  <main class="main main--columns">
+
+    <section *ngFor="let section of pageData.sections">
+
+      <!--TYPE: text-image-->
+      <ng-container *ngIf="section.type === 'text-image'">
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+            <div class="col__content" [innerHTML]="section.text"></div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
+            <p *ngIf="section.imgText">{{section.imgText}}</p>
+          </div>
+        </div>
+      </ng-container>
+
+      <!--TYPE: image-full-->
+      <ng-container *ngIf="section.type === 'image-full'">
+        <div class="row row-cols-1 row-cols-sm-2" *ngIf="section.textBefore">
+          <div class="col">
+            <div class="col__content" [innerHTML]="section.textBefore"></div>
+          </div>
+        </div>
+        <div class="col__content">
+          <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
+          <p *ngIf="section.imgText"><span>{{section.imgText}}</span></p>
+          <div *ngIf="section.textAfter" [innerHTML]="section.textAfter"></div>
+        </div>
+      </ng-container>
+
+    </section>
+
+  </main>
+
+  <app-footer />
+
+</ng-container>

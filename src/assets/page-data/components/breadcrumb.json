@@ -1,0 +1,189 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Breadcrumb",
+  "storybookId": "components-breadcrumb",
+  "storybookDefaultStory": "default",
+  "header": {
+    "title": "Breadcrumbs",
+    "description": "Help understand the navigation hierarchy",
+    "backgroundImg": "components/breadcrumb/breadcrumb-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Indicate the location of the current page or content within a navigation hierarchy ",
+            "Facilitate navigation allowing the user to see where they are within the structure",
+            "They will be activated from the second navigation level onwards",
+            " They shouldn’t be used for products that have single level navigation"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=5149-2797\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">States</h3><p>Breadcrumb actionable parts or level links will use <a href=\"/design-system/dls-global-docs/components/button-common\">text buttons</a> so they will inherit the states of each component.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The breadcrumb comes in two density modes: relaxed and condensed.</p><p>As with states, actionable breadcrumb parts will inherit the measurements of the <a href=\"/design-system/dls-global-docs/components/button-common\">text button</> component.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-01@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-02@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Breadcrumbs indicate the location of the current page or content within a navigation hierarchy, allowing the users to see where they are in the site.</p><p>They should reflect the sitemap structure levels, not the path the user has navigated through (this will be controlled only with the browser’s back button).</p>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-03@3x.png",
+              "imgAlt": "Breadcrumb usage - do",
+              "type": "success"
+            },
+            {
+              "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-04@3x.png",
+              "imgAlt": "Breadcrumb usage - don't",
+              "type": "error"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<p>They will be activated from the second navigation level onwards so <b>they shouldn’t be used for products that have single level navigation.</b></p><p>The first level will always link to the main page of the app, and the last one will be the current active page and won’t be a link.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-05@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Level link (text button)</li><li>Separator</li><li>Overflow levels</li><li>Current page label</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3><p>Breadcrumbs are placed <b>in the top left portion of the page</b>. They sit <b>underneath the header and navigation, but above the page title.</b></p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Customization</h3><p>The texts buttons within the breadcrumb <b>should not be changed in style or type.</b></p>"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>Users can activate each previous level link by clicking anywhere inside the text button's container. The cursor will change to the hand cursor when :pressed.</p><p>When the component is :disabled the cursor will not be displayed when hovering or pressing over it and there will be no interaction.</p><p>The separators between page links are not interactive.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and activate a breadcrumb level with these keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus on the next available navigation item "},
+            {"keys": "Space/Enter", "actions": "Activates the focused navigation item"},
+            {"keys": "Arrow", "actions": "Allows navigation through menu items"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-06@3x.png",
+          "imgAlt": "Using labels",
+          "textBefore": "<h3 class=\"title-high\">Using labels</h3><p>The labels should represent the navigation level real names. They should be short and representative (e.g., “Home”, “Edit manager”, “Employee detail”, etc.). <b>All the labels used in the breadcrumbs should be sentence case.</b></p><p>All of the breadcrumb buttons, but the current page, have a maximum width. <b>If a breadcrumb is longer than 300px, the label will be truncated with an ellipsis and supported by a tooltip.</b> Breadcrumbs should never wrap onto a second line.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsiveness & densities</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/breadcrumb/breadcrumb-07@3x.png",
+          "imgAlt": "Nesting actions",
+          "textBefore": "<h4 class=\"title-low\">Nesting actions</h4><p>When a screen is resized, the breadcrumb resizes with it. Some of the destinations can be truncated inside the breadcrumb structure. If there’s space available, the first level (and optionally the last two) should be shown, and the remaining breadcrumbs in between will be condensed into an overflow menu.</p><p>Breadcrumbs should never wrap onto a second line.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Densities</h4><p>The condensed density will shrink the size according to the reduction applied to the text and icon buttons used inside the breadcrumb. <b>Mobile screens should always use relaxed density to ensure touch accessibility.</b></p><p>All of these changes can be visually seen in the Measurements section.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"layer": "Breadcrumb height", "relaxed": "48", "condensed": "40"},
+            {"layer": "Current page height", "relaxed": "40", "condensed": "32"},
+            {"layer": "Current page h-padding", "relaxed": "12", "condensed": "8"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed", "id": "relaxed"},
+            {"label": "Condensed", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

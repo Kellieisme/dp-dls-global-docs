@@ -1,0 +1,154 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>    
+  </header>
+  
+  <main class="main">
+
+    <section class="section__cards">
+      
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+          <div class="col">
+            <a routerLink="/patterns/content-overflow" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/content-overflow/content-overflow-header@3x.png" alt="Content overflow">
+                <mat-card-header>
+                  <mat-card-title>Content overflow</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>How to act when content exceeds the space</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/tables" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/tables/tables-header@3x.png" alt="Table patterns">
+                <mat-card-header>
+                  <mat-card-title>Data table pattern</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Display data in rows and columns</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/data-visualization" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/data-vis/data-vis-header@3x.png" alt="Disabled states">
+                <mat-card-header>
+                  <mat-card-title>Data visualization</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Data in graphs and charts</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/patterns/disabled-states" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/disabled-states/disabled-states-header@3x.png" alt="Disabled states">
+                <mat-card-header>
+                  <mat-card-title>Disabled state</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>States without interaction</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/empty-states" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/empty-states/empty-states-header@3x.png" alt="Empty states">
+                <mat-card-header>
+                  <mat-card-title>Empty state</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>How to act when there is no data to display</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/error-handling" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/error-handling/error-handling-header@3x.png" alt="Error handling">
+                <mat-card-header>
+                  <mat-card-title>Error handling</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Identify, manage, and resolve errors</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/links" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/links/links-header@3x.png" alt="Links">
+                <mat-card-header>
+                  <mat-card-title>Link</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Add links in text blocks</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/navigation" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/navigation/navigation-header@3x.png" alt="Navigation">
+                <mat-card-header>
+                  <mat-card-title>Navigation</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Guide users through your app</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/patterns/user-profile" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/patterns/user-profile/user-profile-header@3x.png" alt="User profile">
+                <mat-card-header>
+                  <mat-card-title>User profile</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Display user-related information and actions</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <app-footer />
+
+</ng-container>
+  
+  

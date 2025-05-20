@@ -1,0 +1,144 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Divider",
+  "storybookId": "components-divider",
+  "storybookDefaultStory": "full-bleed-divider",
+  "header": {
+    "title": "Divider",
+    "description": "Chips allow users to view information, make selections, filter content, and enter data",
+    "backgroundImg": "components/divider/divider-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "There are three types of dividers: full-bleed, inset, and middle-inset",
+            "Full-bleed dividers come in two styles: flat and specular",
+            "Use dividers to group related items, not to separate individual items"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=4565-3585\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/divider/divider-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3><p>Dividers come in three types to help group content meaningfully.</p>",
+          "textAfter": "<ol><li>Full-bleed</li><li>Inset</li><li>Middle-inset</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/divider/divider-02@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Orientations</h3><p>Dividers can be used in two orientations.</p>",
+          "textAfter": "<ol><li>Horizontal</li><li>Vertical</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/divider/divider-03@3x.png",
+          "imgAlt": "Styles",
+          "textBefore": "<h3 class=\"title-high\">Styles</h3><p>Full-bleed Dividers can be used in two styles.</p>",
+          "textAfter": "<ol><li>Flat</li><li>Specular</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>Inset dividers are compatible with both relaxed and condensed densities. The left and right margin of the divider can be adjusted using different spacing variables to resize it as needed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/divider/divider-04@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/divider/divider-05@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Below are some of its usage characteristics:</p><ul><li>Dividers are one way to visually group components and create hierarchy. They can also be used to imply nested parent/child relationships.</li><li>Use the specular style sparingly to avoid visual clutter. Reserve it for prominent components or sections that are always visible, such as the navigation rail, navigation drawer, top app bar, and separators between panels.</li></ul>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Full-bleed dividers</h4><p>Usage guidelines:</p><ul><li>Use full-bleed dividers to separate larger sections of unrelated content. They can be placed directly on a layout or inside components like cards or lists.</li><li>Full-bleed dividers can also separate interactive content from non-interactive content.</li></ul>",
+          "imgSrc": "./assets/images/components/divider/divider-06@3x.png",
+          "imgAlt": "Full-bleed dividers"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Inset dividers</h4><p>Usage guidelines:</p><ul><li>Use inset dividers to separate related content within a section.</li><li>Inset dividers come in two types: inset and middle-inset. Inset dividers have a 16px margin on the left side, while middle-inset dividers have a 16px margin on both ends.</li></ul>",
+          "imgSrc": "./assets/images/components/divider/divider-07@3x.png",
+          "imgAlt": "Inset dividers"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/divider/divider-08@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h4 class=\"title-low\">Anatomy</h4>",
+          "textAfter": "<ol><li>Divider: A divider is a simple line.</li></ol>"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-image",
+          "text": "<p>Dividers are decorative elements and have no minimum contrast requirements.</p>",
+          "imgSrc": "./assets/images/components/divider/divider-09@3x.png",
+          "imgAlt": "Dividers are decorative elements and have no minimum contrast requirements."
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

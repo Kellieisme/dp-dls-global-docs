@@ -1,0 +1,76 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="section__cards">
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+            <a routerLink="/styles/color-system" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/styles/styles-01@3x.png" alt="Color system">
+                <mat-card-header>
+                  <mat-card-title>Color system</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Guidance on color roles, tokens, elevation and how they applied to interactions.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/styles/typography" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/styles/styles-02@3x.png" alt="Typography">
+                <mat-card-header>
+                  <mat-card-title>Typography</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Fonts and style guide to establish hierarchy and information in your product.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/styles/icons" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/styles/styles-03@3x.png" alt="Icons">
+                <mat-card-header>
+                  <mat-card-title>Icons</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Documentation and guidance for using Atmosphere’s icon system.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/styles/shape" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/styles/styles-04@3x.png" alt="Shape">
+                <mat-card-header>
+                  <mat-card-title>Shape</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Documentation for how radii and shape are used across Atmosphere.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <app-footer />
+
+</ng-container>
+

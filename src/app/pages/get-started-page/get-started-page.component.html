@@ -1,0 +1,76 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>
+  </header>
+
+  <main class="main main--columns">
+
+    <section *ngFor="let section of pageData.sections">
+
+      <!--TYPE: list-image-->
+      <ng-container *ngIf="section.type === 'list-image'">
+
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+            <div class="col__content">
+              <div [innerHTML]="section.text"></div>
+              <ul class="link-list">
+                <li class="link-list__item" *ngFor="let item of section.items">
+                  <ng-container *ngIf="item.link.startsWith('/')">
+                    <a mat-icon-button color="primary" [routerLink]="item.link" aria-label="label"> 
+                      <mat-icon [svgIcon]="item.icon"></mat-icon>
+                    </a>
+                  </ng-container>
+                  <ng-container *ngIf="!item.link.startsWith('/')">
+                    <a mat-icon-button color="primary" [href]="item.link" target="_blank" aria-label="label"> 
+                      <mat-icon [svgIcon]="item.icon"></mat-icon>
+                    </a>
+                  </ng-container>
+                  <span [innerHTML]="item.text"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
+            <p *ngIf="section.imgText">{{section.imgText}}</p>
+          </div>
+        </div>
+      </ng-container>
+
+      <!--TYPE: image-list-->
+      <ng-container *ngIf="section.type === 'image-list'">
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+            <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
+            <p *ngIf="section.imgText">{{section.imgText}}</p>
+          </div>
+          <div class="col">
+            <div class="col__content">
+              <div [innerHTML]="section.text"></div>
+              <ul class="link-list">
+                <li class="link-list__item" *ngFor="let item of section.items">
+                  <ng-container *ngIf="item.link.startsWith('/')"> <a mat-icon-button color="primary"
+                      [routerLink]="item.link" aria-label="label"> <mat-icon [svgIcon]="item.icon"></mat-icon> </a>
+                  </ng-container>
+                  <ng-container *ngIf="!item.link.startsWith('/')">
+                    <a mat-icon-button color="primary" [href]="item.link" target="_blank" aria-label="label"> <mat-icon
+                        [svgIcon]="item.icon"></mat-icon> </a>
+                  </ng-container>
+                  <span [innerHTML]="item.text"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </ng-container>
+
+    </section>
+  </main>
+  <app-footer />
+</ng-container>

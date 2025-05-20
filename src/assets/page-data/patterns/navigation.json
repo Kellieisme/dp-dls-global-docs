@@ -1,0 +1,332 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Patterns - Navigation",
+  "header": {
+    "title": "Navigation",
+    "description": "Navigation guides users through different parts of your app",
+    "backgroundImg": "patterns/navigation/navigation-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Within Boeing applications, we can apply various forms of navigation depending on the application requirements and devices used.</p><p>Navigation lets users move through the information architecture of an app intuitively and predictably in different directions:<ul><li>Lateral navigation lets users move between screens at the same level of hierarchy.</li><li>Forward and reverse navigation lets users move between various child screens or deeper levels of the same screen.</li></ul><p>External navigation is also possible, for example, by providing links that open another app or website.</p><p>When designing the navigation of your app:</p><ul><li>Make sure users know where they are, and where they can go.</li><li>Limit the number of navigation menu items to facilitate fast scanning.</li><li>Don't distract people from the actual content of the screen.</li></ul><p>The Atmosphere framework is intended primarily for building browser-based web apps. In addition to navigation options within the app, it should be possible to use the back button in the browser to go back in the navigation history.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Main navigation</h3><p>Navigation design is complex. You can choose from many different design patterns to optimize the user experience.</p><p>Design patterns are general, reusable solutions to a problem. No one pattern is necessarily better than the other. <b>Each pattern has its benefits and drawbacks, and needs careful consideration to ensure it's right for your product and users.</b> Always test your navigation design before implementing it.</p><p>The next sections describe the design patterns for different depth levels of main navigation using the <a href=\"/design-system/dls-global-docs/components/navigation-rail\">navigation rail</a>, <a href=\"/design-system/dls-global-docs/components/navigation-drawer\">navigation drawer</a>, and <a href=\"/design-system/dls-global-docs/components/top-app-bar\">top app bar</a> components.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Do's and dont's</h4>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/navigation/navigation-01@3x.png",
+              "imgAlt": "Navigation - do",
+              "type": "success",
+              "text": "Place the top app bar over the nav rail or nav drawer"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/navigation/navigation-02@3x.png",
+              "imgAlt": "Navigation - don't",
+              "type": "error",
+              "text": "Don't place the top app bar beside a nav rail or nav drawer"
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/navigation/navigation-03@3x.png",
+              "imgAlt": "Navigation - do",
+              "type": "success",
+              "text": "Use a top app bar menu only in use cases where there are few menu items and little depth of navigation"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/navigation/navigation-04@3x.png",
+              "imgAlt": "Navigation - don't",
+              "type": "warning",
+              "text": "Avoid using a hamburger menu to store primary navigation in addition to a top app bar horizontal menu"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Secondary navigation</h3><p>The main navigation helps the user pivot between different areas to complete tasks without losing context or progress. However, inside a final level, it is also possible to use  secondary navigation components that help to establish an information structure.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Tabs</h4><p><a href=\"/design-system/dls-global-docs/components/tabs\">Tabs</a> are used to group different but related content, allowing users to navigate views without leaving the page. They always contain at least two items and one tab is active at a time. Tabs can be used on full page layouts/panes or in components such as dialogs, cards, or side sheets.</p>",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-05@3x.png",
+          "imgAlt": "Tabs"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Breadcrumbs</h4><p><a href=\"/design-system/dls-global-docs/components/breadcrumb\">Breadcrumbs</a> let the user see where they are in the hierarchy of the application and give a way to navigate back up. They can also include the main navigation.</p><p>In many cases users need to drill up into a new context, for example from an overview page to a particular project, device or asset view. A drill down can be triggered from any interactive element in an application, and will generally open a new page focused on the object that was selected. This new page will then include a breadcrumb of the path back to the root level above the title.</p>",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-06@3x.png",
+          "imgAlt": "Breadcrumbs"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Side sheets</h4><p><a href=\"/design-system/dls-global-docs/components/side-sheet\">Side sheets</a> display content that complements the screen’s primary content.</p><p>They can display a list of actions that affect the screen’s primary content, such as filters or actions, or  show supplemental content and features. ",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-07@3x.png",
+          "imgAlt": "Side sheets"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Menus</h4><p>A <a href=\"/design-system/dls-global-docs/components/menu\">menu</a> is a component that appears with a set of actions relevant to a specific item. Typically, this context is determined by the user’s current selection. Menus can be opened from components such as icon buttons or through right-clicking.</p><p>Use menus to hide less frequently used or advanced options until users specifically need them, to keep the interface clean and focused on essential elements.</p>",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-08@3x.png",
+          "imgAlt": "Menus"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Cards</h4><p>When used for navigation, <a href=\"/design-system/dls-global-docs/components/card\">cards</a> can complement the main navigation, or provide shortcuts to detail pages or other modules. They can also show more visual information about their destination. Use them to group related information or actions.</p>",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-09@3x.png",
+          "imgAlt": "Cards"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Tables and lists</h4><p><a href=\"/design-system/dls-global-docs/components/table\">Tables</a> and <a href=\"/design-system/dls-global-docs/components/list\">lists</a> help organizing and displaying big blocks of data. They can also be expanded/collapsed to progressively disclose information to save space in the screen.</p>",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-10@3x.png",
+          "imgAlt": "Tables and lists"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Accessibility considerations</h3><p>Accessibility in navigation will be given by the components that make up each screen.</p><p>From the development side, it is recommended to use <a href=\"/design-system/dls-global-docs/accessibility\">accessibility best practices</a> such as maintaining well-ordered code for screen readers, using semantic tags such as <b>nav</b> with an ARIA role='navigation' attribute or, optionally, attaching an aria-label attribute to your navigation to give assistive technology users as much information as possible (especially if there are multiple navigations in the screen).</p>"
+        }
+      ]
+    },
+    {
+      "label": "1 level",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Main navigation</h3><p>For the main level navigation, several patterns combining navigation components can be used, depending on the first levels of depth of the information architecture.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">1. Navigation rail</h3><p>For main navigation levels with only one level of depth, the default structure uses a fixed nav rail on the left side of the screen.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-11@3x.png",
+          "imgAlt": "Navigation rail"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-12@3x.png",
+          "imgAlt": "Navigation rail"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Compact screen sizes, the navigation rail will become a modal nav drawer.</p><p>The secondary elements such as profile, settings, etc. will be placed into a top app bar that will also hold the hamburger icon button that triggers the nav drawer.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-13@3x.png",
+          "imgAlt": "Navigation rail - compact screen sizes"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">2. Navigation rail + top app bar</h3><p>As an alternative option, a top app bar can be used in combination with the fixed nav rail, to hold secondary navigation.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-14@3x.png",
+          "imgAlt": "Navigation rail + top app bar"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-15@3x.png",
+          "imgAlt": "Navigation rail + top app bar"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Compact screen sizes, the navigation rail will become a modal nav drawer. The top app bar will hold the hamburger icon button that triggers the nav drawer.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-16@3x.png",
+          "imgAlt": "Navigation rail + top app bar - compact screen sizes"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">3. Top app bar with horizontal menu (exception)</h3><p>The default responsive approach will be different when using a horizontal menu inside the top app bar.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-17@3x.png",
+          "imgAlt": "Top app bar with horizontal menu (exception)"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Medium and Compact screen sizes, all the navigation will appear inside a tab menu (scrollable when the tabs are wider than the width). The top app bar will hold the rest of the items.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-18@3x.png",
+          "imgAlt": "Top app bar with horizontal menu (exception) - medium screen sizes"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-19@3x.png",
+          "imgAlt": "Top app bar with horizontal menu (exception) - compact screen sizes"
+        }
+      ]
+    },
+    {
+      "label": "1-2 levels",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">1. Navigation drawer that expands/contracts</h3><p>For main navigation levels involving one or two levels of depth, an expandable standalone nav drawer can be used.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-20@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-21@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Medium and Compact screen sizes, the nav drawer will become a modal nav drawer with a back button that allows going back between levels.</p><p>The secondary elements such as profile, settings, etc. will be placed into a top app bar that will also hold the hamburger icon button that triggers the nav drawer.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-22@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts - medium screen sizes"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-23@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts - compact screen sizes"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">2. Navigation drawer that expands/contracts + top app bar</h3><p>As an alternative option, a top app bar can be used in combination with the expandable nav drawer to hold secondary navigation.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-24@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts + top app bar"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-25@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts + top app bar"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Medium and Compact screen sizes, the nav drawer will  become a modal nav drawer with a back button that allows going back between levels. The top app bar will hold the hamburguer icon button that triggers the nav drawer.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-26@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts + top app bar - medium screen sizes"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-27@3x.png",
+          "imgAlt": "Navigation drawer that expands/contracts + top app bar - compact screen sizes"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">3. Top app bar + static nav drawer</h3><p>In cases of frequent use of the main navigation, a left-fixed navigation drawer can be used in combination with a top app bar.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-28@3x.png",
+          "imgAlt": "Top app bar + static nav drawer"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Medium and Compact screen sizes, the nav drawer will become a modal nav drawer with a back button that allows going back between levels. The top app bar will hold the hamburger icon button that triggers the nav drawer.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-29@3x.png",
+          "imgAlt": "Top app bar + static nav drawer - medium screen sizes"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-30@3x.png",
+          "imgAlt": "Top app bar + static nav drawer - compact screen sizes"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">4. Top app bar + nav drawer - hamburger icon only</h3><p>In use cases where the main navigation is not going to be used frequently or there is a great need for horizontal space, it is possible to hide it from the start inside a navigation drawer whose trigger is a hamburger icon always present in the top app bar. The nav drawer triggered can either push or go over the page content.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-31@3x.png",
+          "imgAlt": "Top app bar + nav drawer - hamburger icon only"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-32@3x.png",
+          "imgAlt": "Top app bar + nav drawer - hamburger icon only"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Medium and Compact screen sizes, the nav drawer will become a modal nav drawer with a back button that allows going back between levels.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-33@3x.png",
+          "imgAlt": "Top app bar + nav drawer - hamburger icon only - medium screen sizes"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-34@3x.png",
+          "imgAlt": "Top app bar + nav drawer - hamburger icon only - compact screen sizes"
+        }
+      ]
+    },
+    {
+      "label": "2-3 levels",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">1. Navigation rail + navigation drawer</h3><p>For main navigation levels involving greater depth, a combination of components will be applied, starting with a fixed nav rail that will open a nav drawer that can contain one or two internal levels.</p><p>In Extra-Large, Large and Expanded screen sizes, the nav drawer can push or appear over the content, depending on the available space.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-35@3x.png",
+          "imgAlt": "Navigation rail + navigation drawer"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-36@3x.png",
+          "imgAlt": "Navigation rail + navigation drawer"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>On Medium screen sizes, the modal navigation drawer will remain hidden until the mouse hovers over the navigation rail destinations. After selecting a navigation item, the modal drawer will collapse back when the mouse cursor moves out of the navigation drawer region.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-37@3x.png",
+          "imgAlt": "Navigation rail + navigation drawer - medium screen sizes"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>In Compact screen sizes, all the navigation inside the nav rail and the nav drawer will appear inside a modal nav drawer with a back button that allows going back between levels. </p><p>The secondary elements such as profile, settings, etc. will be placed into a top app bar that will also hold the hamburger icon button that triggers the nav drawer.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/navigation/navigation-38@3x.png",
+          "imgAlt": "Navigation rail + navigation drawer - compact screen sizes"
+        }
+      ]
+    }
+  ]
+}

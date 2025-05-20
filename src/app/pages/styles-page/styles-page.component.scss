@@ -1,0 +1,8 @@
+header {
+  > div {
+    background-image: url('../../../assets/images/styles/styles-header-dark@3x.png');
+    .theme-light & {
+      background: url('../../../assets/images/styles/styles-header-light@3x.png') 50% / cover no-repeat;
+    }
+  }
+}

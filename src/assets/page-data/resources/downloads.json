@@ -1,0 +1,76 @@
+{
+  "metaTitle": "The Atmosphere Global Documentation Hub - Downloads",
+  "header": {
+    "title": "Downloads",
+    "description": "Access brand resources and relevant links.",
+    "backgroundImg": "resources/downloads-header@3x.png"
+  },
+  "sections": [
+    {
+      "type": "list-column",
+      "text": "<h3 class=\"title-high\">Figma design files and devlopment resources</h3>",
+      "items": [
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Atmosphere Foundations and Components Library</h4><p>A Figma UI toolkit designers can use to get started creating digital products with Atmosphere's design system.</p>",
+          "link": "https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library",
+          "icon": "icon-home-repair-service"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Atmosphere Icons Library</h4><p>A Figma UI toolkit designers can use to change iconography inside the componentes of the Atmosphere’s design system.</p>",
+          "link": "https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library",
+          "icon": "icon-import-contacts"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Atmosphere Documentation Hub file</h4><p>Content reference to populate the Doc Hub website.</p>",
+          "link": "https://www.figma.com/design/IBCaFUndMBzgyHOr4F9XSI/Atmosphere-Documentation-Hub",
+          "icon": "icon-article"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">GitLab: Global Assets Library</h4><p>A framework-independent toolkit for any web-based product, with fonts, icons, global styles, and design tokens represented in multiple formats.</p>",
+          "link": "https://git.web.boeing.com/design/design-system/dls-global-assets",
+          "icon": "icon-folder"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">GitLab: Global Angular Library</h4><p>The first framework-specific library, implementing Atmosphere as an Angular Material theme and custom Angular components.</p>",
+          "link": "https://git.web.boeing.com/design/design-system/dls-global-angular",
+          "icon": "icon-inventory-2"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Storybook: Global Angular Library</h4><p>The Global Angular Library publishes a Storybook containing interactive demos of each component.</p>",
+          "link": "https://design.pages.boeing.com/design-system/dls-global-angular",
+          "icon": "icon-assignment"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Atmosphere Documentation Hub Code</h4><p>Code reference to populate the Doc Hub website.</p>",
+          "link": "https://git.web.boeing.com/design/design-system/dls-global-docs",
+          "icon": "icon-article"
+        }
+      ]
+    },
+    {
+      "type": "list-column",
+      "text": "<h3 class=\"title-high\">Other resources</h3>",
+      "items": [
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Content development toolkit</h4><p>Find specific language and style guidance</p>",
+          "link": "https://iks.web.boeing.com/webfiles/IKS/contentStandards",
+          "icon": "icon-description"
+        },
+        {
+          "type": "icon-button",
+          "text": "<h4 class=\"label-high\">Macintosh support</h4><p>Find useful support information in the Boeing Macintosh Wiki</p>",
+          "link": "https://macintosh.pages.boeing.com",
+          "icon": "icon-desktop-mac"
+        }
+      ]
+    }
+  ]
+}

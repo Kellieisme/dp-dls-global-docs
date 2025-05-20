@@ -1,0 +1,241 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Icon Button",
+  "storybookId": "components-button",
+  "storybookDefaultStory": "standard",
+  "header": {
+    "title": "Icon Button",
+    "description": "Icon buttons help people take minor actions with one tap",
+    "backgroundImg": "components/button-icon/icon-button-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Icon buttons must use a system icon with a clear meaning",
+            "Always use the <a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">icon library</a> when selecting an icon ",
+            "On hover, display a tooltip describing the button’s action",
+            "Visit the <a href=\"/design-system/dls-global-docs/icons\">icons page</a> to learn about designing icons and implementation",
+            "If an icon new icon is needed, submit a request with our team"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=4260-36494\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3>",
+          "textAfter": "<ol><li>Primary</li><li>Accent</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-02@3x.png",
+          "imgAlt": "Styles",
+          "textBefore": "<h3 class=\"title-high\">Styles</h3>",
+          "textAfter": "<ol><li>Standard</li><li>Filled (not available with the toggle behavior)</li><li>Tonal</li><li>Outlined</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">States - Primary icon button</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-03@3x.png",
+          "imgAlt": "States - Primary icon button - default behavior",
+          "textBefore": "<h4 class=\"title-low\">Default behavior</h4>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Pressed</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-04@3x.png",
+          "imgAlt": "States - Primary icon button - toggle behavior",
+          "textBefore": "<h4 class=\"title-low\">Toggle behavior</h4>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Pressed</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">States - Accent icon button</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-05@3x.png",
+          "imgAlt": "States - Primary icon button - default behavior",
+          "textBefore": "<h4 class=\"title-low\">Default behavior</h4>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Pressed</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-06@3x.png",
+          "imgAlt": "States - Primary icon button - toggle behavior",
+          "textBefore": "<h4 class=\"title-low\">Toggle behavior</h4>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Pressed</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The button component comes in two density modes: relaxed and condensed. By default, it's recommended to use the relaxed density mode for improved accessibility. However, the condensed density mode can be beneficial when presenting a large amount of information on a larger screen. It's advisable to avoid the use of condensed density mode when designing applications for small and medium viewports.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-07@3x.png",
+          "imgAlt": "Measurements - relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>",
+          "textAfter": "<ol><li>Icon size</li><li>State layer</li><li>Target size</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-08@3x.png",
+          "imgAlt": "Measurements - condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>",
+          "textAfter": "<ol><li>Icon size</li><li>State layer</li><li>Target size</li></ol>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Icon buttons are used to display actions in a small screen size or pane. Icon buttons can represent opening actions such as opening an overflow menu or search, or represent binary actions that can be toggled on and off, such as favorite or bookmark.</p><p>Always use the standard type icon button, and only use a filled, tonal or outlined icon button when the component requires more emphasis or visual separation from the background.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"style": "Standard", "usage": "Default usage"},
+            {"style": "Filled", "usage": "High emphasis actions"},
+            {"style": "Tonal", "usage": "Medium emphasis actions or as a secondary action paired with a high emphasis action."},
+            {"style": "Outlined", "usage": "Medium emphasis actions. Slightly more emphasis than a standard button."}
+          ],
+          "cols": [
+            {"label": "Style", "id": "style"},
+            {"label": "Usage", "id": "usage"}
+          ],
+          "displayedColumns": ["style", "usage"]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-09@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Icon</li><li>Container (non visible in the standard type enabled state)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Placement</h3><p>Icon buttons can be used within other components, such as a navigation rail, top app bar, etc. These buttons should be used for common actions.</p><p>Icon buttons can be grouped together as in a toolbar or they can stand alone. Remember to only display a few icon buttons at once.</p>",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-10@3x.png",
+          "imgAlt": "Placement"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Behavior</h3><p>Icon buttons can have two different behaviors. We can use them as default buttons for opening actions, or allow to change them as a toggle.</p><p>Toggle icon buttons allow a single choice to be selected or deselected, and they will be used in actions such as adding or removing something from favorites /bookmarks, change between two modes, etc.</p>",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-11@3x.png",
+          "imgAlt": "Behavior"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>Users can activate an icon button by clicking anywhere inside the button's container. The cursor will change to the hand cursor when  :pressed.</p><p>When the component is :disabled the cursor will not be displayed when hovering or pressing over it and there will be no interaction.</p>",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-12@3x.png",
+          "imgAlt": "Cursor"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to understand the meaning of the icon and navigate to and activate an icon button with these keys.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus lands on (non-disabled) button"},
+            {"keys": "Space/Enter", "actions": "Activates the (non-disabled) button"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Using labels</h3><p>Icons visually communicate the button’s action. Their meaning should be clear and unambiguous.</p><p>Use label text to support icons. Label text provides meaningful descriptions when symbols are more abstract. Support the icon with a tooltip in hover state when labels can’t be used. The tooltip should describe its action, rather than the name of the icon itself.</p><p>See more about the accesibility in the Iconography section.</p>",
+          "imgSrc": "./assets/images/components/button-icon/icon-button-13@3x.png",
+          "imgAlt": "Using labels"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsiveness & densities</h3><p>A group of similar components can be nested together inside a component or they can stand alone. To ensure accesibility, the target size of each icon button should always be at least 48 in mobile devices, even when nested together.</p><p>The condensed density is an exception that shrinks the size of the icon button parts, and should be used only in desktop applications to ensure touch accesibility.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"layer": "Icon size", "relaxed": "24", "condensed": "20"},
+            {"layer": "State layer", "relaxed": "40", "condensed": "32"},
+            {"layer": "Target size", "relaxed": "48", "condensed": "40"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed", "id": "relaxed"},
+            {"label": "Condensed", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Light vs dark mode exceptions</h3><p>Due to Figma restrictions, not all the styles defined in this component will be aligned with code.</p><p>See more about the light vs dark mode exceptions in the <a routerLink=\"/design-system/dls-global-docs/color-system\">Color and Elevation section</a>.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

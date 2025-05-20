@@ -1,0 +1,296 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Navigation drawer",
+  "storybookId": "components-navigation-drawer",
+  "storybookDefaultStory": "default",
+  "storybookHeight": "700",
+  "header": {
+    "title": "Navigation drawer",
+    "description": "Navigation drawers provide multi-level navigation on small, mid, and large-sized devices",
+    "backgroundImg": "components/navigation-drawer/navigation-drawer-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "There are three types of navigation drawers: standalone, standard, and modal.",
+            "Use standalone and standard navigation drawers for medium, large, and extra-large screen sizes.",
+            "Fixed standard navigation drawers are recommended for extra-large screen sizes.",
+            "Modal navigation drawers work best for smaller and medium screens, but they're suitable for all sizes.",
+            "Modal navigation drawers can be opened and closed by default.",
+            "Use navigation drawers when you have more than ten top-level destinations. They can also be used to accommodate more than one level of destinations.",
+            "Always use the provided <a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Atmosphere Design System Icons Library</a>"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=5725-38167\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3><p>The navigation drawer primarily comes in three types. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Narrow</li><li>Narrow (with labels)</li><li>Wide (with labels)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-02@3x.png",
+          "imgAlt": "States",
+          "textBefore": "<h3 class=\"title-high\">States</h3><p>Each destination within the navigation drawer uses states to effectively communicate the status of the component. Refer to the selection behavior guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Enabled (top-level destination)</li><li>Hovered (top-level destination)</li><li>Focused (top-level destination)</li><li>Pressed (top-level destination)</li><li>Hovered (nested destination - parent)</li><li>Pressed (nested destination - parent)</li><li>Hovered (nested destination - child)</li><li>Pressed (nested destination - child)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The navigation drawer component offers two density modes: relaxed and condensed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-03@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-04@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-05@3x.png",
+          "imgAlt": "Usage",
+          "textBefore": "<h3 class=\"title-high\">Usage</h3><p>The navigation drawer is a side navigation component that can display a large number of destinations along with two or more levels of navigation.</p>",
+          "textAfter": "<p>Below are some of its usage characteristics:</p><ul><li>The navigation drawer is best suited for applications with five or more top-level destinations.</li><li>It is recommended for apps with two or more levels of navigation hierarchy.</li><li>One navigation destination is always active.</li><li>It can be used as a standalone navigation component in a UI or can be combined with a top app bar or a navigation rail for a more complex navigation structure. For additional usage examples, refer to <a href=\"/design-system/dls-global-docs/patterns/navigation\">Navigation patterns</a>.</li></ul>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Standalone</h4><p>Usage guidelines:</p><ul><li>Not to be combined with other navigation components like the top app bar or navigation rail in the UI.</li><li>Represent top-level destinations with both an icon and a label.</li><li>Suitable for use in medium, large, and extra-large screen sizes.</li><li>Is permanently visible, either in the collapsed state or expanded state.</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-06@3x.png",
+          "imgAlt": "Standalone"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Standard</h4><p>Usage guidelines:</p><ul><li>To be used in combination with the top app bar.</li><li>Can be permanently visible, either in the collapsed state or expanded state.</li><li>Can be opened and closed by clicking on the menu button on the Top app bar.</li><li>Top-level destinations should be represented with both an icon and a label.</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-07@3x.png",
+          "imgAlt": "Standard"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Modal</h4><p>Usage guidelines:</p><ul><li>Always uses an overlay to block interaction with the rest of the content on the page.</li><li>Does not affect the screen’s layout grid.</li><li>Most suited for small screen sizes.</li><li>Can be opened and closed by clicking on any action item on the top app bar or navigation rail.</li><li>Can also be closed by clicking on the overlay.</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-08@3x.png",
+          "imgAlt": "Modal"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-09@3x.png",
+          "imgAlt": "Anatomy",
+          "textAfter": "<ol><li>Logo + app name</li><li>Section label (optional)</li><li>Icon - Active</li><li>Active indicator</li><li>Label text - Active (optional)</li><li>Icon - Inactive</li><li>Label text - Inactive (optional)</li><li>Divider</li><li>Badge</li><li>Dropdown</li><li>Sidesheet</li><li>Layout resizer</li><li>Icon button (optional)</li><li>Badge</li><li>User profile (optional)</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Logo + app name</h4><p>Standalone: By default, the Boeing logo mark appears in the collapsed state of the navigation drawer. Upon expanding the drawer, the logo mark transforms into the complete logo, optionally accompanied by the app name.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-10@3x.png",
+          "imgAlt": "Logo + app name"
+        },
+        {
+          "type": "text-image",
+          "text": "<p><b>Standard:</b> When combining the navigation drawer with the top app bar, a standard navigation drawer should be used, which doesn't include a logo or app name.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-11@3x.png",
+          "imgAlt": "Logo + app name: standard"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Section label</h4><p>Can help group related destinations in the navigation drawer.</p><p>Appears as an icon in collapsed view and appears as label text in expanded view.</p><p>The chosen icon should reflect the section label, symbolizing the content or nature of the destinations grouped under it. If there are several sections, or it is impractical to represent the section label with an icon, a generic icon be used.</p><p>Is non-interactive.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-12@3x.png",
+          "imgAlt": "Section label"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Icon</h4><p>Top-level destinations are always represented with an icon and label text. The icon switches from an outline to a filled style in its selected state.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-13@3x.png",
+          "imgAlt": "Icon"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Active indicator</h4><p>The active indicator is a background shape communicating which destination of the navigation drawer is currently being displayed.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-14@3x.png",
+          "imgAlt": "Active indicator"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Label text</h4><p>Labels are short, meaningful descriptions of navigation destinations.</p><p>Labels should be kept short enough to avoid truncation.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-15@3x.png",
+          "imgAlt": "Label text"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Divider</h4><p>Dividers are used to create clear demarcation between different groups of destinations within the navigation drawer.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-16@3x.png",
+          "imgAlt": "Divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Badge</h4><p>In the navigation drawer, destinations can include badges in both expanded and collapsed views. A text badge switches to a small badge when toggling between expanded and collapsed views.</p><ol><li>Text badge</li><li>Large badge (single-digit)</li><li>Small badge</li><ol>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-17@3x.png",
+          "imgAlt": "Badge"
+        },
+        {
+          "type": "text-image",
+          "text": "",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-18@3x.png",
+          "imgAlt": "Badge"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Layout resizer</h4><p>A layout resizer bar appears when hovering over the right edge of the navigation drawer. It allows users to toggle between the expanded and collapsed views of the navigation drawer.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-19@3x.png",
+          "imgAlt": "Layout resizer"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3><p>The navigation drawer should always run vertically along the side of a layout.</p><p>The modal navigation drawer could be paired with a navigation rail or a top app bar to display additional secondary destinations or actions.</p><p>The navigation drawer should never be paired with any other instance of navigation drawer like standalone or standard navigation drawer.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Responsive layout</h3><p>When transitioning from medium and large viewports to small viewports, the navigation drawer transforms into a modal navigation drawer.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-20@3x.png",
+          "imgAlt": "Placement"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Scrolling</h4><p>The destinations inside navigation drawers can be vertically scrolled independently of the rest of the screen’s content and UI.</p><p>The top header section (logo + app name) and the bottom icon button and user profile section remain sticky while scrolling when using a standalone navigation drawer.</p>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-21@3x.png",
+          "imgAlt": "Scrolling"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Visibility</h4><p><b>Dynamic:</b></p><ul><li>Standalone and standard (dynamic) navigation drawers have dynamic visibility within the layout.</li><li>They are permanently visible within the layout, either in the collapsed state or expanded state.</li><li>They appear in a collapsed view by default.</li><li>They affect the layout grid of the screen upon expanding and collapsing</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-22@3x.png",
+          "imgAlt": "Visibility - Dynamic"
+        },
+        {
+          "type": "text-image",
+          "text": "<p><b>Fixed:</b></p><ul><li>Modal and standard (fixed) navigation drawers appear in a fixed size within the layout.</li><li>The modal navigation drawer sits on top of the screen's layout grid, so it doesn't affect the layout grid when opening and closing.</li><li>The standard (fixed) navigation drawer can either be permanently visible within the layout or opened and closed by clicking a menu button in the top app bar, which affects the screen's layout grid.</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-23@3x.png",
+          "imgAlt": "Visibility - Fixed"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Navigate between navigation destinations using assistive technology.</li><li>Select a particular navigation destination from a set.</li><li>View the expanded view of the navigation drawer to read the destination label upon hovering or focusing on the destination.</li><li>Toggle between collapsed and expanded views through the layout resizer bar.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>When hovering over a destination (default collapsed view), the hover state appears as an expanded view, providing a visual cue that the destination is interactive.</p><p>Upon clicking on any destination, the icon of the selected destination switches from outlined to filled, accompanied by a background color change.</p><p>Upon clicking on any destination, the view remains in its expanded state until the user collapses the navigation drawer using the layout resizer bar.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and select an active item using the specified keys.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus lands on the first navigation destination"},
+            {"keys": "Arrow", "actions": "Navigate between destinations within the navigation drawer"},
+            {"keys": "Space/Enter", "actions": "Selects the focused navigation destination, and focus moves to the newly opened section (if applicable)"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Initial focus</h3><p>Initial focus lands directly on the first navigation item, as its the first interactive element of the component.</p><ul><li>First tab on first item</li><li>Navigate between destinations using arrow key</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-24@3x.png",
+          "imgAlt": "Initial focus"
+        },
+        {
+          "type": "text-image",
+          "text": "",
+          "imgSrc": "./assets/images/components/navigation-drawer/navigation-drawer-25@3x.png",
+          "imgAlt": "Initial focus"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>The accessibility label for a navigation item is typically the same as the adjacent text label.</p><p>If the UI text is correctly linked to the switch, assistive tech (such as a screenreader) will read the UI text followed by the component’s role.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

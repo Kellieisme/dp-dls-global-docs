@@ -1,0 +1,45 @@
+{
+  "metaTitle": "Boeing DAS Design - Home",
+  "header": {
+    "title": "DAS Design",
+    "description": "In support of digital-first customer engagement we are building a practice to research, design and measure all customer interactions, to meet or exceed customer expectations and increase customer satisfaction and loyalty."
+  },
+  "cards": [
+    {
+      "title": "Design thinking",
+      "content": "Imagine, collaborate, evolve",
+      "route": "/das/design-thinking",
+      "imgSrc": "./assets/images/das/home-01@3x.png"    
+    },
+    {
+      "title": "Design standards",
+      "content": "Quality, consistency, precision",
+      "route": "/das/design-standards",
+      "imgSrc": "./assets/images/das/home-02@3x.png"    
+    },
+    {
+      "title": "Research",
+      "content": "Discover, innovate, transform",
+      "route": "/das/research",
+      "imgSrc": "./assets/images/das/home-03@3x.png"    
+    },
+    {
+      "title": "Analytics",
+      "content": "Data-driven, insightful, strategic",
+      "route": "/das/analytics",
+      "imgSrc": "./assets/images/das/home-04@3x.png"    
+    },
+    {
+      "title": "Tools",
+      "content": "Efficient, reliable, essential",
+      "route": "/das/tools",
+      "imgSrc": "./assets/images/das/home-05@3x.png"    
+    },
+    {
+      "title": "Careers and training",
+      "content": "Grow, learn, lead",
+      "route": "/das/careers-and-training",
+      "imgSrc": "./assets/images/das/home-06@3x.png"    
+    }
+  ]
+}

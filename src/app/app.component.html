@@ -1,0 +1,54 @@
+<div *ngIf="!showDrawer" class="app-container">
+  <ba-navigation-rail
+    disableSidenavContent
+    wide 
+    appLogo="boeing"
+    homeRoute="/home"
+    [menuItems]="railMenuItems" 
+    [navRailBottomComponent1] = "sideNavThemeToggle"
+    (itemClick)="onLevel1ItemClick($event)"
+  >
+  </ba-navigation-rail>
+
+  <mat-sidenav-container [hasBackdrop]="false" class="app-sidenav--level-2">
+    <mat-sidenav #level2Sidenav mode="side" position="start" [opened]="isSidenavOpen">
+      <div class="section-header">
+        <h6 class="section-header-label">
+        {{ selectedLevel1Item?.label }}
+        </h6>
+      </div>
+      <mat-nav-list class="level2-nav">
+        <ng-container *ngFor="let level2Item of selectedLevel1Item?.children || []">
+          <mat-list-item disableRipple [ngClass]="{'mat-list-item--toggle-on': level2Item.toggled }">
+            <a [routerLink]="level2Item.route" matListItemTitle class="section-label">
+              {{ level2Item.label }} 
+            </a>
+          </mat-list-item>
+        </ng-container>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content #sidenavContent>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+
+<ba-navigation-drawer
+  *ngIf="showDrawer"
+  appLogo="boeing" 
+  appName="DAS Design"
+  homeRoute="/das/home"
+  fixedOpen 
+  navDrawerPresentation="standalone" 
+  [navDrawerMenuItems]="drawerMenuItems"
+  [navBarBottomComponent1] = "sideNavThemeToggle"
+>
+</ba-navigation-drawer>
+
+<ng-template #sideNavThemeToggle let-data="data">
+    <ba-theme-toggle></ba-theme-toggle>
+</ng-template>
+
+
+

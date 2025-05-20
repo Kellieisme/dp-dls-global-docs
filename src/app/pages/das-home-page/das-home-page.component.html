@@ -1,0 +1,51 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header>
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>    
+  </header>
+  
+  <main class="main">
+    
+    <section class="section__cards">
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          
+          <div class="col" *ngFor="let card of pageData.cards">
+            <a [routerLink]="card.route" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image [src]="card.imgSrc" [alt]="card.title">
+                <mat-card-header>
+                  <mat-card-title>{{card.title}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>{{card.content}}</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="resource-list">
+      <h3 class="title-high">Other resources</h3>
+      <ul>
+        <li><a routerLink="/design-principles">Read our design principles</a></li>
+        <li><a routerLink="/das/contact">Meet the Leadership team</a></li>
+        <li><a routerLink="#">Download global privacy and human subject compliance docs</a></li>
+        <li><a routerLink="/accessibility">Get information about accessibility</a></li>
+        <li><a routerLink="/color-system">Learn about the color system</a></li>
+        <li><a routerLink="/content-design">Become familiar with content design</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <app-das-footer />
+
+</ng-container>
+

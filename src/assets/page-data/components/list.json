@@ -1,0 +1,359 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - List",
+  "storybookId": "components-list",
+  "storybookDefaultStory": "single-line-non-interactive",
+  "storybookHeight": "300",
+  "header": {
+    "title": "List",
+    "description": "Lists are continuous, vertical indexes of text and images",
+    "backgroundImg": "components/list/list-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Lists are essentially vertical groupings of related content such as text, images, and other interactive or non-interactive elements",
+            "List items should be ordered in logical ways (e.g., alphabetical or numerical)",
+            "Content inside a list item should be kept short and easy to understand",
+            "All the elements of the list items in a list group should be used in a consistent manner"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=8523-22376\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3><p>The list component comes in four types. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Medium emphasis (Non-interactive)</li><li>High emphasis (Non-interactive)</li><li>Medium emphasis (Interactive)</li><li>High emphasis (Interactive)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">States</h3><p>The interactive list component utilizes states to effectively communicate its status.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-02@3x.png",
+          "imgAlt": "Medium emphasis",
+          "textBefore": "<h4 class=\"title-low\">Medium emphasis</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-03@3x.png",
+          "imgAlt": "High emphasis",
+          "textBefore": "<h4 class=\"title-low\">High emphasis</h4>",
+          "textAfter": "<ol><li>Enabled<li>Hovered</li><li>Focused</li><li>Pressed</li><li>Dragged</li><li>Disabled</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The list component offers two density modes: relaxed and condensed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-04@3x.png",
+          "imgAlt": "Relaxed density (single-line)",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density (single-line)</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-05@3x.png",
+          "imgAlt": "Relaxed density (multi-line)",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density (multi-line)</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-06@3x.png",
+          "imgAlt": "Condensed density (single-line)",
+          "textBefore": "<h4 class=\"title-low\">Condensed density (single-line)</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-07@3x.png",
+          "imgAlt": "Condensed density (multi-line)",
+          "textBefore": "<h4 class=\"title-low\">Condensed density (multi-line)</h4>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Configurations</h3><p>Below are some commonly used configurations of the list component. In addition, the component contains top and bottom slots to accommodate other custom configurations to meet the app's requirements.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-08@3x.png",
+          "imgAlt": "With avatar",
+          "textBefore": "<h4 class=\"title-low\">With avatar</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-09@3x.png",
+          "imgAlt": "With image or thumbnail",
+          "textBefore": "<h4 class=\"title-low\">With image or thumbnail</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-10@3x.png",
+          "imgAlt": "With video",
+          "textBefore": "<h4 class=\"title-low\">With video</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-11@3x.png",
+          "imgAlt": "With icon",
+          "textBefore": "<h4 class=\"title-low\">With icon</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-12@3x.png",
+          "imgAlt": "Text-only",
+          "textBefore": "<h4 class=\"title-low\">Text-only</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-13@3x.png",
+          "imgAlt": "With checkbox",
+          "textBefore": "<h4 class=\"title-low\">With checkbox</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-14@3x.png",
+          "imgAlt": "With radio button",
+          "textBefore": "<h4 class=\"title-low\">With radio button</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-15@3x.png",
+          "imgAlt": "With switch",
+          "textBefore": "<h4 class=\"title-low\">With switch</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-17@3x.png",
+          "imgAlt": "Usage",
+          "textBefore": "<h3 class=\"title-high\">Usage</h3><p>Lists are vertically organized groups of text and images that contain primary and supplemental actions.</p>",
+          "textAfter": "<p>Below are some of its usage characteristics:</p><ul><li>A list consists of a single continuous column of rows, with each row representing a list item.</li><li>The list component is available in two types: non-interactive and interactive.</li><li>Non-interactive list components are used when more than one interactive item, like a checkbox or an icon button, is used inside the component.</li><li>Interactive list components are useful when one or no interactive items are included inside the list. In this case, the whole list container becomes actionable, and any interactive item used inside the component becomes non-interactive.</li><li>While creating a list, a consistent configuration of list items should be used for easy scannability.</li><li>In the case of varied list items, similar configurations of list items should be grouped together for better scannability.</li><li>The list component also comes in two different content types: single-line and multi-line. Use a single-line configuration when a list item uses just a headline without any supporting text.</li><li>The list component background can also be swapped between medium and high emphasis to achieve appropriate contrast against the layout background.</li>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/list/list-16@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Headline</li><li>Supporting text</li><li>Trailing supporting text</li><li>Container</li><li>Trailing icon (or icon button)</li<li>Trailing selection control (checkbox, radio, switch, etc.)</li><li>Divider (optional)</li><li>Leading avatar</li><li>Leading icon</li><li>Leading media (image or video)</li>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Container</h4><p>The List containers hold all List items and their elements.</p><p>List item size is determined by the \"tallest\" element within the List item.</p>",
+          "imgSrc": "./assets/images/components/list/list-18@3x.png",
+          "imgAlt": "Container"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Content block</h4><p>The content block contains a headline with optional overline text and supporting text up to two lines.</p><ul><li><b>Headline:</b> Used to communicate the subject of the list item.</li><li><b>Supporting text:</b> Optional body text offering a brief description of the list content.</li></ul>",
+          "imgSrc": "./assets/images/components/list/list-19@3x.png",
+          "imgAlt": "Content block"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Icons</h4><p><b>Leading icon:</b> List items can include leading icons.</p><p><b>Trailing icon:</b> List items can include trailing icons.</p>",
+          "imgSrc": "./assets/images/components/list/list-20@3x.png",
+          "imgAlt": "Icons"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Leading media or avatar</h4><p>List items can contain an image, video, or avatar.</p><ul><li><b>Image:</b> Photos, illustrations, and other graphics can be included as images.</li><li><b>Video:</b> Animations, GIFs, and other motion graphics can be included as videos.</li><li><b>Avatar:</b> This can be an image of a person in a circular crop or a person's first name initial.</li></ul>",
+          "imgSrc": "./assets/images/components/list/list-21@3x.png",
+          "imgAlt": "Leading media or avatar"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Trailing supporting text</h4><p>Trailing supporting text can be used in addition to inline supporting text to communicate meta-information about the list item, such as content count, etc.</p>",
+          "imgSrc": "./assets/images/components/list/list-22@3x.png",
+          "imgAlt": "Trailing supporting text"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Selection controls</h4><p>Selection controls display information and actions for list items.</p><ul><li><b>Checkbox:</b> Checkboxes can be used to select one or more list items.</li><li><b>Switch:</b> Switches can be used to toggle a control on or off.</li><li><b>Radio button:</b> Radio buttons can be used to select one list item from a set</li></ul>",
+          "imgSrc": "./assets/images/components/list/list-23@3x.png",
+          "imgAlt": "Selection controls"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Divider</h4><p>Dividers can be used to separate larger list items.</p>",
+          "imgSrc": "./assets/images/components/list/list-24@3x.png",
+          "imgAlt": "Divider"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsive layout</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Line length</h4><p>Avoid excessively long lines of text when expanding the list item container for larger breakpoints. The ideal line length for text is typically between 40-60 characters. For larger breakpoints, choose a multi-column layout instead of scaling the list component to fit the width of the viewport to improve readability.</p>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/list/list-25@3x.png",
+              "imgAlt": "Line length - don't",
+              "type": "error",
+              "text": "Don’t scale the list component to fill the space in large viewports without adjusting the text length."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/list/list-26@3x.png",
+              "imgAlt": "Line length - do",
+              "type": "success",
+              "text": "Use multi-column layout to adjust the component for larger viewports."
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Component adaptation</h4><p>Lists can also show more or less content as they scale up and down in size. For example, a list item can reveal more content when the component expands.</p>",
+          "imgSrc": "./assets/images/components/list/list-27@3x.png",
+          "imgAlt": "Component adaptation"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Slots</h4><p>The list component comes with additional top and bottom slots to insert new items like chips, labels, etc., within its existing layout.</p>",
+          "imgSrc": "./assets/images/components/list/list-28@3x.png",
+          "imgAlt": "Slots"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Dragging</h4><p>Items can be dragged to reorder a List.</p>",
+          "imgSrc": "./assets/images/components/list/list-29@3x.png",
+          "imgAlt": "Dragging"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Navigate to a list item with assistive technology.</li><li>Select list item.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>In the case of an interactive list item, hovering and clicking should display the respective hovered and selected states to provide a visual cue of the interaction.</p>",
+          "imgSrc": "./assets/images/components/list/list-30@3x.png",
+          "imgAlt": "Cursor"
+        },
+        {
+          "type": "text-image",
+          "text": "<p>In the case of a non-interactive list item, hovering and clicking should display the respective hovered and selected states of the individual interactive items inside the list to provide a visual cue of the interaction.</p>",
+          "imgSrc": "./assets/images/components/list/list-31@3x.png",
+          "imgAlt": "Cursor"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and select an active list item using the specified keys.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "To navigate to the first list item or selected element in the list"},
+            {"keys": "Arrow", "actions": "To move up or down, between list items"},
+            {"keys": "Space/Enter", "actions": "To select a list item not yet selected"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Initial focus</h3><p>The first element in a List should always receive focus, unless the List has a selected element. In that case, focus should go to the selected List item instead.</p><p>After an element is focused, a user should be able to navigate within the list using arrow keys.</p><ul><li>Tab key focuses on the first List item</li><li>Tab key brings the focus to the initially selected item</li></ul>",
+          "imgSrc": "./assets/images/components/list/list-34@3x.png",
+          "imgAlt": "Initial focus"
+        },
+        {
+          "type": "text-image",
+          "text": "",
+          "imgSrc": "./assets/images/components/list/list-35@3x.png",
+          "imgAlt": "Initial focus"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>The accessibility label for a List is typically the same as the headline text label.</p><p>Components contained within the List, such as a checkbox, should be labeled according to the guidelines specific to those components.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

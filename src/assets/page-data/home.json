@@ -1,0 +1,28 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Home",
+  "header": {
+    "title": "Atmosphere",
+    "subtitle": "Boeing’s Design Language System",
+    "description": "Build user-friendly digital tools with a unified system of components and styles across all Boeing products and services.",
+    "ctaButton": {
+      "text": "Get started",
+      "link": "/get-started"
+    }
+  },
+  "changelog": {
+    "data": [
+      {"platform": "Angular 19", "version": "3.2.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>", "date": "March 27, 2025"},
+      {"platform": "Angular 18", "version": "2.5.8", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>","date": "March 25, 2025"},
+      {"platform": "Figma Library", "version": "2.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>","date": "February 21, 2025"},
+      {"platform": "Angular 17", "version": "1.0.1", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>", "date": "December 9, 2024"}
+    ],
+    "cols": [
+      {"label": "Platform", "id": "platform"},
+      {"label": "Library Version", "id": "version"},
+      {"label": "Notes", "id": "notes"},
+      {"label": "Status", "id": "status"},
+      {"label": "Date", "id": "date"}
+    ],
+    "displayedColumns": ["platform", "version", "notes", "status", "date"]
+  }
+}

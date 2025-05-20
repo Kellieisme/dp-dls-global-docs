@@ -1,0 +1,78 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>    
+  </header>
+  
+  <main class="main">
+
+    <section class="section__cards">
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+            <a routerLink="/contact/contribute" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/contact/contribute/contribute-header@3x.png" alt="Contribute to Atmosphere">
+                <mat-card-header>
+                  <mat-card-title>Contribute to Atmosphere</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>From job openings to collaboration projects, learn about how to get involved</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/contact/request-component" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/contact/request/request-component-header@3x.png" alt="Request a component">
+                <mat-card-header>
+                  <mat-card-title>Request a component</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Submit a request for a new component or changes related to the Figma library</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/contact/report-bug" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/contact/report/report-bug-header@3x.png" alt="Report a bug">
+                <mat-card-header>
+                  <mat-card-title>Report a bug</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Submit code or component issues encountered in the Atmosphere ecosystem</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/contact/meet-the-team" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/contact/team/meet-the-team-header@3x.png" alt="Meet the team">
+                <mat-card-header>
+                  <mat-card-title>Meet the team</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Meet the designers, devs and strategists who build and maintain Atmosphere</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <app-footer />
+
+</ng-container>
+  
+  

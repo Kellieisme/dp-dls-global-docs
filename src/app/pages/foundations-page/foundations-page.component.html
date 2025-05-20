@@ -1,0 +1,115 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-two">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="section__cards">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        <div class="col">
+          <a routerLink="/foundations/strategy" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/foundations/foundations-06@3x.png" alt="Strategy">
+              <mat-card-header>
+                <mat-card-title>Strategy</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Mission, vision, and scope of the Atmosphere strategy</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+
+        <div class="col">
+          <a routerLink="/foundations/design-principles" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/foundations/foundations-01@3x.png"
+                alt="Design principles">
+              <mat-card-header>
+                <mat-card-title>Design principles</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Fundamentals for intuitive and cohesive designs.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+
+        <div class="col">
+          <a routerLink="/foundations/accessibility" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/foundations/foundations-02@3x.png"
+                alt="Accessibility">
+              <mat-card-header>
+                <mat-card-title>Accessibility</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Standards for inclusive design and interaction.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        <div class="col">
+          <a routerLink="/foundations/content-design" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/foundations/foundations-03@3x.png"
+                alt="Content design">
+              <mat-card-header>
+                <mat-card-title>Content design</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Language guidance for UX writing and content.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+
+        <div class="col">
+          <a routerLink="/foundations/design-tokens" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/foundations/foundations-04@3x.png"
+                alt="Design tokens">
+              <mat-card-header>
+                <mat-card-title>Design tokens</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Reusable variables that connect design and code.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+
+        <div class="col">
+          <a routerLink="/foundations/layout" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/foundations/foundations-05@3x.png"
+                alt="Layout">
+              <mat-card-header>
+                <mat-card-title>Layout</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Hierarchy, grids and viewport guidance.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <app-footer />
+
+</ng-container>

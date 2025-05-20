@@ -1,0 +1,10 @@
+@import '@design/dls-global-assets/dist/scss/base/_variables.scss';
+
+.component-table {
+
+  [mat-table].mat-mdc-table .mdc-data-table__cell,
+  [mat-table].mat-mdc-table .mdc-data-table__header-cell {
+    padding-top: $size-relaxed-spacing-m;
+    padding-bottom: $size-relaxed-spacing-m;
+  }
+}

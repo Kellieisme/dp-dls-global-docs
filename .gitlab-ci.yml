@@ -1,0 +1,208 @@
+image: registry.web.boeing.com/container/images/stack/ubi9minimal-node20:9.4-949-1-2
+
+stages:
+  - build
+  - deploy
+  - test
+  - deploy-pages     # Publish the branch pages out
+
+# Build the static site
+build-repo:
+  stage: build
+  except:
+    - develop
+  script:
+    - echo "registry=https://${JFROG_URL}/${JFROG_REPO}/" > .npmrc
+    # - echo "//${JFROG_URL}/${JFROG_REPO}/:_password=${JFROG_PASSWORD}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:_authToken=${JFROG_AUTHTOKEN}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
+    - echo "@design:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
+    - echo "//git.web.boeing.com/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - echo "Created the following .npmrc:"; cat .npmrc
+    - npm install --loglevel silly
+    - npm run build:branch
+    - ls -la "branch/" || echo "Directory does not exist yet"
+    - ls -la "branch/$CI_COMMIT_REF_SLUG" || echo "Directory does not exist yet"
+    - ls -la "branch/$CI_COMMIT_REF_SLUG/browser" || echo "Directory does not exist yet"
+    - ls -la "branch/$CI_COMMIT_REF_SLUG/browser/*" || echo "Directory does not exist yet"
+  artifacts:
+    paths:
+      - branch
+
+
+# Build the static site
+build-static-site:
+  stage: build
+  only:
+    - develop
+  script:
+    - echo "registry=https://${JFROG_URL}/${JFROG_REPO}/" > .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:_authToken=${JFROG_AUTHTOKEN}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
+    - echo "@design:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
+    - echo "//git.web.boeing.com/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - echo "Created the following .npmrc:"; cat .npmrc
+    - npm install --loglevel silly
+    - |
+      if [ "$CI_COMMIT_REF_NAME" != "develop" ]; then
+        echo "Building for branch."
+        npm run build:branch
+      else
+        echo "Build storybook for develop."
+        npm run build:prod
+        rm -rf -v dist/server
+        mv -v dist/browser .
+        ls -la "public/" || echo "Directory does not exist yet"
+        mv -v browser public
+      fi
+  artifacts:
+    paths:
+      - public
+
+deploy-branch-url:
+  stage: deploy
+  script:
+    - echo "Let's set the URL"
+  environment:
+    name: $CI_COMMIT_REF_SLUG/branch
+    url: ${CI_PAGES_URL}/$CI_COMMIT_REF_SLUG/branch/
+  except:
+    - develop
+
+deploy-main-url:
+  stage: deploy
+  script:
+    - echo "Publishing Pages..."
+  variables:
+    PAGES_PREFIX: ""
+  pages:
+    path_prefix: "$PAGES_PREFIX"
+  environment:
+    name: "Pages ${PAGES_PREFIX}"
+    url: "${CI_PAGES_URL}${PAGES_PREFIX}"
+  artifacts:
+    paths:
+      - public
+  only:
+    - develop
+
+pages:
+  stage: deploy-pages
+  except:
+    - develop
+  cache:
+    key: 'my-branch'
+    paths:
+      - public
+  script:
+    - echo "branch"
+    - ls -la "branch" || echo "Directory does not exist yet"
+    - echo "public"
+    - ls -la "public/" || echo "Directory does not exist yet"
+    - echo "branch/$CI_COMMIT_REF_SLUG"
+    - ls -la "branch/$CI_COMMIT_REF_SLUG" || echo "Directory does not exist yet"
+    - echo "public/$CI_COMMIT_REF_SLUG"
+    - ls -la "public/$CI_COMMIT_REF_SLUG" || echo "Directory does not exist yet"
+    - |
+      if [ "$CI_COMMIT_REF_NAME" != "develop" ]; then
+        rm -rf "public/$CI_COMMIT_REF_SLUG" || echo "Directory does not exist yet"
+        mkdir -p "public/$CI_COMMIT_REF_SLUG";
+        mv -v branch/$CI_COMMIT_REF_SLUG/browser/* public/$CI_COMMIT_REF_SLUG
+      fi
+  artifacts:
+    paths:
+      - public
+
+pages-main:
+  stage: deploy-pages
+  script:
+    - echo "public"
+    - ls -la "public/" || echo "Directory does not exist yet"
+  variables:
+    PAGES_PREFIX: ""
+  pages:
+    path_prefix: "$PAGES_PREFIX"
+  environment:
+    name: "Pages ${PAGES_PREFIX}"
+    url: "${CI_PAGES_URL}${PAGES_PREFIX}"
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
+
+pages-clean-preview:
+  stage: build
+  cache:
+    key: my-branch
+    paths: [public]
+  variables:
+    GIT_STRATEGY: none # git files not available after branch deletion
+  script:
+    - ls public/
+  environment:
+    name: pages/$CI_COMMIT_BRANCH
+    action: stop
+  rules:
+    - when: manual
+      allow_failure: true
+
+pages-clean-delete:
+  stage: build
+  cache:
+    key: my-branch
+    paths: [public]
+  variables:
+    GIT_STRATEGY: none
+    FOLDER_TO_DELETE: $FOLDER
+  script:
+    - echo "FOLDER_TO_DELETE $FOLDER_TO_DELETE"
+    - echo "rm -rf public/$FOLDER_TO_DELETE"
+    - rm -rf public/$FOLDER_TO_DELETE
+    - ls public/
+  environment:
+    name: pages/$CI_COMMIT_BRANCH
+    action: stop
+  rules:
+    - when: manual
+      allow_failure: true
+
+
+pr-develop:
+  stage: test
+  only:
+    - merge_requests
+  script:
+    # Log NPM configuration
+    - echo "===== NPM Configuration ====="
+    - npm config list
+    - echo "Registry:$(npm config get registry)"
+
+    # Setup .npmrc for npm install
+    - echo "registry=https://${JFROG_URL}/${JFROG_REPO}/" > .npmrc
+    # - echo "//${JFROG_URL}/${JFROG_REPO}/:_password=${JFROG_PASSWORD}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:_authToken=${JFROG_AUTHTOKEN}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
+    - echo "@design:registry=https://git.web.boeing.com/api/v4/packages/npm/" >> .npmrc
+    - echo "//git.web.boeing.com/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - echo "Created the following .npmrc:"; cat .npmrc
+
+    # Verify registry access
+    - echo "===== Verifying Registry Access ====="
+    - curl -I https://${JFROG_URL}/${JFROG_REPO}/ || exit 1
+
+    # Install all dependencies
+    - echo "===== Installing Dependencies ====="
+    - npm install || exit 1
+
+    # Run build and test scripts
+    - echo "===== Running Scripts ====="
+    - npm run build:prod || exit 1
+
+  artifacts:
+    paths:
+      - coverage/            # Store coverage reports as artifacts
+      - lint-results/        # Store lint results as artifacts

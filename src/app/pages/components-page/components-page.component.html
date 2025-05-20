@@ -1,0 +1,383 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>    
+  </header>
+  
+  <main class="main">
+
+    <section class="section__cards">
+      <div class="section__header">
+        <h3 class="title-high">Actions</h3>
+        <p>Action components help people achieve an aim</p>
+      </div>
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <a routerLink="/components/button-common" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/button-common/common-button-header@3x.png" alt="Common buttons">
+                <mat-card-header>
+                  <mat-card-title>Common button</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Buttons help people take actions in a UI.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/button-icon" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/button-icon/icon-button-header@3x.png" alt="Icon buttons">
+                <mat-card-header>
+                  <mat-card-title>Icon button</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Icon buttons enable minor actions with one tap.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__cards">
+      <div class="section__header">
+        <h3 class="title-high">Communication</h3>
+        <p>Comunication components provide helpful information</p>
+      </div>
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <a routerLink="/components/snackbar" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/snackbar/snackbar-header@3x.png" alt="Snackbar">
+                <mat-card-header>
+                  <mat-card-title>Snackbar</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Show short updates about app processes</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/tooltip" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/tooltip/tooltip-header@3x.png" alt="Tooltips">
+                <mat-card-header>
+                  <mat-card-title>Tooltip</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Display brief labels or messages</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__cards">
+      <div class="section__header">
+        <h3 class="title-high">Containment</h3>
+        <p>Containment components hold information and actions – including other components like buttons, menus, or chips</p>
+      </div>
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <a routerLink="/components/card" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/card/card-header@3x.png" alt="Cards">
+                <mat-card-header>
+                  <mat-card-title>Card</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Containers that display content and actions.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/dialog" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/dialog/dialog-header@3x.png" alt="Dialogs">
+                <mat-card-header>
+                  <mat-card-title>Dialog</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Provide important prompts in a user flow</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/divider" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/divider/divider-header@3x.png" alt="Divider">
+                <mat-card-header>
+                  <mat-card-title>Divider</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Thin lines to group and divide containers</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/list" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/list/list-header@3x.png" alt="Lists">
+                <mat-card-header>
+                  <mat-card-title>List</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Continuous, vertical indexes of text and images</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/table" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/table/table-header@3x.png" alt="Data tables">
+                <mat-card-header>
+                  <mat-card-title>Data table</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Display sets of data across rows and columns</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/side-sheet" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/side-sheet/side-sheet-header@3x.png" alt="Side sheets">
+                <mat-card-header>
+                  <mat-card-title>Side sheet</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Show secondary content on side of the screen.</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__cards">
+      <div class="section__header">
+        <h3 class="title-high">Navigation</h3>
+        <p>Navigation components help people move through the interface</p>
+      </div>
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <a routerLink="/components/breadcrumb" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/breadcrumb/breadcrumb-header@3x.png" alt="Breadcrumbs">
+                <mat-card-header>
+                  <mat-card-title>Breadcrumbs</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Help understand the navigation hierarchy</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/navigation-drawer" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/navigation-drawer/navigation-drawer-header@3x.png" alt="Navigation drawer">
+                <mat-card-header>
+                  <mat-card-title>Navigation drawer</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Provide multi-level navigation</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/navigation-rail" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/navigation-rail/navigation-rail-header@3x.png" alt="Navigation rail">
+                <mat-card-header>
+                  <mat-card-title>Navigation rail</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Navigate between the first level of an app</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/tabs" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/tabs/tabs-header@3x.png" alt="Tabs">
+                <mat-card-header>
+                  <mat-card-title>Tabs</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Organize content across different screens</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/top-app-bar" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/top-app-bar/top-app-bar-header@3x.png" alt="Tabs">
+                <mat-card-header>
+                  <mat-card-title>Top app bar</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Display actions at the top of a screen</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__cards">
+      <div class="section__header">
+        <h3 class="title-high">Selection</h3>
+        <p>Selection components let people specify choices</p>
+      </div>
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <a routerLink="/components/checkbox" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/checkbox/checkbox-header@3x.png" alt="Checkbox">
+                <mat-card-header>
+                  <mat-card-title>Checkbox</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Select one or more items from a list</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/chips" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/chips/chips-header@3x.png" alt="Chips">
+                <mat-card-header>
+                  <mat-card-title>Chip</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Filter content, make selections or trigger actions</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/date-picker" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/date-picker/date-picker-header@3x.png" alt="Date picker">
+                <mat-card-header>
+                  <mat-card-title>Date picker</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Select a date or a range of dates</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/menu" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/menu/menu-header@3x.png" alt="Menus">
+                <mat-card-header>
+                  <mat-card-title>Menu</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Display a list of choices on a temporary surface</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/radio-button" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/radio-button/radio-button-header@3x.png" alt="Radio button">
+                <mat-card-header>
+                  <mat-card-title>Radio button</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Select one option from a small set</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/select" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/select/select-header@3x.png" alt="Select">
+                <mat-card-header>
+                  <mat-card-title>Select</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Select a value from multiple options</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/components/switch" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/switch/switch-header@3x.png" alt="Switch">
+                <mat-card-header>
+                  <mat-card-title>Switch</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Toggle the selection of an item</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__cards">
+      <div class="section__header">
+        <h3 class="title-high">Text input</h3>
+        <p>Text input components let people enter and edit text/p>
+      </div>
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <a routerLink="/components/text-field" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/components/text-field/text-field-header@3x.png" alt="Text fields">
+                <mat-card-header>
+                  <mat-card-title>Text field</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Text fields and areas let people enter/edit text</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <app-footer />
+
+</ng-container>
+  
+  

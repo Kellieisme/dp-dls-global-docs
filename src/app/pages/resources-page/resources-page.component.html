@@ -1,0 +1,51 @@
+<ng-container *ngIf="pageData$ | async as pageData">
+
+  <header class="header--level-one">
+    <div>
+      <h1 class="display-high">{{pageData.header.title}}</h1>
+      <p class="body-low-default">{{pageData.header.description}}</p>
+    </div>    
+  </header>
+  
+  <main class="main">
+
+    <section class="section__cards">
+      <div>
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+            <a routerLink="/resources/changelog" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/resources/changelog-header@3x.png" alt="Changelog">
+                <mat-card-header>
+                  <mat-card-title>Changelog</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Documents updates and changes that occur across design and development</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+          <div class="col">
+            <a routerLink="/resources/downloads" class="mat-card-wrapper">
+              <mat-card appearance="outlined">
+                <img mat-card-image src="./assets/images/resources/downloads-header@3x.png" alt="Downloads and links">
+                <mat-card-header>
+                  <mat-card-title>Downloads and links</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Access Boeing brand resources and relevant links</p>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <app-footer />
+
+</ng-container>
+  
+  

@@ -1,0 +1,34 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Develop",
+  "header": {
+    "title": "Develop",
+    "description": "Code and production-ready assets for UX development.",
+    "backgroundImg": "develop-header@3x.png"
+  },
+  "sections": [
+    {
+      "type": "text-image",
+      "text": "<h3 class=\"title-high\">Building with Atmosphere</h3> <p>The Boeing design system offers two entry points for product  development teams to  begin building or transition existings products using Atmosphere.  The Global Assets Library and Global Angular Library   are both published as NPM packages, available via the GitLab    Package Registry.</p>   <h4 class=\"title-low\">NPM Packages</h4> <p>The <a href=\"https://git.web.boeing.com/design/design-system/dls-global-assets/-/packages\"   target=\"_blank\">Global Asset Library</a> offers a framework-independent toolkit for any web-based product, with  fonts, icons,  global styles, and design tokens represented in multiple  formats.</p> <p>The <a  href=\"https://git.web.boeing.com/design/design-system/dls-global-angular/-/packages\"  target=\"_blank\">Global Angular Library</a> is the first    framework-specific library, implementing Atmospphere as an Angular     Material theme and     custom Angular components.</p>      <h4 class=\"title-low\">Documentation</h4>  <p>The Global Angular Library publishes a <a   href=\"https://design.pages.boeing.com/design-system/dls-global-angular\" target=\"_blank\">Storybook</a> containing interactive demos of   each component.</p> <p>The Documentation Hub is the first consumer of the Global Angular  Library and its <a href=\"https://git.web.boeing.com/design/design-system/dls-global-docs\"  target=\"_blank\">source code</a> can be viewed as a reference application for implementing the library.</p>",
+      "imgSrc": "./assets/images/develop-04@3x.png",
+      "imgAlt": "Ecosystem diagram"
+    },
+    {
+      "type": "image-full",
+      "imgSrc": "./assets/images/develop-01@3x.png",
+      "imgAlt": "Ecosystem diagram",
+      "imgText": "The technology ecosystem"
+    },
+    {
+      "type": "text-image",
+      "text": "<h3 class=\"title-high\">Global Assets Library</h3> <p>The Global Assets Library provides the following to accelerate development of any web-based UX, according to the Boeing    Atmosphere specifications:</p>  <ul>  <li>Design tokens in multiple formats (CSS custom properties, SCSS       variables, JavaScript, and JSON)</li>  <li>A set of global styles and utility classes for typography,    with font files and &#64;font-face rules included</li>  <li>SCSS mixins for typography and composite design tokens</li>  <li>A customized Bootstrap build that includes the responsive grid    and utility classes</li>  <li>Web-optimized SVG icons and icon sprite</li> </ul> <p>Read more about how to contribute to or use the Global Assets   Library in the <a    href=\"https://git.web.boeing.com/design/design-system/dls-global-assets\"    target=\"_blank\">GitLab repository</a>.</p>            <h4 class=\"title-low\">Token service</h4>  <p>The token service is a NodeJS application within the Global    Assets Library repo that translates design tokens into code. The    code outputs (variables or mixins) are all parsed directly from    the token set defined in Tokens Studio     within the Atmosphere Foundation and Components Library. Through     automation the style code stays in sync with the design      specification.    </p>  <p>Read more about the token service in the <a   href=\"https://git.web.boeing.com/design/design-system/dls-global-assets/-/tree/develop/token-service\"   target=\"_blank\">GitLab repository</a>.</p>",
+      "imgSrc": "./assets/images/develop-02@3x.png",
+      "imgAlt": "Ecosystem diagram"
+    },
+    {
+      "type": "text-image",
+      "text": "<h3 class=\"title-high\">Global Angular Library</h3><p>The Global Angular Library provides the following to accelerate    development of Angular applications, according to the Boeing     Atmosphere specifications:</p>  <ul>   <li>Everything included in the Global Assets Library (it is     installed as a dependency)</li>   <li>A core Angular Material theme that defines the color palette     (dark and light), typography config, and density</li>   <li>Additional theme customizations for individual Angular      Material components</li>    <li>Angular module that loads the custom icon set as an SvgIconSet      for use by the mat-icon component</li>    <li>Custom Angular components</li>  </ul>  <p>Read more about how to contribute to or use the Global Assets   Library in the <a  href=\"https://git.web.boeing.com/design/design-system/dls-global-angular/-/tree/develop/projects/design/dls-global-angular\"      target=\"_blank\">GitLab repository</a>.</p>   <h4 class=\"title-low\">Other frameworks</h4>   <p>While Angular is the first framework-specific implementation of Atmosphere components, the Atmosphere development  ecosystem was architected to support the development of multiple  component libaries for other framewoks   such as React, Vue, or Web Components.<p>  <p>The Global Assets Library should serve as the foundation and     be a common dependency for each framework-specific     implementation. With this architecture, any updates to      design tokens will flow into all component libraries.</p>",
+      "imgSrc": "./assets/images/develop-02@3x.png",
+      "imgAlt": "Global Angular Library"
+    }
+  ]
+}

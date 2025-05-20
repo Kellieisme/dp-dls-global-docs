@@ -1,0 +1,8 @@
+header {
+  > div {
+    background-image: url('../../../assets/images/get-started/get-started-header-dark.png');
+    .theme-light & {
+      background: url('../../../assets/images/get-started/get-started-header-light.png') 50% / cover no-repeat;
+    }
+  }
+}

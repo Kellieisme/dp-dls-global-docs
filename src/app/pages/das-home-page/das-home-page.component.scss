@@ -1,0 +1,54 @@
+@import '@design/dls-global-assets/dist/scss/base/_variables.scss';
+@import '@design/dls-global-assets/dist/scss/base/_variablesBase.scss';
+@import '@design/dls-global-assets/dist/scss/base/_bootstrapMixins.scss';
+@import '@design/dls-global-assets/dist/scss/base/_compositionMixins.scss';
+@import '@design/dls-global-assets/dist/scss/base/_typographyMixins.scss';
+@import '@design/dls-global-assets/dist/scss/base/_linkMixins.scss';
+
+header {
+  display: flex;
+  min-height: 370px;
+  padding: $size-relaxed-spacing-s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  text-align: center;
+  > div {
+    display: flex;
+    padding: $size-relaxed-spacing-none $size-relaxed-spacing-3xl;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $size-relaxed-spacing-xl;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: $size-relaxed-radius-xl;
+    background: url('../../../assets/images/das/home-header-dark@3x.png') 50% / cover no-repeat;
+    @include composition-dark-ui-glass-background-blur;
+    .theme-light & {
+      @include composition-light-ui-glass-background-blur;
+      background: url('../../../assets/images/das/home-header-light@3x.png') 50% / cover no-repeat;
+    }
+  }
+}
+
+.resource-list {
+  ul {
+    list-style: disc;
+    @include media-breakpoint-up(md) { 
+      columns: 2;
+    }
+    padding-left: $size-relaxed-spacing-xl;
+    li {
+      @include typography-xl-body-low-default;
+      &::marker {
+        color: var(--color-interactive-accent-textandicon-default);
+      }
+    }
+    margin-top: $size-relaxed-spacing-4xl;
+    a {
+      @include link-accent;
+    }
+  }
+}

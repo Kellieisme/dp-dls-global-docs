@@ -1,0 +1,19 @@
+@use "@angular/material" as mat;
+@import "@design/dls-global-assets/dist/scss/base/_variables.scss";
+@import "@design/dls-global-assets/dist/scss/base/_compositionMixins.scss";
+
+.storybook-wrapper {
+    border: 1px solid var(--color-ui-glass-divider-specular-44);
+    margin-top:  $size-relaxed-spacing-xl;
+    background-color: var(--color-ui-background-high);
+    iframe {
+        width: 100%;
+        min-height: 100px;
+    }
+    &.storybook-wrapper--docs {
+        iframe {
+            min-height: 800px;
+            background-color: var(--color-ui-background-high);
+        }
+    }
+}

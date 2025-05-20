@@ -1,0 +1,163 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Radio button",
+  "storybookId": "components-radio-button",
+  "storybookDefaultStory": "basic",
+  "header": {
+    "title": "Radio button",
+    "description": "Radio buttons let people select one option from a set of options",
+    "backgroundImg": "components/radio-button/radio-button-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Selection control that often appears when users are asked to make decisions",
+            "Radio buttons allow users to select one option from a set",
+            "Use radio buttons when only one item can be selected"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=9230-32432\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/radio-button/radio-button-01@3x.png",
+          "imgAlt": "States",
+          "textBefore": "<h3 class=\"title-high\">States</h3>",
+          "textAfter": "<ol><li>Unselected enabled</li><li>Unselected hovered</li><li>Unselected pressed</li><li>Unselected disabled</li><li>Selected enabled</li><li>Selected hovered</li><li>Selected pressed</li><li>Selected disabled</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The radio button comes in two density modes: relaxed and condensed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/radio-button/radio-button-02@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>",
+          "textAfter": "<ol><li>Radio size</li><li>State layer</li><li>Target size</li><li>Padding between radius & label</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/radio-button/radio-button-03@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>",
+          "textAfter": "<ol><li>Radio size</li><li>State layer</li><li>Target size</li><li>Padding between radius & label</li></ol>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Radio buttons are the recommended way to allow users to make a single selection from a list of options. Only one radio button can be selected at a time. If multiple selections are needed, use <a href=\"/design-system/dls-global-docs/components/checkbox\">checkboxes</a> instead.</p><p>Use radio buttons when there are five or fewer options and avoid nesting them.</p><p>Consider using a <a href=\"/design-system/dls-global-docs/components/select\">select</a> instead of radio buttons when there’s more than three choices or it’s important to save space on a screen.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/radio-button/radio-button-04@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Radio button</li><li>Label (optional when used inside other components)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3><p>Radio buttons are often arranged in stacked layouts. <b>They should be vertically oriented</b>. They can also appear inside other components such as <a href=\"/design-system/dls-global-docs/components/checkbox\">checkboxes</a> instead.</p><p>Use radio buttons when there are five or fewer options and avoid nesting them.</p><p>Consider using a <a href=\"/design-system/dls-global-docs/components/list\">lists</a>. Placement may vary according to the containing component.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3><p>A radio button is successfully selected when the user has clicked or tapped either the radio button icon or the label. By default the radio button group will have one option always selected.</p><p>Once selected, <b>there is always one radio button selected in the group. Users can change their selection but they can’t unselect entirely.</b></p>"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>The radio button has two states: selected and unselected. There’s a brief interaction where the user changes the states of the buttons by clicking on an option.</p><p>Users should be able to select either the text label or the radio button to select an option. </p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and select a radio button inside a list with these keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "To move to the next element in a group"},
+            {"keys": "Shift + Tab", "actions": "To select the last radio button item in a group"},
+            {"keys": "Arrow", "actions": "To move focus up or down between radio options in order to make a selection"},
+            {"keys": "Space", "actions": "To select a radio option currently in focus"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Using labels</h3><p>Radio buttons should always be accompanied by clear inline labels describing what the radio button selects. Radio groups can also have a label to categorize them.</p><p>The accessibility label for a group of radio buttons is “radio group.” The accessibility label for an individual radio button is typically the same as its adjacent text label.</p><p>Don’t truncate labels unless required, as truncated text can impede comprehension. In this case, the label will be truncated with an ellipsis and supported by a tooltip.</p>"
+        },
+        {
+          "type": "text-table",
+          "text": "<h3 class=\"title-high\">Responsiveness & densities</h3><p>Radio button target size is reduced in size for condensed versions, but the size of the radio button itself remains fixed given its usage inside other components. <b>Mobile screens should always use relaxed density to ensure touch accessibility.</b></p><p>All of these changes can be visually seen in the Measurements section.</p>",
+          "data": [
+            {"layer": "State layer", "relaxed": "40", "condensed": "32"},
+            {"layer": "Target size", "relaxed": "48", "condensed": "40"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed", "id": "relaxed"},
+            {"label": "Condensed", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Light vs Dark mode exceptions</h3><p>Due to Figma restrictions, not all the styles defined in this component will be aligned with code.</p><p>See more about the Light vs Dark mode exceptions in the <a href=\"/design-system/dls-global-docs/color-system\">Color system</a> section.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}
