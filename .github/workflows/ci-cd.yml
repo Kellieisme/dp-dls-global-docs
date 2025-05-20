@@ -95,7 +95,7 @@ jobs:
     if: github.ref_name != 'develop'
     steps:
       - name: Output URL
-        run: echo "Branch URL will be: https://${{ vars.NPM_REGISTRY_URL }}/${{ github.head_ref }}/branch/"
+        run: echo "Branch URL will be https://${{ vars.NPM_REGISTRY_URL }}/${{ github.head_ref }}/branch/"
     environment:
       name: ${{ github.head_ref }}/branch
       url: https://${{ vars.NPM_REGISTRY_URL }}/${{ github.head_ref }}/branch/
