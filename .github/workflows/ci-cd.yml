@@ -207,7 +207,6 @@ jobs:
         run: echo "Stopping environment for ${{ github.head_ref }}"
     environment:
       name: pages/${{ github.head_ref }}
-      action: stop
     if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
 
   pages-clean-delete:
@@ -246,7 +245,6 @@ jobs:
         run: echo "Stopping environment for ${{ github.head_ref }}"
     environment:
       name: pages/${{ github.head_ref }}
-      action: stop
     if: github.event_name == 'workflow_dispatch'
 
   pr-develop:
