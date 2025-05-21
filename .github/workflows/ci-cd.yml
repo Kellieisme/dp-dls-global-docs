@@ -168,10 +168,11 @@ jobs:
             mv -v branch/$BRANCH_NAME/browser/* public/${{ github.head_ref }}
           fi
 
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
         with:
-          path: public
+          artifact_name: github-pages
+          # commit_message: Deploy branch pages
 
   pages-main:
     name: Deploy Main Pages
