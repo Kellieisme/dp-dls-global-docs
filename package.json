@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:branch": "ng run dls-global-docs:build --base-href /design-system/dls-global-docs/${CI_COMMIT_REF_SLUG}/ --output-path=branch/${CI_COMMIT_REF_SLUG}",
-    "build:prod": "ng build --base-href /design-system/dls-global-docs/",
+    "build:prod": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
