@@ -10,6 +10,10 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: write
+  id-token: write
+
 jobs:
   build-repo:
     name: Build Branch
