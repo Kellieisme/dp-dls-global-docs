@@ -73,7 +73,7 @@ jobs:
           echo "Created the following .npmrc:"; cat .npmrc
 
       - name: Install dependencies
-        run: npm install --loglevel silly
+        run: npm install --loglevel verbose
 
       - name: Build for develop
         run: |
@@ -133,6 +133,16 @@ jobs:
           name: github-pages
           path: public
           if-no-files-found: ignore
+
+      - name: Extract artifact
+        run: |
+          if [ -f "branch/artifact.tar" ]; then
+            echo "Extracting artifact.tar..."
+            mkdir -p branch/extracted
+            tar -xf branch/artifact.tar -C branch/extracted
+          else
+            echo "No artifact.tar found to extract."
+          fi
 
       - name: Create public directory if it doesn't exist
         run: mkdir -p public
