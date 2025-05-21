@@ -127,6 +127,9 @@ jobs:
     env:
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     if: github.ref_name != 'develop'
+    environment:
+      name: github-pages
+      url: ${{ github.pages_url }}
     steps:
       - name: Download branch artifact
         uses: actions/download-artifact@v4
