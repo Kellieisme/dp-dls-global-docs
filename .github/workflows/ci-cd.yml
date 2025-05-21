@@ -186,6 +186,9 @@ jobs:
     name: Deploy Main Pages
     runs-on: ubuntu-latest
     needs: build-static-site
+    environment:
+      name: github-pages
+      url: ${{ github.pages_url }}
     if: github.ref_name == 'develop'
     steps:
       - name: Download develop artifact
