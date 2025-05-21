@@ -203,7 +203,7 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages
-          commit_message: Deploy main to GitHub Pages
+          # commit_message: Deploy main to GitHub Pages
 
   pages-clean-preview:
     name: Clean Preview Environment
