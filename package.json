@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^18.2.13",
     "@angular/platform-server": "^18.2.13",
     "@angular/router": "^18.2.13",
-    "@dasdigitalplatform/dls-global-angular": "2.5.10",
+    "@dasdigitalplatform/dls-global-angular": "^2.5.11",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
