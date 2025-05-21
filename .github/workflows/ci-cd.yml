@@ -103,8 +103,7 @@ jobs:
     steps:
       - name: Output URL
         run: echo "Branch URL will be ${{ github.pages_url }}/$BRANCH_NAME/"
-        with:
-          artifact_name: github-pages
+
     environment:
       name: $BRANCH_NAME/branch
       url: ${{ github.pages_url }}/$BRANCH_NAME/
@@ -117,9 +116,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
-          commit_message: Deploy to GitHub Pages
     environment:
       name: "Pages"
       url: ${{ github.pages_url }}
