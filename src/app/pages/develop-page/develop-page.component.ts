@@ -8,7 +8,6 @@ import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-develop-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, FooterComponent],
     templateUrl: './develop-page.component.html',

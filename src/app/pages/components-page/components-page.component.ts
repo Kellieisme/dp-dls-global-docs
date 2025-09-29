@@ -9,7 +9,6 @@ import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-components-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatCardModule, FooterComponent, RouterLink],
     templateUrl: './components-page.component.html',

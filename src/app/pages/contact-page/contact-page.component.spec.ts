@@ -1,4 +1,4 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ContactPageComponent} from './contact-page.component';
 
@@ -6,17 +6,17 @@ describe('ContactPageComponent', () => {
   let component: ContactPageComponent;
   let fixture: ComponentFixture<ContactPageComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [ContactPageComponent]
     })
-      .compileComponents()
-      .then(() => {
-        fixture = TestBed.createComponent(ContactPageComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-      });
-  }));
+    .compileComponents();
+
+    fixture = TestBed.createComponent(ContactPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    await fixture.whenStable();
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

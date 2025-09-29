@@ -28,19 +28,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/fonts.zip",
-              {
-                "glob": "/images/icons/**/*.svg",
-                "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/icons/",
-                "output": "./assets"
-              },
-              { "glob": "svgSet.svg", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/icons", "output": "./assets" },
-              { "glob": "**/*", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/content", "output": "./assets" }
+              { "glob": "svgSet.svg", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/icons/", "output": "./assets" },
+              { "glob": "**.svg", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/content/", "output": "./assets" },
+              { "glob": "svgSet.svg", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/icons/", "output": "./assets" },
+              { "glob": "**.svg", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/content/", "output": "./assets" }
             ],
             "styles": [
-              "./node_modules/@dasdigitalplatform/dls-global-angular/styles/fonts.scss",
-              "./node_modules/@dasdigitalplatform/dls-global-angular/styles/global.scss",
-              "./node_modules/@dasdigitalplatform/dls-global-angular/styles/material.scss",
+              "./node_modules/@dasdigitalplatform/dls-angular/styles/fonts.scss",
+              "./node_modules/@dasdigitalplatform/dls-angular/styles/global.scss",
+              "./node_modules/@dasdigitalplatform/dls-angular/styles/material.scss",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -115,9 +111,9 @@
               { "glob": "**/*", "input": "./node_modules/@dasdigitalplatform/dls-global-assets/dist/images/content", "output": "./assets" }
             ],
             "styles": [
-              "./node_modules/@dasdigitalplatform/dls-global-angular/styles/fonts.scss",
-              "./node_modules/@dasdigitalplatform/dls-global-angular/styles/global.scss",
-              "./node_modules/@dasdigitalplatform/dls-global-angular/styles/material.scss",
+              "./node_modules/@dasdigitalplatform/dls-angular/styles/fonts.scss",
+              "./node_modules/@dasdigitalplatform/dls-angular/styles/global.scss",
+              "./node_modules/@dasdigitalplatform/dls-angular/styles/material.scss",
               "src/styles.scss"
             ],
             "scripts": []

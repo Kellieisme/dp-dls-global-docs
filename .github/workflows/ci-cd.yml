@@ -142,7 +142,7 @@ jobs:
         with:
           name: github-pages
           path: public
-          if-no-files-found: ignore
+        continue-on-error: true
 
       - name: Extract artifact
         run: |
@@ -222,7 +222,7 @@ jobs:
         with:
           name: github-pages
           path: public
-          if-no-files-found: ignore
+        continue-on-error: true
 
       - name: List public directory
         run: ls public/ || echo "Public directory does not exist"
@@ -247,7 +247,7 @@ jobs:
         with:
           name: github-pages
           path: public
-          if-no-files-found: ignore
+        continue-on-error: true
 
       - name: Set FOLDER_TO_DELETE
         run: echo "FOLDER=${{ github.event.inputs.folder_to_delete }}" >> $GITHUB_ENV
@@ -297,7 +297,7 @@ jobs:
           echo "Created the following .npmrc:"; cat .npmrc
 
       - name: Verify registry access
-        run: curl -I https://${{ secrets.JFROG_URL }}/${{ secrets.JFROG_REPO }}/ || exit 1
+        run: curl -I https://@dasdigitalplatform/dls-angular/ || exit 1
 
       - name: Install dependencies
         run: npm install || exit 1

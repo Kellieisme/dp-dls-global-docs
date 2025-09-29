@@ -12,7 +12,6 @@ import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-das-home-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule, DasFooterComponent, RouterLink, MatTableModule],
     templateUrl: './das-home-page.component.html',

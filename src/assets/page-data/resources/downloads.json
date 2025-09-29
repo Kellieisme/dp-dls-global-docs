@@ -37,13 +37,13 @@
         {
           "type": "icon-button",
           "text": "<h4 class=\"label-high\">GitLab: Global Angular Library</h4><p>The first framework-specific library, implementing Atmosphere as an Angular Material theme and custom Angular components.</p>",
-          "link": "https://git.web.boeing.com/design/design-system/dls-global-angular",
+          "link": "https://git.web.boeing.com/design/design-system/dls-angular",
           "icon": "icon-inventory-2"
         },
         {
           "type": "icon-button",
           "text": "<h4 class=\"label-high\">Storybook: Global Angular Library</h4><p>The Global Angular Library publishes a Storybook containing interactive demos of each component.</p>",
-          "link": "https://design.pages.boeing.com/design-system/dls-global-angular",
+          "link": "https://design.pages.boeing.com/design-system/dls-angular",
           "icon": "icon-assignment"
         },
         {

@@ -10,13 +10,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-foundations-detail-page',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, FooterComponent, MatIcon, MatButtonModule, MatTabsModule, MatTableModule, RouterLink],
-  templateUrl: './foundations-detail-page.component.html',
-  styleUrl: './foundations-detail-page.component.scss',
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-foundations-detail-page',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, FooterComponent, MatIcon, MatButtonModule, MatTabsModule, MatTableModule, RouterLink],
+    templateUrl: './foundations-detail-page.component.html',
+    styleUrl: './foundations-detail-page.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 export class FoundationsDetailPageComponent {
   pageData$ = this.activatedRoute.data.pipe(map(({ pageData }) => pageData));

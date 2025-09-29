@@ -8,7 +8,6 @@ import { MatCardModule } from '@angular/material/card';
 
 @Component({
     selector: 'app-styles-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatCardModule, FooterComponent, RouterLink],
     templateUrl: './styles-page.component.html',

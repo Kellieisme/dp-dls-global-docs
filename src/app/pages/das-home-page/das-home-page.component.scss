@@ -36,7 +36,8 @@ header {
 .resource-list {
   ul {
     list-style: disc;
-    @include media-breakpoint-up(md) {
+    @media (min-width: 576px) {
+      // Use two columns for better layout on small and larger screens
       columns: 2;
     }
     padding-left: $size-relaxed-spacing-xl;

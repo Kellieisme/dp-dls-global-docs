@@ -11,13 +11,12 @@ import { MatTableModule } from '@angular/material/table';
 import { waitForAsync } from "@angular/core/testing";
 
 @Component({
-  selector: 'app-home-page',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule, MatCardHeader, FooterComponent, RouterLink, MatTableModule],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss',
-  encapsulation: ViewEncapsulation.None,
-  standalone: true
+    selector: 'app-home-page',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule, MatCardHeader, FooterComponent, RouterLink, MatTableModule],
+    templateUrl: './home-page.component.html',
+    styleUrl: './home-page.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 
 export class HomePageComponent implements OnInit {
