@@ -297,7 +297,7 @@ jobs:
           echo "Created the following .npmrc:"; cat .npmrc
 
       - name: Verify registry access
-        run: curl -I https://${{ secrets.JFROG_URL }}/${{ secrets.JFROG_REPO }}/ || exit 1
+        run: curl -I https://${{ vars.NPM_REGISTRY_URL }}/ || exit 1
 
       - name: Install dependencies
         run: npm install || exit 1
