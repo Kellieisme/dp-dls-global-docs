@@ -10,7 +10,6 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-contact-detail-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, FooterComponent, MatIconModule, MatButtonModule, MatDividerModule, RouterLink],
     templateUrl: './contact-detail-page.component.html',

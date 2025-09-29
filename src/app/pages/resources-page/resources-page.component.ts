@@ -10,7 +10,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-resources-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatCardModule, FooterComponent, RouterLink, MatIconModule],
     templateUrl: './resources-page.component.html',

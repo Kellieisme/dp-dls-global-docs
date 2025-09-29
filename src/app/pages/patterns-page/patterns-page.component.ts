@@ -9,7 +9,6 @@ import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-patterns-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatCardModule, FooterComponent, RouterLink],
     templateUrl: './patterns-page.component.html',

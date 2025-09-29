@@ -10,13 +10,12 @@ import { MatTableModule } from '@angular/material/table';
 
 
 @Component({
-  selector: 'app-styles-detail-page',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, MatTabsModule, FooterComponent, MatIcon, MatTableModule],
-  templateUrl: './styles-detail-page.component.html',
-  styleUrl: './styles-detail-page.component.scss',
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-styles-detail-page',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, MatTabsModule, FooterComponent, MatIcon, MatTableModule],
+    templateUrl: './styles-detail-page.component.html',
+    styleUrl: './styles-detail-page.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 
 export class StylesDetailPageComponent {

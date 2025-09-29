@@ -10,7 +10,6 @@ import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-get-started-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, FooterComponent, MatButtonModule, MatIcon, RouterLink],
     templateUrl: './get-started-page.component.html',

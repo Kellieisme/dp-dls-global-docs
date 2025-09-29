@@ -10,13 +10,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-resources-detail-page',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, MatTabsModule, FooterComponent, RouterLink, MatIconModule, MatButtonModule, MatTableModule],
-  templateUrl: './resources-detail-page.component.html',
-  styleUrl: './resources-detail-page.component.scss',
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-resources-detail-page',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, MatTabsModule, FooterComponent, RouterLink, MatIconModule, MatButtonModule, MatTableModule],
+    templateUrl: './resources-detail-page.component.html',
+    styleUrl: './resources-detail-page.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 
 export class ResourcesDetailPageComponent {
