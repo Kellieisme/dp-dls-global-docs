@@ -142,7 +142,7 @@ jobs:
         with:
           name: github-pages
           path: public
-          if-no-files-found: ignore
+        continue-on-error: true
 
       - name: Extract artifact
         run: |
@@ -203,7 +203,6 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages
-          commit_message: Deploy main to GitHub Pages
 
   pages-clean-preview:
     name: Clean Preview Environment
@@ -219,7 +218,7 @@ jobs:
         with:
           name: github-pages
           path: public
-          if-no-files-found: ignore
+        continue-on-error: true
 
       - name: List public directory
         run: ls public/ || echo "Public directory does not exist"
@@ -244,7 +243,7 @@ jobs:
         with:
           name: github-pages
           path: public
-          if-no-files-found: ignore
+        continue-on-error: true
 
       - name: Set FOLDER_TO_DELETE
         run: echo "FOLDER=${{ github.event.inputs.folder_to_delete }}" >> $GITHUB_ENV
