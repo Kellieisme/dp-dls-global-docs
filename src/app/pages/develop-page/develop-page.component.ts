@@ -4,7 +4,6 @@ import { FooterComponent } from '../../partials/footer/footer.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { firstValueFrom, map } from 'rxjs';
-import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-develop-page',

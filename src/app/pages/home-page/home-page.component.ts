@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule, MatCardHeader } from '@angular/material/card';
 import { FooterComponent } from '../../partials/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
-import { waitForAsync } from "@angular/core/testing";
 
 @Component({
     selector: 'app-home-page',
