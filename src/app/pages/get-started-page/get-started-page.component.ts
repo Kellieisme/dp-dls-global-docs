@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { firstValueFrom, map } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-get-started-page',
