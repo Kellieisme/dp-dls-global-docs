@@ -1,8 +1,7 @@
-import { ApplicationConfig, APP_ID } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
@@ -14,9 +13,7 @@ const scrollConfig: InMemoryScrollingOptions = {
 const inMemoryScrollingFeature: InMemoryScrollingFeature = withInMemoryScrolling(scrollConfig);
 export const appConfig: ApplicationConfig = {
   providers: [
-    { provide: APP_ID, useValue: 'dls-global-docs' },
-    provideRouter(routes), 
-    provideClientHydration(), 
+    provideRouter(routes, inMemoryScrollingFeature), 
     provideAnimationsAsync(), 
     provideHttpClient(withFetch())
   ]
