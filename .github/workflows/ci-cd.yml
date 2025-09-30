@@ -5,10 +5,16 @@ on:
     branches:
       - main
       - develop
+      - dochub-19
+      - dochub-20
+      - dochub-21
       - '*' # Matches any branch name
   pull_request:
     branches:
       - develop
+      - dochub-19
+      - dochub-20
+      - dochub-21
 
 permissions:
   contents: write
