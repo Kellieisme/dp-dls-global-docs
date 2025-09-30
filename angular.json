@@ -39,14 +39,7 @@
               "./node_modules/@dasdigitalplatform/dls-angular/styles/material.scss",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": {
-              "routesFile": "routes.txt"
-            },
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
