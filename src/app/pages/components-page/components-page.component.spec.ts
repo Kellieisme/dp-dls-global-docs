@@ -1,4 +1,4 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ComponentsPageComponent} from './components-page.component';
 
@@ -6,17 +6,17 @@ describe('ComponentsPageComponent', () => {
   let component: ComponentsPageComponent;
   let fixture: ComponentFixture<ComponentsPageComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [ComponentsPageComponent]
     })
-      .compileComponents()
-      .then(() => {
-        fixture = TestBed.createComponent(ComponentsPageComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-      });
-  }));
+    .compileComponents();
+
+    fixture = TestBed.createComponent(ComponentsPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    await fixture.whenStable();
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

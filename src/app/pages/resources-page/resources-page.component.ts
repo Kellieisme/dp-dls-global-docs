@@ -5,12 +5,10 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { firstValueFrom, map } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
-import {waitForAsync} from "@angular/core/testing";
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-resources-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatCardModule, FooterComponent, RouterLink, MatIconModule],
     templateUrl: './resources-page.component.html',

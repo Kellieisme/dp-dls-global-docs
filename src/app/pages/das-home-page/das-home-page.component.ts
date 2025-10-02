@@ -8,11 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { DasFooterComponent } from '../../partials/das-footer/das-footer.component';
 import { MatTableModule } from '@angular/material/table';
-import {waitForAsync} from "@angular/core/testing";
 
 @Component({
     selector: 'app-das-home-page',
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule, DasFooterComponent, RouterLink, MatTableModule],
     templateUrl: './das-home-page.component.html',
