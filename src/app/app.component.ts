@@ -1,9 +1,9 @@
 import { Component, ElementRef, Inject, OnInit, AfterViewInit, PLATFORM_ID, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { IconRegistryModule } from '@dasdigitalplatform/dls-angular/icon-registry';
-import { ThemeToggleModule } from '@dasdigitalplatform/dls-angular/theme-toggle';
-import { NavigationRailComponent, AtmosphereNavRailMenuItem } from '@dasdigitalplatform/dls-angular/navigation-rail';
-import { NavigationDrawerComponent, AtmosphereNavDrawerMenuSection } from '@dasdigitalplatform/dls-angular/navigation-drawer';
+import { IconRegistryModule } from '@jeppesen-foreflight/dp-dls-global-angular/icon-registry';
+import { ThemeToggleModule } from '@jeppesen-foreflight/dp-dls-global-angular/theme-toggle';
+import { NavigationRailComponent, AtmosphereNavRailMenuItem } from '@jeppesen-foreflight/dp-dls-global-angular/navigation-rail';
+import { NavigationDrawerComponent, AtmosphereNavDrawerMenuSection } from '@jeppesen-foreflight/dp-dls-global-angular/navigation-drawer';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { filter } from 'rxjs/operators';
