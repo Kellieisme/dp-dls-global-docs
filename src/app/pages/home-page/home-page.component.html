@@ -1,5 +1,4 @@
-<ng-container *ngIf="pageData$ | async as pageData">
-
+@if (pageData$ | async; as pageData) {
   <header>
     <div>
       <h1>
@@ -11,7 +10,6 @@
       <p><a class="theme-atmo" mat-flat-button color="accent" routerLink={{pageData.header.ctaButton.link}}>{{pageData.header.ctaButton.text}}</a></p>
     </div>
   </header>
-
   <main class="main">
     <section>
       <div class="section__header section__header--link">
@@ -21,10 +19,12 @@
         </div>
       </div>
       <table mat-table [dataSource]="pageData.changelog.data">
-        <ng-container *ngFor="let col of pageData.changelog.cols" [matColumnDef]="col.id">
-          <th mat-header-cell *matHeaderCellDef>{{col.label}} </th>
-          <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
-        </ng-container>
+        @for (col of pageData.changelog.cols; track col) {
+          <ng-container [matColumnDef]="col.id">
+            <th mat-header-cell *matHeaderCellDef>{{col.label}} </th>
+            <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
+          </ng-container>
+        }
         <tr mat-header-row *matHeaderRowDef="pageData.changelog.displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: pageData.changelog.displayedColumns;"></tr>
       </table>
@@ -117,8 +117,6 @@
       </div>
     </section>
   </main>
-
   <app-footer />
-
-</ng-container>
+}
 

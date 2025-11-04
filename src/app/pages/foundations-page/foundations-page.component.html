@@ -1,18 +1,13 @@
-<ng-container *ngIf="pageData$ | async as pageData">
-
+@if (pageData$ | async; as pageData) {
   <header class="header--level-two">
     <div>
       <h1 class="display-high">{{pageData.header.title}}</h1>
       <p class="body-low-default">{{pageData.header.description}}</p>
     </div>
   </header>
-
   <main class="main">
-
     <section class="section__cards">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-
         <div class="col">
           <a routerLink="/foundations/strategy" class="mat-card-wrapper">
             <mat-card appearance="outlined">
@@ -26,7 +21,6 @@
             </mat-card>
           </a>
         </div>
-
         <div class="col">
           <a routerLink="/foundations/design-principles" class="mat-card-wrapper">
             <mat-card appearance="outlined">
@@ -41,7 +35,6 @@
             </mat-card>
           </a>
         </div>
-
         <div class="col">
           <a routerLink="/foundations/accessibility" class="mat-card-wrapper">
             <mat-card appearance="outlined">
@@ -57,9 +50,7 @@
           </a>
         </div>
       </div>
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-
         <div class="col">
           <a routerLink="/foundations/content-design" class="mat-card-wrapper">
             <mat-card appearance="outlined">
@@ -74,7 +65,6 @@
             </mat-card>
           </a>
         </div>
-
         <div class="col">
           <a routerLink="/foundations/design-tokens" class="mat-card-wrapper">
             <mat-card appearance="outlined">
@@ -89,7 +79,6 @@
             </mat-card>
           </a>
         </div>
-
         <div class="col">
           <a routerLink="/foundations/layout" class="mat-card-wrapper">
             <mat-card appearance="outlined">
@@ -105,11 +94,7 @@
           </a>
         </div>
       </div>
-
     </section>
-
   </main>
-
   <app-footer />
-
-</ng-container>
+}

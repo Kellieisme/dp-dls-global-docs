@@ -1,14 +1,11 @@
-<ng-container *ngIf="pageData$ | async as pageData">
-
+@if (pageData$ | async; as pageData) {
   <header class="header--level-one">
     <div>
       <h1 class="display-high">{{pageData.header.title}}</h1>
       <p class="body-low-default">{{pageData.header.description}}</p>
-    </div>    
+    </div>
   </header>
-  
   <main class="main">
-
     <section class="section__cards">
       <div class="section__header">
         <h3 class="title-high">Actions</h3>
@@ -45,7 +42,6 @@
         </div>
       </div>
     </section>
-
     <section class="section__cards">
       <div class="section__header">
         <h3 class="title-high">Communication</h3>
@@ -82,7 +78,6 @@
         </div>
       </div>
     </section>
-
     <section class="section__cards">
       <div class="section__header">
         <h3 class="title-high">Containment</h3>
@@ -171,7 +166,6 @@
         </div>
       </div>
     </section>
-
     <section class="section__cards">
       <div class="section__header">
         <h3 class="title-high">Navigation</h3>
@@ -247,7 +241,6 @@
         </div>
       </div>
     </section>
-
     <section class="section__cards">
       <div class="section__header">
         <h3 class="title-high">Selection</h3>
@@ -349,35 +342,30 @@
         </div>
       </div>
     </section>
-
     <section class="section__cards">
       <div class="section__header">
         <h3 class="title-high">Text input</h3>
         <p>Text input components let people enter and edit text/p>
-      </div>
-      <div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          <div class="col">
-            <a routerLink="/components/text-field" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/components/text-field/text-field-header@3x.png" alt="Text fields">
-                <mat-card-header>
-                  <mat-card-title>Text field</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Text fields and areas let people enter/edit text</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
+        </div>
+        <div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col">
+              <a routerLink="/components/text-field" class="mat-card-wrapper">
+                <mat-card appearance="outlined">
+                  <img mat-card-image src="./assets/images/components/text-field/text-field-header@3x.png" alt="Text fields">
+                  <mat-card-header>
+                    <mat-card-title>Text field</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p>Text fields and areas let people enter/edit text</p>
+                  </mat-card-content>
+                </mat-card>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+    <app-footer />
+  }
 
-  </main>
-
-  <app-footer />
-
-</ng-container>
-  
-  

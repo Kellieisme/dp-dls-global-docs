@@ -1,5 +1,4 @@
-<ng-container *ngIf="pageData$ | async as pageData">
-
+@if (pageData$ | async; as pageData) {
   <header class="header--level-two">
     <div>
       <h1 class="display-high">{{pageData.header.title}}</h1>
@@ -7,102 +6,105 @@
     </div>
     <div class="header__image" [style]="backgroundImage"></div>
   </header>
-
   <main class="main main--columns">
-
-    <section *ngFor="let section of pageData.sections">
-
-      <!--TYPE: text-column-->
-      <ng-container *ngIf="section.type === 'text-column'">
-        <div class="row row-cols-1 row-cols-sm-2">
-          <div class="col">
-            <div class="col__content" [innerHTML]="section.text"></div>
+    @for (section of pageData.sections; track section) {
+      <section>
+        <!--TYPE: text-column-->
+        @if (section.type === 'text-column') {
+          <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col">
+              <div class="col__content" [innerHTML]="section.text"></div>
+            </div>
+            <div class="col"></div>
           </div>
-          <div class="col"></div>
-        </div>
-      </ng-container>
-
-      <!--TYPE: text-image-->
-      <ng-container *ngIf="section.type === 'text-image'">
-        <div class="row row-cols-1 row-cols-sm-2">
-          <div class="col">
-            <div class="col__content" [innerHTML]="section.text"></div>
-          </div>
-          <div class="col">
-            <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
-            <p *ngIf="section.imgText">{{section.imgText}}</p>
-          </div>
-        </div>
-      </ng-container>
-
-      <!--TYPE: divider-->
-      <mat-divider *ngIf="section.type === 'divider'"></mat-divider>
-
-      <!--TYPE: list-image-->
-      <ng-container *ngIf="section.type === 'list-image'">
-        <div class="row row-cols-1 row-cols-sm-2">
-          <div class="col">
-            <div class="col__content">
-              <div [innerHTML]="section.text"></div>
-              <ul class="link-list">
-                <li class="link-list__item" *ngFor="let item of section.items">
-                  <ng-container *ngIf="item.link.startsWith('/')">
-                    <a mat-icon-button color="primary" [routerLink]="item.link" aria-label="label">
-                      <mat-icon [svgIcon]="item.icon"></mat-icon>
-                    </a>
-                  </ng-container>
-                  <ng-container *ngIf="!item.link.startsWith('/')">
-                    <a mat-icon-button color="primary" [href]="item.link" target="_blank" aria-label="label">
-                      <mat-icon [svgIcon]="item.icon"></mat-icon>
-                    </a>
-                  </ng-container>
-                  <span [innerHTML]="item.text"></span>
-                </li>
-              </ul>
+        }
+        <!--TYPE: text-image-->
+        @if (section.type === 'text-image') {
+          <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col">
+              <div class="col__content" [innerHTML]="section.text"></div>
+            </div>
+            <div class="col">
+              <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
+              @if (section.imgText) {
+                <p>{{section.imgText}}</p>
+              }
             </div>
           </div>
-          <div class="col">
-            <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
-            <p *ngIf="section.imgText">{{section.imgText}}</p>
-          </div>
-        </div>
-      </ng-container>
-
-      <!--TYPE: list-->
-      <ng-container *ngIf="section.type === 'list'">
-        <div class="row row-cols-1 row-cols-sm-2">
-          <div class="col col--contact">
-            <div class="col__content" [innerHTML]="section.text">
+        }
+        <!--TYPE: divider-->
+        @if (section.type === 'divider') {
+          <mat-divider></mat-divider>
+        }
+        <!--TYPE: list-image-->
+        @if (section.type === 'list-image') {
+          <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col">
+              <div class="col__content">
+                <div [innerHTML]="section.text"></div>
+                <ul class="link-list">
+                  @for (item of section.items; track item) {
+                    <li class="link-list__item">
+                      @if (item.link.startsWith('/')) {
+                        <a mat-icon-button color="primary" [routerLink]="item.link" aria-label="label">
+                          <mat-icon [svgIcon]="item.icon"></mat-icon>
+                        </a>
+                      }
+                      @if (!item.link.startsWith('/')) {
+                        <a mat-icon-button color="primary" [href]="item.link" target="_blank" aria-label="label">
+                          <mat-icon [svgIcon]="item.icon"></mat-icon>
+                        </a>
+                      }
+                      <span [innerHTML]="item.text"></span>
+                    </li>
+                  }
+                </ul>
+              </div>
             </div>
-            <ul class="intro-list" *ngIf="section.type === 'list'">
-              <li *ngFor="let item of section.items"><mat-icon svgIcon="icon-label"></mat-icon><span
+            <div class="col">
+              <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt" />
+              @if (section.imgText) {
+                <p>{{section.imgText}}</p>
+              }
+            </div>
+          </div>
+        }
+        <!--TYPE: list-->
+        @if (section.type === 'list') {
+          <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col col--contact">
+              <div class="col__content" [innerHTML]="section.text">
+              </div>
+              @if (section.type === 'list') {
+                <ul class="intro-list">
+                  @for (item of section.items; track item) {
+                    <li><mat-icon svgIcon="icon-label"></mat-icon><span
                   [innerHTML]="item"></span></li>
-            </ul>
-            <a mat-flat-button color="accent" [href]="section.email">{{section.name}} 
+                }
+              </ul>
+            }
+            <a mat-flat-button color="accent" [href]="section.email">{{section.name}}
               <mat-icon svgIcon="icon-email"></mat-icon>
             </a>
           </div>
         </div>
-      </ng-container>
-
-
+      }
       <!-- TYPE: headshots -->
-      <ng-container *ngIf="section.type === 'headshots'">
+      @if (section.type === 'headshots') {
         <div class="section__headshots">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-            <div class="col mb-5" *ngFor="let member of section.team">
-              <img class="img-fluid" [src]="member.image" [alt]="member.name" />
-              <h4 class="title-low mt-4">{{ member.name }}</h4>
-              <p class="body-low-default my-3 pb-5">{{ member.title }}<br>{{ member.location }}</p>
-            </div>
+            @for (member of section.team; track member) {
+              <div class="col mb-5">
+                <img class="img-fluid" [src]="member.image" [alt]="member.name" />
+                <h4 class="title-low mt-4">{{ member.name }}</h4>
+                <p class="body-low-default my-3 pb-5">{{ member.title }}<br>{{ member.location }}</p>
+              </div>
+            }
           </div>
         </div>
-      </ng-container>
-
+      }
     </section>
-
-  </main>
-
-  <app-footer />
-
-</ng-container>
+  }
+</main>
+<app-footer />
+}
