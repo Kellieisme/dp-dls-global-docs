@@ -85,13 +85,13 @@
         {
           "type": "icon-button",
           "text": "<h4 class=\"label-high\">GitLab: Global Angular Library</h4><p>An Angular implementation of Atmosphere.</p>",
-          "link": "https://git.web.boeing.com/design/design-system/dls-angular",
+          "link": "https://git.web.boeing.com/design/design-system/dp-dls-global-angular",
           "icon": "icon-folder"
         },
         {
           "type": "icon-button",
           "text": "<h4 class=\"label-high\">Storybook: Global Angular Library</h4> <p>Explore the Atmosphere's Angular components.</p>",
-          "link": "https://design.pages.boeing.com/design-system/dls-angular",
+          "link": "https://design.pages.boeing.com/design-system/dp-dls-global-angular",
           "icon": "icon-assignment"
         },
         {

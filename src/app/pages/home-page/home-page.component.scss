@@ -1,6 +1,6 @@
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_compositionMixins.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_typographyMixins.scss';
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_variables.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_compositionMixins.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_typographyMixins.scss' as *;
 
 header {
   display: flex;

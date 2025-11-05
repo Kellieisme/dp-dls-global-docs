@@ -1,6 +1,6 @@
 @use "@angular/material" as mat;
-@import "@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss";
-@import "@dasdigitalplatform/dls-global-assets/dist/scss/base/_compositionMixins.scss";
+@use "@jeppesen-foreflight/dls-global-assets/dist/scss/base/_variables.scss" as *;
+@use "@jeppesen-foreflight/dls-global-assets/dist/scss/base/_compositionMixins.scss" as *;
 
 .storybook-wrapper {
     border: 1px solid var(--color-ui-glass-divider-specular-44);

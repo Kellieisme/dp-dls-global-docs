@@ -1,8 +1,7 @@
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variablesBase.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_bootstrapMixins.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_compositionMixins.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_typographyMixins.scss';
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_variables.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_compositionMixins.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_typographyMixins.scss' as *;
+@use '@jeppesen-foreflight/dp-dls-global-angular/styles/material/core';
 
 .app-container {
   display: flex;
@@ -16,7 +15,7 @@
 .app-sidenav--level-2 {
   mat-sidenav {
     width: 250px;
-    padding: $size-relaxed-spacing-xs;
+    // padding: $size-relaxed-spacing-xs;
   }
   mat-list-item {
     background-color: transparent;
@@ -68,7 +67,7 @@ header {
   &.header--level-one, &.header--level-two {
     display: flex;
     min-height: 310px;
-    padding: $size-relaxed-spacing-s;
+    // padding: $size-relaxed-spacing-s;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +75,7 @@ header {
 
     > div {
       display: flex;
-      padding: $size-relaxed-spacing-none $size-relaxed-spacing-8xl;
+      padding: $size-relaxed-spacing-xs $size-relaxed-spacing-8xl;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;

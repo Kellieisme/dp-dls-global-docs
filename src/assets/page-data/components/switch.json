@@ -28,7 +28,7 @@
           "data": [
             {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=9856-66567\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
             {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
-            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dls-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
           ],
           "cols": [
             {"label": "Type", "id": "type"},
