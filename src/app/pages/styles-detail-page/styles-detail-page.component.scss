@@ -1,4 +1,5 @@
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_variables.scss' as *;
+@use '@jeppesen-foreflight/dp-dls-global-angular/styles/material/core';
 
 .component-table {
 
