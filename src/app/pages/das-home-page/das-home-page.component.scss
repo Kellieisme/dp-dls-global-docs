@@ -1,9 +1,8 @@
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variablesBase.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_bootstrapMixins.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_compositionMixins.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_typographyMixins.scss';
-@import '@dasdigitalplatform/dls-global-assets/dist/scss/base/_linkMixins.scss';
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_variables.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_compositionMixins.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_typographyMixins.scss' as *;
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_linkMixins.scss' as *;
+
 
 header {
   display: flex;

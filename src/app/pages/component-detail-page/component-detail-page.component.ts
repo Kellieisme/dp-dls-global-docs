@@ -34,19 +34,19 @@ export class ComponentDetailPageComponent implements OnInit {
   ) { }
 
   storybookEmbedUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dls-angular/?path=/story/${this.storybookId}--${this.storybookDefaultStory}&full=1&shortcuts=false&singleStory=true`);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dp-dls-global-angular/?path=/story/${this.storybookId}--${this.storybookDefaultStory}&full=1&shortcuts=false&singleStory=true`);
   }
 
   storybookFullUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dls-angular/?path=/story/${this.storybookId}--${this.storybookDefaultStory}`);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dp-dls-global-angular/?path=/story/${this.storybookId}--${this.storybookDefaultStory}`);
   }
 
   storybookDocsEmbedUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dls-angular/iframe.html?id=${this.storybookId}--overview&singleStory=true&viewMode=docs&theme=light`);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dp-dls-global-angular/iframe.html?id=${this.storybookId}--overview&singleStory=true&viewMode=docs&theme=light`);
   }
 
   storybookDocsFullUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dls-angular/?path=/docs/${this.storybookId}--overview`);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://design.pages.boeing.com/design-system/dp-dls-global-angular/?path=/docs/${this.storybookId}--overview`);
   }
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(data => {

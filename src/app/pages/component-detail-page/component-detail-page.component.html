@@ -1,5 +1,4 @@
-<ng-container *ngIf="pageData$ | async as pageData">
-
+@if (pageData$ | async; as pageData) {
   <header class="header--level-two">
     <div>
       <h1 class="display-high">{{pageData.header.title}}</h1>
@@ -7,175 +6,175 @@
     </div>
     <div class="header__image" [style]="backgroundImage"></div>
   </header>
-
   <main class="main main--columns">
-
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" animationDuration="0ms">
-
-      <mat-tab *ngFor="let tab of pageData.tabs" [label]="tab.label">
-
-        <ng-template matTabContent>
-
-          <section *ngFor="let section of tab.sections">
-
-            <!--TYPE: storybook-->
-            <ng-container *ngIf="section.type === 'storybook'">
-              <div class="section__header section__header--link">
-                <h3 class="title-high">Storybook</h3>
-                <div>
-                  <a [href]="storybookFullUrl()" target="_blank">View all stories <mat-icon svgIcon="icon-open-in-new"></mat-icon></a>
-                </div>
-              </div>
-              <div class="storybook-wrapper">
-                <iframe [attr.height]="pageData.storybookHeight || null" [src]="storybookEmbedUrl()"></iframe>
-              </div>
-            </ng-container>
-
-            <!--TYPE: storybook-docs-->
-            <ng-container *ngIf="section.type === 'storybook-docs'">
-              <div class="section__header section__header--link">
-                <h3 class="title-high">Documentation</h3>
-                <div>
-                  <a [href]="storybookDocsFullUrl()" target="_blank">View in Storybook <mat-icon svgIcon="icon-open-in-new"></mat-icon></a>
-                </div>
-              </div>
-              <div class="storybook-wrapper storybook-wrapper--docs">
-                <iframe [src]="storybookDocsEmbedUrl()"></iframe>
-              </div>
-            </ng-container>
-
-            <!--TYPE: list-->
-            <ng-container  *ngIf="section.type === 'list'">
-              <div class="row row-cols-1 row-cols-sm-2">
-                <div class="col">
-                  <ul class="intro-list">
-                    <li *ngFor="let item of section.items"><mat-icon svgIcon="icon-label"></mat-icon><span [innerHTML]="item"></span></li>
-                  </ul>
-                </div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: divider-->
-            <mat-divider *ngIf="section.type === 'divider'"></mat-divider>
-
-            <!--TYPE: image-full-->
-            <ng-container *ngIf="section.type === 'image-full'">
-              <div class="row row-cols-1 row-cols-sm-2" *ngIf="section.textBefore">
-                <div class="col">
-                  <div class="col__content" [innerHTML]="section.textBefore"></div>
-                </div>
-              </div>
-              <div class="col__content">
-                <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt"/>
-                <div *ngIf="section.textAfter" [innerHTML]="section.textAfter"></div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: image-image-->
-            <ng-container *ngIf="section.type === 'image-image'">
-              <div class="row row-cols-1" [class.row-cols-sm-2]="section.images.length === 2" [class.row-cols-sm-3]="section.images.length > 2">
-                <div class="col" *ngFor="let image of section.images">
-                  <img class="img-fluid" [src]="image.imgSrc" [alt]="image.imgAlt" />
-                  <p *ngIf="image.text">{{image.text}}</p>
-                </div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: text-column-->
-            <ng-container *ngIf="section.type === 'text-column'">
-                <div class="row row-cols-1 row-cols-sm-2">
-                <div class="col">
-                  <div class="col__content" [innerHTML]="section.text"></div>
-                </div>
-                <div class="col"></div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: text-text-->
-            <ng-container *ngIf="section.type === 'text-text'">
-              <div class="row row-cols-1 row-cols-sm-2">
-                <div class="col">
-                  <div class="col__content" [innerHTML]="section.text"></div>
-                </div>
-                <div class="col">
-                  <div class="col__content" [innerHTML]="section.text2"></div>
-                </div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: text-image-->
-            <ng-container *ngIf="section.type === 'text-image'">
-              <div class="row row-cols-1 row-cols-sm-2">
-                <div class="col">
-                  <div class="col__content" [innerHTML]="section.text"></div>
-                </div>
-                <div class="col">
-                  <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt"/>
-                  <p *ngIf="section.imgText">{{section.imgText}}</p>
-                </div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: text-table-->
-            <ng-container *ngIf="section.type === 'text-table'">
-              <div class="row row-cols-1 row-cols-sm-2">
-                <div class="col">
-                  <div class="col__content" [innerHTML]="section.text"></div>
-                </div>
-                <div class="col">
-                  <table mat-table [dataSource]="section.data">
-                    <ng-container *ngFor="let col of section.cols" [matColumnDef]="col.id">
-                      <th mat-header-cell *matHeaderCellDef> {{col.label}} </th>
-                      <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
-                    </ng-container>
-                    <tr mat-header-row *matHeaderRowDef="section.displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: section.displayedColumns;"></tr>
-                  </table>
-                </div>
-              </div>
-            </ng-container>
-
-            <!--TYPE: table-->
-            <ng-container *ngIf="section.type === 'table'">
-              <div class="col__content">
-                <h3 class="title-high" *ngIf="section.heading">{{section.heading}}</h3>
-                <table mat-table [dataSource]="section.data">
-                  <ng-container *ngFor="let col of section.cols" [matColumnDef]="col.id">
-                    <th mat-header-cell *matHeaderCellDef> {{col.label}} </th>
-                    <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="section.displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: section.displayedColumns;"></tr>
-                </table>
-              </div>
-            </ng-container>
-
-            <!--TYPE: annotated image-->
-
-            <ng-container *ngIf="section.type === 'image-annotated'">
-              <div class="row row-cols-1" [class.row-cols-sm-2]="section.images.length === 2" [class.row-cols-sm-3]="section.images.length > 2">
-                <div class="col" *ngFor="let image of section.images">
-                  <img class="img-fluid image--annotated" [src]="image.imgSrc" [alt]="image.imgAlt"/>
-                  <div class="image-annotation" [class]="image.type === 'warning' ? 'image-annotation--warning' : (image.type === 'error' ? 'image-annotation--error' : 'image-annotation--success')">
-                    <mat-icon [svgIcon]="image.type === 'warning' ? 'icon-warning' : (image.type === 'error' ? 'icon-close' : 'icon-check')"></mat-icon><span>{{ image.type === 'warning' ? 'Caution' : (image.type === 'error' ? 'Don’t' : 'Do') }}</span>
+      @for (tab of pageData.tabs; track tab) {
+        <mat-tab [label]="tab.label">
+          <ng-template matTabContent>
+            @for (section of tab.sections; track section) {
+              <section>
+                <!--TYPE: storybook-->
+                @if (section.type === 'storybook') {
+                  <div class="section__header section__header--link">
+                    <h3 class="title-high">Storybook</h3>
+                    <div>
+                      <a [href]="storybookFullUrl()" target="_blank">View all stories <mat-icon svgIcon="icon-open-in-new"></mat-icon></a>
+                    </div>
                   </div>
-                  <p>{{image.text}}</p>
-                </div>
-              </div>
-            </ng-container>
-
-          </section>
-
-        </ng-template>
-
-      </mat-tab>
-
-
+                  <div class="storybook-wrapper">
+                    <iframe [attr.height]="pageData.storybookHeight || null" [src]="storybookEmbedUrl()"></iframe>
+                  </div>
+                }
+                <!--TYPE: storybook-docs-->
+                @if (section.type === 'storybook-docs') {
+                  <div class="section__header section__header--link">
+                    <h3 class="title-high">Documentation</h3>
+                    <div>
+                      <a [href]="storybookDocsFullUrl()" target="_blank">View in Storybook <mat-icon svgIcon="icon-open-in-new"></mat-icon></a>
+                    </div>
+                  </div>
+                  <div class="storybook-wrapper storybook-wrapper--docs">
+                    <iframe [src]="storybookDocsEmbedUrl()"></iframe>
+                  </div>
+                }
+                <!--TYPE: list-->
+                @if (section.type === 'list') {
+                  <div class="row row-cols-1 row-cols-sm-2">
+                    <div class="col">
+                      <ul class="intro-list">
+                        @for (item of section.items; track item) {
+                          <li><mat-icon svgIcon="icon-label"></mat-icon><span [innerHTML]="item"></span></li>
+                        }
+                      </ul>
+                    </div>
+                  </div>
+                }
+                <!--TYPE: divider-->
+                @if (section.type === 'divider') {
+                  <mat-divider></mat-divider>
+                }
+                <!--TYPE: image-full-->
+                @if (section.type === 'image-full') {
+                  @if (section.textBefore) {
+                    <div class="row row-cols-1 row-cols-sm-2">
+                      <div class="col">
+                        <div class="col__content" [innerHTML]="section.textBefore"></div>
+                      </div>
+                    </div>
+                  }
+                  <div class="col__content">
+                    <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt"/>
+                    @if (section.textAfter) {
+                      <div [innerHTML]="section.textAfter"></div>
+                    }
+                  </div>
+                }
+                <!--TYPE: image-image-->
+                @if (section.type === 'image-image') {
+                  <div class="row row-cols-1" [class.row-cols-sm-2]="section.images.length === 2" [class.row-cols-sm-3]="section.images.length > 2">
+                    @for (image of section.images; track image) {
+                      <div class="col">
+                        <img class="img-fluid" [src]="image.imgSrc" [alt]="image.imgAlt" />
+                        @if (image.text) {
+                          <p>{{image.text}}</p>
+                        }
+                      </div>
+                    }
+                  </div>
+                }
+                <!--TYPE: text-column-->
+                @if (section.type === 'text-column') {
+                  <div class="row row-cols-1 row-cols-sm-2">
+                    <div class="col">
+                      <div class="col__content" [innerHTML]="section.text"></div>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                }
+                <!--TYPE: text-text-->
+                @if (section.type === 'text-text') {
+                  <div class="row row-cols-1 row-cols-sm-2">
+                    <div class="col">
+                      <div class="col__content" [innerHTML]="section.text"></div>
+                    </div>
+                    <div class="col">
+                      <div class="col__content" [innerHTML]="section.text2"></div>
+                    </div>
+                  </div>
+                }
+                <!--TYPE: text-image-->
+                @if (section.type === 'text-image') {
+                  <div class="row row-cols-1 row-cols-sm-2">
+                    <div class="col">
+                      <div class="col__content" [innerHTML]="section.text"></div>
+                    </div>
+                    <div class="col">
+                      <img class="img-fluid" [src]="section.imgSrc" [alt]="section.imgAlt"/>
+                      @if (section.imgText) {
+                        <p>{{section.imgText}}</p>
+                      }
+                    </div>
+                  </div>
+                }
+                <!--TYPE: text-table-->
+                @if (section.type === 'text-table') {
+                  <div class="row row-cols-1 row-cols-sm-2">
+                    <div class="col">
+                      <div class="col__content" [innerHTML]="section.text"></div>
+                    </div>
+                    <div class="col">
+                      <table mat-table [dataSource]="section.data">
+                        @for (col of section.cols; track col) {
+                          <ng-container [matColumnDef]="col.id">
+                            <th mat-header-cell *matHeaderCellDef> {{col.label}} </th>
+                            <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
+                          </ng-container>
+                        }
+                        <tr mat-header-row *matHeaderRowDef="section.displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: section.displayedColumns;"></tr>
+                      </table>
+                    </div>
+                  </div>
+                }
+                <!--TYPE: table-->
+                @if (section.type === 'table') {
+                  <div class="col__content">
+                    @if (section.heading) {
+                      <h3 class="title-high">{{section.heading}}</h3>
+                    }
+                    <table mat-table [dataSource]="section.data">
+                      @for (col of section.cols; track col) {
+                        <ng-container [matColumnDef]="col.id">
+                          <th mat-header-cell *matHeaderCellDef> {{col.label}} </th>
+                          <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
+                        </ng-container>
+                      }
+                      <tr mat-header-row *matHeaderRowDef="section.displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: section.displayedColumns;"></tr>
+                    </table>
+                  </div>
+                }
+                <!--TYPE: annotated image-->
+                @if (section.type === 'image-annotated') {
+                  <div class="row row-cols-1" [class.row-cols-sm-2]="section.images.length === 2" [class.row-cols-sm-3]="section.images.length > 2">
+                    @for (image of section.images; track image) {
+                      <div class="col">
+                        <img class="img-fluid image--annotated" [src]="image.imgSrc" [alt]="image.imgAlt"/>
+                        <div class="image-annotation" [class]="image.type === 'warning' ? 'image-annotation--warning' : (image.type === 'error' ? 'image-annotation--error' : 'image-annotation--success')">
+                          <mat-icon [svgIcon]="image.type === 'warning' ? 'icon-warning' : (image.type === 'error' ? 'icon-close' : 'icon-check')"></mat-icon><span>{{ image.type === 'warning' ? 'Caution' : (image.type === 'error' ? 'Don’t' : 'Do') }}</span>
+                        </div>
+                        <p>{{image.text}}</p>
+                      </div>
+                    }
+                  </div>
+                }
+              </section>
+            }
+          </ng-template>
+        </mat-tab>
+      }
     </mat-tab-group>
-
   </main>
-
   <app-footer />
-
-</ng-container>
+}
 
