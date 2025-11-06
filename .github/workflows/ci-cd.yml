@@ -139,56 +139,11 @@ jobs:
       name: github-pages
       url: ${{ github.pages_url }}
     steps:
-      - name: Download branch artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: branch
-
-      - name: Download develop artifact (if exists)
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: public
-        continue-on-error: true
-
-      - name: Extract artifact
-        run: |
-          if [ -f "branch/artifact.tar" ]; then
-            echo "Extracting artifact.tar..."
-            mkdir -p branch/$BRANCH_NAME
-            tar -xf branch/artifact.tar -C branch/$BRANCH_NAME
-          else
-            echo "No artifact.tar found to extract."
-          fi
-
-      - name: Create public directory if it doesn't exist
-        run: mkdir -p public
-
-      - name: List directories
-        run: |
-          echo "branch"
-          ls -la "branch" || echo "Directory does not exist yet"
-          echo "public"
-          ls -la "public/" || echo "Directory does not exist yet"
-          echo "branch/$BRANCH_NAME"
-          ls -la "branch/$BRANCH_NAME" || echo "Directory does not exist yet"
-          echo "public/$BRANCH_NAME"
-          ls -la "public/$BRANCH_NAME" || echo "Directory does not exist yet"
-
-      - name: Move branch files to public
-        run: |
-          if [ "$BRANCH_NAME" != "develop" ]; then
-            rm -rf "public/$BRANCH_NAME" || echo "Directory does not exist yet"
-            mkdir -p "public/$BRANCH_NAME";
-            mv -v branch/$BRANCH_NAME/browser/* public/${{ github.head_ref }}
-          fi
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
-          # commit_message: Deploy branch pages
+    - name: Deploy
+      uses: jeppesen-foreflight/dp-actions-gh-pages@v1.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: $BRANCH_NAME
 
   pages-main:
     name: Deploy Main Pages
