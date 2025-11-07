@@ -23,25 +23,11 @@
           "date": "March 27, 2025"
         },
         {
-          "platform": "Angular 19",
-          "version": "3.0",
-          "notes": "Initial release",
-          "status": "<span class=\"status status--success\">Available</span>",
-          "date": "December 4, 2024"
-        },
-        {
           "platform": "Angular 18",
           "version": "2.5.8",
           "notes": "Latest release",
           "status": "<span class=\"status status--success\">Available</span>",
           "date": "March 25, 2025"
-        },
-        {
-          "platform": "Angular 18",
-          "version": "2.0",
-          "notes": "Initial release",
-          "status": "<span class=\"status status--success\">Available</span>",
-          "date": "November 22, 2024"
         },
         {
           "platform": "Angular 17",
@@ -51,25 +37,11 @@
           "date": "December 9, 2024"
         },
         {
-          "platform": "Angular 17",
-          "version": "1.0",
-          "notes": "Initial release",
-          "status": "<span class=\"status status--warning\">Not supported</span>",
-          "date": "August 2, 2024"
-        },
-        {
           "platform": "Figma Library",
           "version": "2.0",
           "notes": "Latest release",
           "status": "<span class=\"status status--success\">Available</span>",
           "date": "February 21, 2025"
-        },
-        {
-          "platform": "Figma library",
-          "version": "1.0",
-          "notes": "Initial release",
-          "status": "<span class=\"status status--success\">Available</span>",
-          "date": "August 2, 2024"
         }
       ],
       "cols": [

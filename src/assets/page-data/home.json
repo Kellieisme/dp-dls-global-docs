@@ -1,9 +1,9 @@
 {
-  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Home",
+  "metaTitle": "Atmosphere Global Documentation Hub",
   "header": {
     "title": "Atmosphere",
-    "subtitle": "Boeing’s Design Language System",
-    "description": "Build user-friendly digital tools with a unified system of components and styles across all Boeing products and services.",
+    "subtitle": "The Jeppesen Foreflight Design Language System",
+    "description": "Build user-friendly digital tools with a unified system of components and styles across products and services",
     "ctaButton": {
       "text": "Get started",
       "link": "/get-started"
@@ -11,6 +11,7 @@
   },
   "changelog": {
     "data": [
+      {"platform": "Angular 20", "version": "4.0.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>", "date": "October 31, 2025"},
       {"platform": "Angular 19", "version": "3.3.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>", "date": "September 27, 2025"},
       {"platform": "Angular 18", "version": "2.5.8", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>","date": "March 25, 2025"},
       {"platform": "Figma Library", "version": "2.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>","date": "February 21, 2025"},
