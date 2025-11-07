@@ -1,27 +1,42 @@
-import { Component, signal, ElementRef, Inject, OnInit, AfterViewInit, PLATFORM_ID, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Inject, AfterViewInit, PLATFORM_ID, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { IconRegistryModule } from '@jeppesen-foreflight/dp-dls-global-angular/icon-registry';
 import { ThemeToggleModule } from '@jeppesen-foreflight/dp-dls-global-angular/theme-toggle';
-import { ThemeToggleService } from '@jeppesen-foreflight/dp-dls-global-angular/theme-toggle';
 import { NavigationRailComponent, AtmosphereNavRailMenuItem } from '@jeppesen-foreflight/dp-dls-global-angular/navigation-rail';
 import { NavigationDrawerComponent, AtmosphereNavDrawerMenuSection } from '@jeppesen-foreflight/dp-dls-global-angular/navigation-drawer';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatListItemTitle } from '@angular/material/list';
+import { MatNavList } from '@angular/material/list';
+import { MatListItem } from '@angular/material/list';
 import { filter } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, NgClass, isPlatformBrowser } from '@angular/common';
 
 const homeRouteMatch = '/home';
 const drawerPath = '/das';
 
 @Component({
-    selector: 'app-root',
-    imports: [CommonModule, RouterOutlet, RouterLink, IconRegistryModule, ThemeToggleModule, NavigationRailComponent, NavigationDrawerComponent, MatSidenavModule, MatListModule],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    encapsulation: ViewEncapsulation.None
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    CommonModule,
+    NgClass,
+    RouterOutlet,
+    RouterLink,
+    MatSidenavModule,
+    MatListModule,
+    MatListItem,
+    MatListItemTitle,
+    MatNavList,
+    NavigationRailComponent,
+    NavigationDrawerComponent,
+    IconRegistryModule,
+    ThemeToggleModule
+  ],
 })
-
 export class AppComponent implements AfterViewInit {
   // Change this naming to correspond to the DAS nav or the DocHub Nav
   showDrawer: boolean = false;
@@ -370,6 +385,5 @@ export class AppComponent implements AfterViewInit {
       this.selectedLevel1Item = undefined;
       this.isSidenavOpen = false;
     }
-  };
-
+  }
 }
