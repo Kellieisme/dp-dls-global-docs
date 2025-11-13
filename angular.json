@@ -99,6 +99,9 @@
             },
             "development": {
               "buildTarget": "dls-global-docs:build:development"
+            },
+            "das": {
+              "buildTarget": "dls-global-docs:build:das"
             }
           },
           "defaultConfiguration": "development"
