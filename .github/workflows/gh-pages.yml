@@ -32,7 +32,8 @@ jobs:
 
       # Build DAS variant, sending its output to a separate folder
       - name: Build DAS docs
-        run: ng build --configuration=das --output-path=das-dist
+  #     run: npm run build --configuration=das --output-path=das-dist
+        run: npm run build:original:gh && npm run build:das:gh && gh-pages -d dist/dls-global-docs/browser -b gh-pages-original -e original && gh-pages -d dist-das/dls-global-docs/browser -b gh-pages-original -e das
 
       # Prepare deployment folder
       - name: Prepare publish directory
