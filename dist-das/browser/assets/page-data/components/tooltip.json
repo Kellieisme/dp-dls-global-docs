@@ -1,0 +1,176 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Tooltip",
+  "storybookId": "components-tooltip",
+  "storybookDefaultStory": "simple-tooltip",
+  "storybookHeight": "400",
+  "header": {
+    "title": "Tooltip",
+    "description": "Tooltips display brief labels or messages",
+    "backgroundImg": "components/tooltip/tooltip-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Use tooltips to add additional context to a button or other UI element",
+            "Use tooltips to describe elements or actions of icon buttons",
+            "Use tooltips to provide more details, like describing the value of a feature",
+            "Tooltips can include an optional title and link."
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=5002-17139\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-01@3x.png",
+          "imgAlt": "Configurations",
+          "textBefore": "<h3 class=\"title-high\">Configurations</h3>",
+          "textAfter": "<ol><li>Without title</li><li>Title and description</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-02@3x.png",
+          "imgAlt": "Measurements"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>A tooltip provides additional context for a UI element.</p><ul><li>Tooltips briefly describe a UI element. They're best used for labeling UI elements with no text, like icon-only buttons and fields.</li><li>Tooltips  can also provide additional context about a UI element. They can optionally contain a subhead and hyperlinks.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-03@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>List item</li><li>Title</li><li>Description</li<li>Container</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Subhead (optional)</h4><p>Keep subheads brief, ideally to one line. They should summarize or describe the message of the tooltip. Subheads are important to include when the tooltip appears automatically, like when the page loads.</p>",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-04@3x.png",
+          "imgAlt": "Subhead (optional)"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/tooltip/tooltip-05@3x.png",
+              "imgAlt": "Hide the title if it is not necessary",
+              "text": "Hide the title if it is not necessary"
+            },
+            {
+              "imgSrc": "./assets/images/components/tooltip/tooltip-06@3x.png",
+              "imgAlt": "Briefly describe a UI element",
+              "text": "Briefly describe a UI element"
+            }
+          ]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Position</h4><p>By default, tooltips are positioned directly above the parent element.</p><p>There should be collision logic to avoid cases like close to the edge e.g If the tooltip does not fit within the viewport, it will switch to the opposite position.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-07@3x.png",
+          "imgAlt": "Position"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Distance</h4><ul><li>If there's a visual boundary, like a button, the distance is 4dp</li><li>If there's no visual boundary, like with text baselines, the distance is 8dp</li></ul>",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-08@3x.png",
+          "imgAlt": "Distance"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Transient by default</h4><ul><li>Tooltips disappear 1.5 seconds after navigating away from the target region.</li><li>Triggering a new tooltip immediately closes any other open tooltip.</li></ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-09@3x.png",
+          "imgAlt": "Position"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">On hover</h4><p>When the tooltip is displayed on hover, it will not close when leaving the target and will continue to show the tooltip when the cursor moves between the tooltip and the target, that is the target region. This will allow the user to copy the tooltip text without any issues.</p>",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-10@3x.png",
+          "imgAlt": "On hover"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Alignment</h4><p>Tooltips adapt to the width of the text inside them up to a maximum of 60 characters. Once that width is reached, the text wraps to another line.</p><p>When the content width is less than the minimum width of the tooltip, the content is centered.</p>",
+          "imgSrc": "./assets/images/components/tooltip/tooltip-10@3x-1.png",
+          "imgAlt": "Alignment"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Accessibility guidelines coming soon</h3><p>In progress: complete guidance for accessible interaction, keyboard navigation, labeling, and more.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

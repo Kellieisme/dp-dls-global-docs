@@ -1,0 +1,220 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Top App Bar",
+  "storybookId": "components-top-app-bar",
+  "storybookDefaultStory": "default",
+  "storybookHeight": "300",
+  "header": {
+    "title": "Top app bar",
+    "description": "Top app bars display navigation, actions, and text at the top of a screen",
+    "backgroundImg": "components/top-app-bar/top-app-bar-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "text-text",
+          "text": "<p>The top app bar contains content, navigation options, or actions related to the current screen. It provides users with a reliable way to  move through the app, and is: </p>"
+         },
+         {
+          "type": "list",
+          "items": [
+            "Responsive to different breakpoint sizes and margins",
+            "The same width as the device window or the topmost element of the browser window",
+            "Persistent — it's visible on every screen in the app"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=4260-36495\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-01@3x.png",
+          "imgAlt": "Viewport",
+          "textBefore": "<h3 class=\"title-high\">Viewport</h3><p>The top app bar has different configurations depending on the viewpoirt size:</p>",
+          "textAfter": "<p>Each configuration contains an optional logo, top bar text, and avatar. For actions, icon buttons have different options depending on the viewport size:</p> <ol><li> Large to extra-large: show icon buttons and optionally add dividers</li><li>Medium to expanded: show icon buttons without dividers</li> <li>Compact: condense icon buttons to a menu</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The top app bar comes in two density modes: relaxed and condensed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-03@3x.png",
+          "imgAlt": "Relaxed mode",
+          "textBefore": "<h4 class=\"title-low\">Relaxed mode</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-04@3x.png",
+          "imgAlt": "Condensed mode",
+          "textBefore": "<h4 class=\"title-low\">Condensed mode</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-text",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Use a top app bar to provide content and actions related to the global app, such as the app name and logo, profile access, language or mode selection, notifications, settings, help, external links and navigation.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-05@3x.png",
+          "imgAlt": "Standard",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Container: holds the top app bar contents</li><li>Menu icon: opens the navigation drawer</li><li>Logo: shows the Boeing or Jeppesen logo</li><li>App name: shows the name of the application</li><li>Icon buttons: let users take action from the top app bar</li><li>User profile: shows the user's avatar and opens the user profile menu</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3><h4 class=\"title-low\">Scrolling</h4><p>Top app bars appear in the same space as the app content. They have the same width as the device window, and are the topmost element of the browser window.</p><p>When users scroll, the top app bar stays fixed at the top of the screen by default. To save space on mobile devices, you can make an exception and hide the top app bar while users are scrolling.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-06@3x.png",
+          "imgAlt": "Badges",
+          "textBefore": "<h4 class=\"title-low\">Badges</h4><p>For information about using badges, refer to the documentation for each component included in the top app bar.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Actions</h4><p>To take action in the top app bar, users select a common button or an icon button. When you add actions to the top app bar, align the buttons to the right of the bar, next to the user profile. In larger viewports, you can also add dividers to group actions.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-12@3x.png",
+          "imgAlt": "App name",
+          "textBefore": "<h4 class=\"title-low\">App name</h4><p>In medium- to large-sized viewports, the top app bar contains the application name. The maximum length of the app name is 30 characters, but it's best to keep it under 20 characters. You can hide the app name in expanded and medium viewports as needed, and it's hidden in compact viewports by default.</p>",
+          "textAfter": "<ol><li>Large or extra-large viewport with the app name</li><li>Medium or expanded viewport with the app name</li><li>Medium or expanded viewport without the app name</li><li>Compact viewport without the app name</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-07@3x.png",
+          "imgAlt": "Profile",
+          "textBefore": "<h4 class=\"title-low\">User profile</h4><p>Some applications include a user profile that users can access when they select their avator. If you include the user profile in the top app bar, place the avatar to the very right of the bar.</p><p>On mobile devices with limited space, you can place the user profile and its available menu options inside the navigation drawer instead of the top app bar.</p><p> To learn more about the user profile pattern, see the User profile section.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-09@3x.png",
+          "imgAlt": "Background",
+          "textBefore": "<h3 class=\"title-high\">Customization</h3><h4 class=\"title-low\">Background</h4><p>The top app bar has a translucent background that adapts to the applicable UI background color.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-10@3x.png",
+          "imgAlt": "Buttons",
+          "textBefore": "<h4 class=\"title-low\">Buttons</h4><p>You can rearrange and group buttons in the top app bar as needed. You can also change their styles, however, it's recommended to use the default configurations.</p>",
+          "textAfter": "<h4 class=\"title-low\">Search bar</h4><p>The top app bar currently doesn't include a search bar. The search bar will become available in a future Atmosphere release.</p><p>You can learn more about this behavior in the <a href=\"/design-system/dls-global-docs/patterns/navigation\">Navigation</a> and Search pattern sections.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use Cases</h3><p>Users should be able to:</p><ul><li>Understand their current location within the app</li><li>Select an action or destination from an overflow menu dropdown with assistive tech</li><li>Maintain access to top app bar navigation when the content is in a scrolled state</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users must be able to interact with the top app bar when they press the following keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus on the next available navigation item"},
+            {"keys": "Space/Enter", "actions": "Activate the focused navigation item"},
+            {"keys": "Arrow", "actions": "Navigate through menu items"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Interaction and style</h3><h4 class=\"title-low\">Cursor</h4><p>To activate the function of an interactive element in the top app bar, users can click the element. For example, icon buttons, action links, clickable images, menus, and so on. The cursor changes depending on the behavior of the element. The top app bar itself isn't interactive, and doesn't result in an action when clicked.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Focus</h3><p>When a navigation item is tabbed, the active indicator appears on the first interactive element, providing feedback to the user that it is selected. The user is then able to tab to additional interactive elements until all available items are complete within the top app bar.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/top-app-bar/top-app-bar-11@3x.png",
+          "imgAlt": "Nesting actions",
+          "textBefore": "<h3 class=\"title-high\">Responsiveness and density</h3><h4 class=\"title-low\">Nesting actions</h4><p>The top app bar adapts to the size of the screen. For smaller screens, you can nest multiple actions into an overflow menu. The menu opens when users select a three-dots icon button.</p>"
+
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Responsiveness</h4><p>Depending on the breakpoint, the height and margins of the top app bar changes:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"breakpoint": "Large, extra-large", "height": "64", "margins": "32"},
+            {"breakpoint": "Medium, expanded", "height": "56", "margins": "32"},
+            {"breakpoint": "Compact", "height": "56", "margins": "16"}
+          ],
+          "cols": [
+            {"label": "Breakpoint", "id": "breakpoint"},
+            {"label": "Height (px)", "id": "height"},
+            {"label": "Margins (px)", "id": "margins"}
+          ],
+          "displayedColumns": ["breakpoint", "height", "margins"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Logo & mark</h4><p>In smaller screen sizes, the logo will change to its mark form, if available, to make space for the rest of the elements.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Densities</h4><p>To make sure that touch targets on small devices are large enough, you must always use relaxed mode for mobile screens. </p><p>In condensed mode, the top app bar and its elements are reduced in height. For more information about the changes in height, refer to the Measurements section.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"layer": "Large to extra-large", "relaxed": "64", "condensed": "56"},
+            {"layer": "Compact to expanded", "relaxed": "56", "condensed": "48"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed (px)", "id": "relaxed"},
+            {"label": "Condensed (px)", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

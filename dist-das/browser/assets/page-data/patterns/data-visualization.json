@@ -1,0 +1,169 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Patterns - Data visualization",
+  "header": {
+    "title": "Data visualization",
+    "description": "Present complex data in charts and graphs",
+    "backgroundImg": "patterns/data-vis/data-vis-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Guidelines</h3><p>To help users quickly analyze complex data, you can visualize it in charts, maps, and diagrams.</p><p>Atmosphere doesn't have a component library for data visualizations. If your app includes data visualizations, <a href=\"https://www.chartjs.org/docs/latest/\" target=\"_blank\">Chart.js</a> is the preferred chart provider.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-medium\">Best practices</h3><ul><li>Always use Atmosphere's graph color palette, but never rely solely on color to communicate data</li><li>To avoid cluttering the interface and make the data easy to understand, limit the number of data points per graph</li></ul>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Pie or doughnut charts</h3><p>A pie or doughnut chart shows numerical proportions. The size of each slice corresponds to the quantity it represents, which makes it easy to compare each part to the whole.</p><p>Use a pie or doughnut chart to display simple data sets with a limited number of categories.</p><p><span class=\"body-low-highlight\">Limit pie charts to a maximum of six categories.</span></p>",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-01@3x.png",
+          "imgAlt": "Example image of charts"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-03@3x.png",
+              "imgAlt": "Label - do",
+              "type": "success",
+              "text": "To optimize accessibility, add labels, a legend, and values"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-02@3x.png",
+              "imgAlt": "Label - don't",
+              "type": "error",
+              "text": "Never add too many categories, as they can become difficult to interpret"
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Bar charts</h3><p>A bar chart represents data in horizontal or vertical bars.</h3><p> The height or length of each bar is proportional to the value it represents.</p><p>Use bar charts in the following cases:</p><ul><li>To compare different categories</li><li>To track changes over time when the categories are discrete</li></ul><p><span class=\"body-low-highlight\">Limit bar charts to a maximum of twelve categories.</span></p>",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-04@3x.png",
+          "imgAlt": "Example image of bar charts"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-05@3x.png",
+              "imgAlt": "Label - do",
+              "type": "success",
+              "text": "To optimize accessibility, add labels, a legend, and values"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-06@3x.png",
+              "imgAlt": "Label - don't",
+              "type": "error",
+              "text": "Don't use different colors for data of the same category"
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Line charts</h3><p>A line chart displays information as a series of data points connected by straight line segments. Each point on the line represents a value at a specific point in time or for a specific category.</p><p>Use line charts in the following cases:</p><ul><li>To compare trends, patterns, and fluctuations in data</li><li>To compare different data sets on the same graph</li></ul><p><span class=\"body-low-highlight\">Limit line charts to a maximum of four datasets.</span></p>",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-07@3x.png",
+          "imgAlt": "Example image of line charts"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-08@3x.png",
+              "imgAlt": "Label - do",
+              "type": "success",
+              "text": "Compare values with similar units"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-09@3x.png",
+              "imgAlt": "Label - don't",
+              "type": "error",
+              "text": "Never include too many datasets, as they can become difficult to interpret"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Color palette",
+      "sections": [
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Chart anatomy</h3>",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-10@3x.png",
+          "imgAlt": "Example of chart parts",
+          "textAfter": "<p><ol><li>Chart title</li><li>Background</li><li>Values</li><li>Secondary chart color</li><li>Primary chart color</li><li>Labels</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-medium\">Background and secondary colors</h3><p>To optimize accessibility, the color palette for charts is based on the <span class=\"body-low-highlight\">foundation.ui.background.high background token</span>.</p><h4 class=\"title-low\">Secondary colors</h4><p>If you need to use secondary background colors for specific chart types, such as progress charts, then use the following colors: </p><ul><li><span class=\"body-low-highlight\">Light mode</span> - Space 90 and Space 99</li><li><span class=\"body-low-highlight\">Dark mode</span> - Space 35 and Space 15</li></ul><h4 class=\"title-low\">Glass material backgrounds</h4><p>You can use glass material for chart backgrounds. Follow these best practices:<ul><li>Always check that the glass thickness ensures accessibility</li><li>Evaluate whether a glass background is appropriate—for heavy data sets, glass material might clutter the view or take longer to load</li></p>",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-11@3x.png",
+          "imgAlt": "Example image of  colors"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Data types</h3><h4 class=\"title-low\">Sequential data</h4><p>When the order of data points is significant, the data is sequential. Sequential data steps are represented in a single hue, and the lightness of the color indicates a range.</p><p><span class=\"body-low-highlight\">The Atmosphere color palette for charts doesn't support sequential data yet</span></p><h4 class=\"title-low\">Divergent data</h4><p>When groups or categories deviate from a common point or baseline, the data is divergent. To represent divergent data, color is used to indicate the distance from the center.</p><p><span class=\"body-low-highlight\">The Atmosphere color palette for charts doesn't support divergent data yet</span></p><h4 class=\"title-low\">Categorical data</h4><p>Categorical data consists of values that represent distinct categories or groups. Categories are typically qualitative without a natural order or ranking. Color is used to visually distinguish each category.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Categorical color pallette</h3><p>The categorical color palette uses a subset of the Atmosphere color system that was chosen after extensive research. To create a visual distinction between categories, the selected colors maximize contrast between adjacent colors.</p><p><span class=\"body-low-highlight\">Always follow the color sequences described in this section</span></p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-12@3x.png",
+          "textAfter": "<p>Categorical palette sequence for light and dark modes</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Color groups</h4><p>If the number of categories is fixed, you can use the following color sequences:</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-13@3x.png",
+              "textAfter": "Categorical palette - light mode",
+              "imgAlt": "Show more button"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-14@3x.png",
+              "textAfter": "Categorical palette - dark mode",
+              "imgAlt": "Show less button"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Accessibility guidelines charts</h3><p>The Atmosphere color palette for categorical data was carefully designed to be colorblind-friendly. To pass accessibility tests, WCAG requires a 3:1 contrast ratio for the background and the graph colors and the adjacent graph colors.</p><p>Most colors in the palette meet the 3:1 contrast ratio with the background.</p><p>To optimize the accessibility of visualized data, WCAG recommends the following:</p><ul><li>Show labels, values, and a legend<li>Optionally use dividers for extra contrast</li><li>Optionally add a background pattern</li></ul>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-15@3x.png",
+              "imgAlt": " - do",
+              "type": "success",
+              "text": "If possible, add the following elements: legend, labels, dividers and values"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/data-vis/data-vis-16@3x.png",
+              "imgAlt": " - don't",
+              "type": "error",
+              "text": "Never apply your own colors to categorical data"
+            }
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/data-vis/data-vis-17@3x.png",
+          "textBefore": "<h4 class=\"title-low\">Text accessibility</h4><p>Use solid white (#FFFFFF) or solid black (#000000) tokens for text on colors in graphs. To make sure that your text is readable, use the following color scheme:</p>",
+          "textAfter": "<p>Contrast scores for black or white text on a color. Each combination has a WCAG-recommended contrast ratio of at least 4.5:1.</p>"
+        }
+      ]
+    }
+  ]
+}

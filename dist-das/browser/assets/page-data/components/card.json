@@ -1,0 +1,275 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Cards",
+  "storybookId": "components-card",
+  "storybookDefaultStory": "story-one",
+  "storybookHeight": "600",
+  "header": {
+    "title": "Card",
+    "description": "Cards are versatile containers, holding anything from images to headlines, supporting text, buttons, lists, & other components",
+    "backgroundImg": "components/card/card-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "There are two styles of cards: glass and flat.",
+            "Both styles offer the same level of readability, but the glass style provides dynamic background effects due to its translucent surface. This style might be preferred for certain use cases where the card needs to be moved around the layout.",
+            "Card contents can include anything from images to headlines, supporting text, buttons, and lists.",
+            "Cards have flexible layouts and dimensions based on their contents."
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=8525-22187\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3><p>Cards come in two types. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Non-interactive</li><li>Interactive</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-02@3x.png",
+          "imgAlt": "Styles",
+          "textBefore": "<h3 class=\"title-high\">Styles</h3><p>Cards are available in two styles, each providing the same level of legibility and functionality. Both styles can be used with either medium or high emphasis to ensure necessary contrast against the background where they are used.</p>",
+          "textAfter": "<ol><li>Flat</li><li>Glass</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">States</h3><p>The interactive card utilizes states to effectively communicate the status of the component</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-03@3x.png",
+          "imgAlt": "Flat card states",
+          "textBefore": "<h4 class=\"title-low\">Flat card states</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-04@3x.png",
+          "imgAlt": "Glass card states",
+          "textBefore": "<h4 class=\"title-low\">Glass card states</h4>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Focused</li><li>Pressed</li><li>Dragged</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The card component offers two density modes: relaxed and condensed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-05@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-06@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-08@3x.png",
+          "imgAlt": "Usage",
+          "textBefore": "<h3 class=\"title-high\">Usage</h3><p>Cards are used to show information and actions related to a specific topic in a simple and focused manner.</p>",
+          "textAfter": "<p>Below are some of its usage characteristics:</p><ul><li>The card component is essentially a container that serves as the foundation for designing any custom card component.</li><li>The card component is available in two types: non-interactive and interactive.</li><li>Non-interactive cards are used when one or more interactive items, like buttons, are used inside the card.</li><li>Interactive cards are useful when no other interactive items are included inside the card. In this case the whole card container becomes actionable.</li><li>Cards can be displayed together in a grid, vertical list, or carousel.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-07@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h4 class=\"title-low\">Anatomy</h4>",
+          "textAfter": "<ol><li>Card container</li><li>Media</li><li>Headline</li><li>Subheading</li><li>Supporting text</li><li>Button</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Card container</h4><p>The card container holds all card elements.</p><p>Its size is determined by the space occupied by those elements.</p><p>The card container is the only required element of a card; all other elements are optional.</p>",
+          "imgSrc": "./assets/images/components/card/card-09@3x.png",
+          "imgAlt": "Card container"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Media block</h4><p>The media block is a subsection within the card container, which uses \"xs\" padding on its outer edges. It can accommodate various types of media content, such as:</p><ul><li><b>Thumbnail:</b> The media block can include thumbnails for an avatar or logo.</li><li><b>Image:</b> The media block can include photos, illustrations, and other graphics. Refer to the media aspect ratio section for recommended image sizes.</li><li><b>Video:</b> The media block can include video content.</li></ul>",
+          "imgSrc": "./assets/images/components/card/card-10@3x.png",
+          "imgAlt": "Media block"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Content block</h4><p>The content block is another subsection within the card container, capable of containing text, dividers, and action buttons to arrange the content within the card. Below are various text types it supports:</p><ul><li><b>Headline:</b> Used to communicate the subject of the card.</li><li><b>Subheading:</b> Smaller text elements providing additional context to the headline.</li><li><b>Supporting text:</b> Optional body text offering a brief description of the card's content.</li></ul>",
+          "imgSrc": "./assets/images/components/card/card-11@3x.png",
+          "imgAlt": "Content block"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Divider</h4><p>Dividers can be used to separate regions in cards or to indicate areas of a card that can expand.</li></ul>",
+          "imgSrc": "./assets/images/components/card/card-12@3x.png",
+          "imgAlt": "Divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Actions</h4><p><b>Interactive card:</b> The entire card container can serve as a single large touch target, triggering a detail screen.</p><p><b>Buttons:</b> Different styles of common buttons, either single or multiple, can be utilized to offer various levels of actions.</p><p><b>Icon buttons:</b> These buttons, featuring icons, are suitable for tertiary actions such as save, message, or call.</p><p><b>Linked text:</b> Supporting text within a card can include hyperlinks for additional information or actions.</p><p><b>Overflow menu:</b> Overflow menus contain related actions. They are typically placed in the upper-right corner of a card.</p>",
+          "imgSrc": "./assets/images/components/card/card-13@3x.png",
+          "imgAlt": "Actions"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/card/card-14@3x.png",
+          "imgAlt": "Responsive layout",
+          "textBefore": "<h4 class=\"title-low\">Responsive layout</h4><p>Cards scale to adapt to different viewports and can change their position and alignment based on the breakpoint grid.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Breakpoints</h3><p>Any custom card component should always be designed with consideration for all five breakpoints.</p>",
+          "imgSrc": "./assets/images/components/card/card-15@3x.png",
+          "imgAlt": "Breakpoints"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Ergonomics</h3><p>The layout of the component should be adjusted to meet the ergonomic needs of both large screen and small screen devices.</p><p>The aspect ratio of the media block can be swapped with another aspect ratio to fit the ergonomic needs of the design.</p>",
+          "imgSrc": "./assets/images/components/card/card-16@3x.png",
+          "imgAlt": "Ergonomics"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Visual presentation</h3><p>Communication inside the card component can be significantly enhanced by using appropriate spacing between different elements.</p><p>Use spacer components to create necessary space between the elements.</p><p>Use appropriate text styles to indicate a clear hierarchy within the content.</p>",
+          "imgSrc": "./assets/images/components/card/card-17@3x.png",
+          "imgAlt": "Visual presentation"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Small screens</h3><p>Card components can be replaced with list components, which can display the content in a more compact form.</p>",
+          "imgSrc": "./assets/images/components/card/card-18@3x.png",
+          "imgAlt": "Small screens"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Scrolling</h3><p>If the card content exceeds the maximum height of the card, it will be truncated and will not scroll. However, users can expand the card's height by clicking on the 'show more' action. In this case, the card will expand to its full height to display the complete content, with an option to collapse it back to its default truncated state.</p>",
+          "imgSrc": "./assets/images/components/card/card-19@3x.png",
+          "imgAlt": "Scrolling"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Dragging</h3><p>Cards can be picked up and dragged to reorder them within a collection.</p>",
+          "imgSrc": "./assets/images/components/card/card-20@3x.png",
+          "imgAlt": "Dragging"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Navigate to a card and the elements within a card using assistive tech.</li><li>Get appropriate feedback based on input type.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>When hovered over, an interactive card displays a hover state, providing a visual cue to the user that the card is actionable.</p><p>Upon clicking an interactive card, the background color changes to provide appropriate feedback to the user.</p><p>Non-interactive cards do not have hover or press states.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and select an active item using the specified keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Move to the next actionable element<br><br><b>Non-interactive cards with actionable elements:</b> Move to next actionable element Interactive cards: Move to next card container"},
+            {"keys": "Space/Enter", "actions": "Confirm action"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Focus</h3><p>For interactive cards, the entire card container needs to have a tab stop so that they can be focused.</p>",
+          "imgSrc": "./assets/images/components/card/card-21@3x.png",
+          "imgAlt": "Focus"
+        },
+        {
+          "type": "text-image",
+          "text": "<p>For non-interactive cards, the card itself doesn't have a tab stop, but every actionable element within the card has a tab stop so that they can all be visited before focus navigates to the next card.</p>",
+          "imgSrc": "./assets/images/components/card/card-22@3x.png",
+          "imgAlt": "Focus"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>The informative contents of a card are vocalized when navigating to them using a screen reader.</p><p>All actionable elements must receive focus from both screen reader and keyboard.</p><p>Interactive cards can have either a button or a link role, depending on their usage.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

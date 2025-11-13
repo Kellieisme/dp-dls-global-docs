@@ -1,0 +1,217 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Switch",
+  "storybookId": "components-switch-slide-toggle",
+  "storybookDefaultStory": "default",
+  "header": {
+    "title": "Switch",
+    "description": "Switches toggle the selection of an item on or off",
+    "backgroundImg": "components/switch/switch-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Use switches when items in a list can be controlled independently",
+            "If possible, use switches to let users adjust settings",
+            "Make sure that the switch setting (on or off) is visible at a glance"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=9856-66567\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-02@3x.png",
+          "imgAlt": "States",
+          "textBefore": "<h3 class=\"title-high\">States</h3>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Pressed</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-03@3x.png",
+          "imgAlt": "Configurations",
+          "textBefore": "<h3 class=\"title-high\">Configurations</h3>",
+          "textAfter": "<ol><li>Without icons</li><li>Icon on selected switch</li><li>Icon on selected and unselected switch</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-04@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-05@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Use switches to let users adjust settings and other standalone options. Switches control binary options rather than opposing ones. Binary options represent a single selection that is either on or off (or true or false). Opposing options let users select only one at a time, such as a list or map view.</p><p>Like a light switch, switches should take effect immediately, without users needing to take another action (such as saving their settings).</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/switch/switch-08@3x.png",
+              "imgAlt": "Switch - off"
+            },
+            {
+              "imgSrc": "./assets/images/components/switch/switch-09@3x.png",
+              "imgAlt": "Switch - off"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<p>Use switches to:<br>Turn a single item on or off<br>Immediately activate or deactivate something</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-10@3x.png",
+          "imgAlt": "Alternate selection controls",
+          "textAfter": "<h4 class=\"title-low\">Alternate selection controls</h4><p>Checkboxes, radio buttons, and switches are the three main types of selection controls. They help users to make choices, such as selecting options or turning settings on and off.</p><ul><li>Use checkboxes to select multiple related options in a list</li><li>Use radio buttons to select a single option in a list</li><li>Use switches to select standalone options in a list, like settings</li></ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-06@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Track</li><li>Handle</li><li>Icon (optional)</li><li>State layer</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Icon (optional)</h4><p>The switch handle can contain an icon, which helps to visually emphasize the selected state.</p><p>Use an icon that's clear and unambiguous to help users understand whether the switch is on or off.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-07@3x.png",
+          "imgAlt": "Anatomy",
+          "textAfter": "<h4 class=\"title-low\">Label text</h4><p>Always pair switches with an inline label that describes what the switch controls. Align labels to the left or right of the switch.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement and behavior</h4><p>Switches are often arranged in stacked layouts.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/switch/switch-11@3x.png",
+              "imgAlt": "Stacked layout",
+              "text": "When users select a switch, the handle slides to the other side of the track, the handle size changes depending on the setting, and the corresponding switch action takes immediate effect."
+            },
+            {
+              "imgSrc": "./assets/images/components/switch/switch-12@3x.png",
+              "imgAlt": "Stacked layout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Navigate to and interact with a switch using assistive technology</li><li>Turn the switch on and off</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard navigation</h3><p>Make sure that users can navigate to and interact with a switch using their keyboard.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Places focus on the switch handle"},
+            {"keys": "Space/Enter", "actions": "Turns the switch on and off"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Using labels</h3><p>If implemented correctly, the accessibility label for a switch uses the adjacent label text. Assistive technology, such as screen readers, read the UI copy followed by the component's role. Make sure that the adjacent label text clearly describes what the switch controls.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/switch/switch-13@3x.png",
+          "imgAlt": "Focus",
+          "textBefore": "<h3 class=\"title-high\">Focus</h3><p>The initial focus lands directly on the switch handle, which is the primary interactive element of the component. Pressing Space or Enter moves the handle to turn the switch on or off."
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>When hovered (in both on and off states), the hover area grows, providing a visual cue to the user that the handle is interactive. When clicked, then handle size grows.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Densities</h3><p>The default and recommended density of the switch is relaxed. Refer to the Measurements section for examples of these changes.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"layer": "Toggle width", "relaxed": "56", "condensed": "48"},
+            {"layer": "Toggle height", "relaxed": "32", "condensed": "24"},
+            {"layer": "Status layer", "relaxed": "40", "condensed": "32"},
+            {"layer": "Handle diameter - on", "relaxed": "24", "condensed": "20"},
+            {"layer": "Handle diameter - off (with icon)", "relaxed": "24", "condensed": "20"},
+            {"layer": "Handle diamter - off (no icon)", "relaxed": "16", "condensed": "12"},
+            {"layer": "Handle icon", "relaxed": "20", "condensed": "16"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed", "id": "relaxed"},
+            {"label": "Condensed", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

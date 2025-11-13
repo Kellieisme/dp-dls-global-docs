@@ -1,0 +1,26 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Contribute to Atmosphere",
+  "header": {
+    "title": "Contribute to Atmosphere",
+    "description": "From job openings to collaboration projects, learn about how to get involved",
+    "backgroundImg": "contact/contribute/contribute-header@3x.png"
+  },
+  "sections": [
+    {
+      "type": "text-image",
+      "text": "<h3 class=\"title-high\">Contribute a component</h3><p>We're keen to find out how we can expand the design system to meet your needs. Whether your team uses Angular or custom-built components, feel free to contact us about adding them to Atmosphere.</p><h4 class=\"title-low\">Requesting a component</h4><p>Atmosphere is a global design system intended to serve all teams who build DAS solutions. To make sure that Atmosphere components are applicable to multiple products, we carefully evaluate all component requests.</p><p>Before you submit a request for a component, check whether it meets the following requirements:</p><p><ul><li><span class=\"body-low-highlight\">Global and generic</span> - the component is useful to multiple teams and designed without product-specific functionality</li><li><span class=\"body-low-highlight\">Flexible and adaptable</span> - product teams can seamlessly integrate the component into their apps</li><li><span class=\"body-low-highlight\">Simple and straightforward</span> - the component is free from unnecessary complexity and has a limited amount of variants</li></ul></p><h3 class=\"title-high mt-5\">Collaborate with us</h3><p>If you're interested in working with the Atmosphere team, you can get involved in multiple ways:</p><p><ul><li><span class=\"body-low-highlight\">Demos</span> - get detailed information about the Atmosphere capabilities and strategy</li><li><span class=\"body-low-highlight\">Job openings and working groups</span> - find opportunities to join the team</li><li><span class=\"body-low-highlight\">Projects</span> - if you'd like to collaborate, send us your ideas</li><li><span class=\"body-low-highlight\">Testing</span> - help us to continuously improve Atmosphere</li></ul></p><p>To learn more about getting involved, send us a message.</p>",
+      "imgSrc": "./assets/images/contact/contribute/contribute-01@3x.png",
+      "imgAlt": "Collaborate with us"
+    },
+    {
+      "type": "list",
+      "text": "<h3 class=\"title-high\">Get in touch</h3><p>To discuss collaboration opportunities or learn more about contributing components to Atmosphere, contact <a href=\"mailto:jurrien.vanberkum@boeing.com\">jurrien.vanberkum@boeing.com</a> or reach out to us on the Atmosphere Slack Channels:</p>",
+      "items": [
+        "<a href=\"https://jeppesen.enterprise.slack.com/archives/C0748DE1U92\" target=\"_blank\">#designsystem-ux</a> for UX and design questions",
+        "<a href=\"https://jeppesen.enterprise.slack.com/archives/C075L41TSRM\" target=\"_blank\">#designsystem-dev</a> for development questions"
+      ],
+      "name": "Email Jurriën Van Berkum",
+      "email": "jurrien.vanberkum@boeing.com"
+    }
+  ]
+}

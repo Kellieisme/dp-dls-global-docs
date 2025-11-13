@@ -1,0 +1,349 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Dialogs",
+  "storybookId": "components-dialog",
+  "storybookDefaultStory": "standard",
+  "storybookHeight": "700",
+  "header": {
+    "title": "Dialogs",
+    "description": "Dialogs provide important prompts in a user flow",
+    "backgroundImg": "components/dialog/dialog-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Dialogs are a snippet of information that draws attention to important content",
+            "Use dialogs to make sure users act on information",
+            "Should be dedicated to completing a single task or also complex tasks",
+            "Can also display information relevant to the task",
+            "Commonly used to confirm high-risk actions like deleting progress"
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Purposes</h3><p>Alert dialogs are used to inform users about critical information, while simple dialogs present a list of items for selection. Confirmation dialogs ask users for confirmation before proceeding with a task, and full-screen dialogs are employed to collect detailed information in a large format.</p>",
+          "imgSrc": "./assets/images/components/dialog/dialog-01@3x.png",
+          "imgAlt": "Dialog"
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=8523-21610\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-02@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3>",
+          "textAfter": "<ol><li>Landscape</li><li>Portrait</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The dialog component comes in two orientations: portrait and landscape. By default, it's recommended to use the landscape version for improved accessibility. However, the portrait version can be beneficial when presenting a large amount of information on a small screen. It's advisable to avoid the use of the portrait variant when designing applications for small and medium viewports.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-05@3x.png",
+          "imgAlt": "Portrait variant",
+          "textBefore": "<h4 class=\"title-low\">Portrait variant</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-06@3x.png",
+          "imgAlt": "Landscape variant",
+          "textBefore": "<h4 class=\"title-low\">Landscape variant</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-07@3x.png",
+          "imgAlt": "Size",
+          "textBefore": "<h3 class=\"title-high\">Size</h3><p>Dialogs should grow proportionally but they should respect minimum and maximum width and height values depending on whether the format is vertical or horizontal.</p><p>Use portrait orientation on small devices. Do not use this on larger devices because the button positions are optimized for mobile.</p><p><b>Avoid dialogs that take up the entire screen on mobile devices, making it hard for users to navigate.</b></p><p>Use horizontal orientation on larger devices. This setup is not recommended for smaller devices because the button positions are optimized for desktops and tablets.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-08@3x.png",
+          "imgAlt": "Action footer: layout and order",
+          "textBefore": "<h3 class=\"title-high\">Action footer: layout and order</h3><p>Depending on the screen orientation, whether vertical on mobile devices or horizontal on wider screens, buttons should be strategically positioned to ensure primary actions are easily accessible and visible to users.</p><p>In portrait orientation on small screens like mobile devices, button positioning is key for usability. The primary action button should be at the bottom for easy access, the secondary action button should be in the middle above the primary action, and any tertiary action should be at the top, ensuring it receives the least focus.</p><p>In landscape orientation on wider screens, buttons should optimize horizontal space. The primary action button should be on the far right for accessibility, the secondary action immediately to its left, and any tertiary action on the far left to indicate lower priority.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-09@3x.png",
+          "imgAlt": "Usage",
+          "textBefore": "<h3 class=\"title-high\">Usage</h3><p>A dialog is a modal window that appears in front of app content to provide critical information or prompt for a selection. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed, or a required action has been taken.</p><p>Dialogs are purposefully interruptive, so they should be used sparingly. A less disruptive alternative is to use a menu, which provides options without interrupting a user’s experience.</p>",
+          "textAfter": "<h4 class=\"title-low\">Container and scrim</h4><p>Dialog containers appear above other screen elements and hold the dialog’s headline, text, buttons, and list items. To focus attention on the dialog, surfaces behind the container are made less prominent by using a temporary, semi-transparent overlay, or scrim.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Aspect ratio</h4><p>The aspect ratio of a dialog refers to the proportional relationship between its width and height. Maintaining an appropriate aspect ratio ensures visual balance and functionality across various device sizes and orientations. <b>Standard aspect ratios like 16:9 or 4:3 provide a good balance.</b></p><p>Dialogs should be responsive, adjusting their aspect ratio based on orientation:</p><ul><li>Portrait Mode: Maintain a taller aspect ratio to utilize vertical space.</li><li>Landscape Mode: Use a wider aspect ratio for readability and accessibility.</li></ul>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-10@3x.png",
+              "imgAlt": "Dialog aspect ratio - do",
+              "type": "success",
+              "text": "When content exceeds available space, allow vertical scrolling within the dialog or switch to the landscape format. Ensure all content is visible without scrolling for simpler dialogs."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-11@3x.png",
+              "imgAlt": "Dialog aspect ratio - don't",
+              "type": "error",
+              "text": "Avoid making the dialog too narrow and tall, and vice versa.  Watch out for the correlation between dialog height and width."
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Headline (optional)</h4><p>Dialog containers appear above other screen elements and hold the dialog’s headline, text, buttons, and list items. Headlines should:</p><ul><li>Contain a brief and clear statement or question</li><li>Avoid apologies (Sorry for the interruption), extra alarm (Warning!), or ambiguity (Are you sure?)</li><li>Headlines should always be succinct. They can wrap to a second line if necessary, and can’t be truncated.</li><li>In full-screen dialogs, long headlines or headlines of variable lengths, can be placed in the content area instead of the app bar.</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Close icon (optional)</h4><p>A dialog can display a \"cross\" to allow the user to close the component whenever they choose.<p>The dismiss \"X\" is placed at the top right of the dialog in an absolute position, bypassing the padding defined for the container.</p><p>You can also dismiss (equivalent to the \"X\") by tapping on the background overlay.</p>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-12@3x.png",
+              "imgAlt": "Dialog title - do",
+              "type": "success",
+              "text": "This dialog title poses a specific question, concisely explains what’s involved in the request, and provides clear actions."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-13@3x.png",
+              "imgAlt": "Dialog title - don't",
+              "type": "error",
+              "text": "Don’t use dialog titles that pose an ambiguous question."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-14@3x.png",
+              "imgAlt": "Dialog description - do",
+              "type": "success",
+              "text": "Ensure dialogs have a clear and concise description. This helps users understand the purpose of the dialog and what actions they need to take."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-15@3x.png",
+              "imgAlt": "Dialog description - don't",
+              "type": "error",
+              "text": "Avoid using dialogs that have only a title without a description. A clear description is essential for user understanding."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-17@3x.png",
+              "imgAlt": "Dialog description - don't",
+              "type": "error",
+              "text": "Avoid placing long headlines in a condensed mode."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-18@3x.png",
+              "imgAlt": "Dialog description - don't",
+              "type": "error",
+              "text": "Avoid truncating text in titles to prevent misunderstandings."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-19@3x.png",
+              "imgAlt": "Dialog description - do",
+              "type": "success",
+              "text": "Find ways to shorten the text, and place longer headlines into the content area of a full-screen dialog. It is also not a good practice for the headline to span two lines but If this happens, use the relaxed format instead."
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Buttons</h4><p>Dialog containers appear above other screen elements and hold the dialog’s headline, text, buttons, and list items.</p><p>Providing a third action, such as “Learn more,” is not recommended as it navigates the user away from the dialog, leaving the dialog task unfinished.</p><p>Rather than adding a third action, an inline expansion can display more information. If more extensive information is needed, provide it prior to entering the dialog.</p>",
+          "imgSrc": "./assets/images/components/dialog/dialog-34@3x.png",
+          "imgAlt": "Buttons"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-20@3x.png",
+              "imgAlt": "Dialog buttons - do",
+              "type": "success",
+              "text": "Disable confirming actions until a choice is made. Dismissive actions are never disabled."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-21@3x.png",
+              "imgAlt": "Dialog buttons - don't",
+              "type": "error",
+              "text": "Don’t place dismissive actions to the right of confirming actions. Instead, place them to the left of confirming actions."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-22@3x.png",
+              "imgAlt": "Dialog buttons - do",
+              "type": "success",
+              "text": "A single action may be provided only if it’s an acknowledgement."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-23@3x.png",
+              "imgAlt": "Dialog buttons - don't",
+              "type": "error",
+              "text": "Avoid presenting users with unclear choices. “Cancel” doesn't make sense here because no clear action is proposed."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-24@3x.png",
+              "imgAlt": "Dialog buttons - caution",
+              "type": "warning",
+              "text": "The “Learn more” action navigates away from this dialog, potentially leaving it in an indeterminate state."
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-25@3x.png",
+              "imgAlt": "Dialog buttons - do",
+              "type": "success",
+              "text": "Ensure buttons are easily tappable and have sufficient spacing in between to prevent accidental taps."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-26@3x.png",
+              "imgAlt": "Dialog buttons - don't",
+              "type": "error",
+              "text": "Avoid using mobile version on horizontal aspect ratio dialogs."
+            }
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-03@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Container</li><li>Icon Button (optional)</li><li>Icon (optional)</li><li>Title  (optional)</li><li>Supporting text (optional)</li><li>Slot (optional)</li><li>Action Footer</li><li>Overlay</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-27@3x.png",
+          "imgAlt": "Placement",
+          "textBefore": "<h3 class=\"title-high\">Placement</h3><p>Place dialogs in the center of the screen, both vertically and horizontally. This ensures that the dialog captures the user's attention and is easily accessible.</p><p>Ensure dialogs are responsive and adjust their size and placement based on the screen size. On smaller screens, dialogs should have a slightly smaller margin to avoid taking up the entire screen.</p><p>Dialogs retain focus until dismissed or an action has been taken, such as choosing a setting. They shouldn’t be obscured by other elements or appear partially on screen, with the exception of full-screen dialogs.</p><p>Maintain consistent positioning across the application.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Expanded window size</h4><p>Dialogs retain focus until dismissed or an action has been taken, such as choosing a setting. They shouldn’t be obscured by other elements or appear partially on screen, with the exception of full-screen dialogs.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Appearing</h4><p>Dialogs appear without warning, requiring users to stop their current task. They should be used sparingly, as not every choice or setting warrants interruption.</p><p>Dialogs use an enter and exit transition pattern when appearing on screen.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/dialog/dialog-28@3x.png",
+          "imgAlt": "Behavior",
+          "textBefore": "<h3 class=\"title-high\">Behavior</h3><p>When content exceeds the available space, implement vertical scrolling within the dialog to accommodate all the information. This approach ensures that users can access the entire content without disrupting the layout. Conversely, for simpler dialogs, ensure all content is visible without the need for scrolling. This practice enhances readability and usability, allowing users to quickly grasp the necessary information without additional navigation.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Open and close a dialog</li><li>Provide and submit other inputs if the dialog is interactive, such as a text field or selectable list</li><li>Scroll the dialog to access all of its contents if that content extends beyond the container of the dialog</li></ul>",
+          "imgSrc": "./assets/images/components/dialog/dialog-30@3x.png",
+          "imgAlt": "Use cases"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Interaction & style</h3><p>Dialogs are purposefully interruptive. This means they appear in front of app content and disrupt the flow of content for users who may, for example, be using a screen reader to navigate the page.</p><p>As such, dialogs should be used sparingly and only to provide critical information. Less critical information should be presented in a non-blocking way within the flow of app content.</p>",
+          "imgSrc": "./assets/images/components/dialog/dialog-29@3x.png",
+          "imgAlt": "Interaction & style"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Initial focus</h4><p>When a dialog appears, focus should automatically land on the first interactive element within the dialog.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-31@3x.png",
+              "imgAlt": "Dialog - initial focus",
+              "text": "Initial focus lands on the first interactive element within a dialog. The tab key moves focus through the next interactive elements in a cycle."
+            },
+            {
+              "imgSrc": "./assets/images/components/dialog/dialog-32@3x.png",
+              "imgAlt": "Dialog - shifting focus",
+              "text": "The shift and tab keys together move focus in the opposite direction. The space or enter key triggers or commits the action of the focused element."
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>The accessibility label for a dialog is typically the same as the dialog’s title or headline. Components contained within the dialog, such as buttons, should be labeled according to the guidelines specific to those components.</p>",
+          "imgSrc": "./assets/images/components/dialog/dialog-33@3x.png",
+          "imgAlt": "Labeling element"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

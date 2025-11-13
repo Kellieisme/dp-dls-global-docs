@@ -1,0 +1,311 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Snackbar",
+  "storybookId": "components-snackbar",
+  "storybookDefaultStory": "single-line-snackbar",
+  "storybookHeight": "300",
+  "header": {
+    "title": "Snackbar",
+    "description": "Snackbars show short updates about app processes at the bottom of the screen",
+    "backgroundImg": "components/snackbar/snackbar-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Snackbars shouldn’t interrupt the user’s experience",
+            "Usually appear at the bottom of the UI",
+            "Can disappear on their own or remain on screen until the user takes action"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=12514-17191\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-01@3x.png",
+          "imgAlt": "Configurations",
+          "textBefore": "<h3 class=\"title-high\">Configurations</h3>",
+          "textAfter": "<ol><li>No action</li><li>No action on two lines</li><li>With action</li><li>With action on two lines</li><li>With a long action button</li><li>No action dismissable</li><li>o action on two lines dismissable</li><li>With action dismissable</li><li>ith action on two lines dismissable</li><li>With a long action button dismissable</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-02@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-03@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Snackbars inform users of a process that an app has performed or will perform. They appear temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user input to disappear.</p><p><b>Frequency</b> <br>Only one snackbar may be displayed at a time.</p><p><b>Actions</b> <br>A snackbar can contain a single action. \"Dismiss\" or \"Cancel\" actions are optional.</p><p><b>When to use snackbars</b> <br>Snackbars communicate messages that are minimally interruptive and don’t require user action.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-04@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Container</li><li>Supporting text</li><li>Action (optional)</li><li>Dismiss (optional)</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Text labels</h4><p>Snackbars contain a text label that directly relates to the process being performed. In compact windows sizes, like mobile, the text label can contain up to two lines of text.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-05@3x.png",
+          "imgAlt": "Text labels",
+          "imgText": "Text labels are short, clear updates on processes that have been performed"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-06@3x.png",
+              "imgAlt": "Snackbar - do",
+              "type": "success",
+              "text": "Keep the snackbar text label to a single line when possible"
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-07@3x.png",
+              "imgAlt": "Snackbar - don't",
+              "type": "error",
+              "text": "Avoid adding icons to snackbars. If your message needs an icon, consider using a different component such as a banner or dialog"
+            },
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-08@3x.png",
+              "imgAlt": "Snackbar - don't",
+              "type": "error",
+              "text": "Avoid using stylized text or inline links in snackbars; they can add unwanted complexity. If your message needs a link, add a button instead, or use a different component"
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-20@3x.png",
+              "imgAlt": "Snackbar - don't",
+              "type": "error",
+              "text": "Avoid using a red background for error or warning snackbars or color the action button red"
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Container</h4><p>Snackbars are displayed in rectangular containers with a grey background. Containers should be completely opaque, so that text labels remain legible.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-16@3x.png",
+          "imgAlt": "Container",
+          "imgText": "Snackbar containers use a solid background color with a shadow to stand out against content"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-10@3x.png",
+              "imgAlt": "Snackbar - don't",
+              "type": "error",
+              "text": "The text label shouldn’t share the same color as the text button"
+            },
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-11@3x.png",
+              "imgAlt": "Snackbar - don't",
+              "type": "error",
+              "text": "Don’t use a filled or elevated button in a snackbar, as it draws too much attention"
+            }
+          ]
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-09@3x.png",
+              "imgAlt": "Snackbar - do",
+              "type": "success",
+              "text": "In wide layouts, extend the container width to accommodate longer text labels"
+            }
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Action</h4><p>Snackbars can display a single text button that lets users take action on a process performed by the app. Snackbars shouldn’t be the only way to access a core use case, to make an app usable.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-14@3x.png",
+          "imgAlt": "Action",
+          "imgText": "To distinguish the action from the text label, text buttons should display colored text"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-13@3x.png",
+              "imgAlt": "Snackbar - do",
+              "type": "success",
+              "text": "If an action is long, it can be displayed on a third line"
+            },
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-14@3x.png",
+              "imgAlt": "Snackbar - do",
+              "type": "success",
+              "text": "To allow users to amend choices, display an \"Undo\" action"
+            },
+            {
+              "imgSrc": "./assets/images/components/snackbar/snackbar-15@3x.png",
+              "imgAlt": "Snackbar - caution",
+              "type": "warning",
+              "text": "A dismiss action is unnecessary, as snackbars disappear on their own by default"
+            }
+          ]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Position: At the bottom of a UI</h4><p>Snackbars should be placed at the bottom of a UI, in front of the main content. In some cases, snackbars can be nudged upwards to avoid overlapping with other UI elements near the bottom, such as FABs or bottom app bars.</p><p>Avoid placing a snackbar in front of frequently used touch targets or navigation.</p><p>Snackbars can span the entire width of the screen only when a UI does not use persistent navigation components like app bars or navigation bars.</p><p>The length of a snackbar should be defined in relation to the size of the layout being used. It is essential to always respect the proposed margins. The snackbar must be centered and fit within the different columns, reducing its length at various breakpoints as proposed. In some cases, this may result in the snackbar breaking into a new line.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-21@3x.png",
+          "imgAlt": "Position: At the bottom of a UI"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsive layout</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Compact window size</h4><p>In compact window sizes, like mobile screens, snackbars should expand vertically from 48dp to 64dp to accommodate one or two lines of text, while maintaining a  fixed distance from the leading, trailing, and bottom edges of the screen.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-23@3x.png",
+          "imgAlt": "Compact window size"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Medium & expanded window sizes</h4><p>On medium and expanded window sizes, like tablet and desktop, snackbars should scale horizontally to accommodate longer text strings, keeping in mind that the ideal line length for text is typically between 40-60 characters.</p><p>Snackbars use a flexible distance from the trailing edge of the screen. Whenever possible, snackbars on medium and large displays should aim for a single line of text with an optional button.</p><p>In wider layouts, snackbars can be left-aligned or center-aligned if they are consistently placed on the same spot at the bottom of the screen.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-22@3x.png",
+          "imgAlt": "Compact window size"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Displaying snackbars</h4><p>Snackbars appear without warning, but they don’t block users from interacting with page content.</p><p>Snackbars without actions can auto-dismiss after 4–10 seconds, depending on platform. Avoid using auto-dismissing snackbars on web unless there's also inline feedback.</p><p>A snackbar with an action and a dismiss button will remain visible until the user interacts with it. If the user clicks the action button, the specified action will be executed, and the snackbar may then disappear based on the action's logic.</p><p>Alternatively, if the user clicks the dismiss button, the snackbar will immediately disappear. If neither button is pressed, the snackbar will stay visible until a predefined timeout period expires.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Consecutive snackbars</h4><p><b>Consecutive snackbars must appear one at a time.</b></p><p>Snackbars without actions appear and disappear automatically, while those with actions remain on screen until dismissed. However, a snackbar with updated information can immediately replace an outdated snackbar.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-18@3x.png",
+          "imgAlt": "Consecutive snackbars"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:<p><ul><li>Be alerted, but not disrupted, when a snackbar appears</li><li>Move focus to an actionable snackbar</li><li>Take action on a snackbar using assistive technology</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Interaction & style</h3><p>Snackbars with actions shouldn't auto-dismiss. This way, users can read and interact with it at their own pace.</p><p>Snackbars without actions can auto-dismiss after a sufficient amount of time, however this can still be inaccessible on web without additional feedback. </p><p>Each platform has its own requirements for auto-dismiss durations, however common acceptable durations are 4–10 seconds.</p><p>Snackbars use a color intended to stand out against UI elements. Use the default color mapping to avoid color conflict issues.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Accessibility requirements for web</h4><p>On web, auto-dismissing snackbars are inaccessible for people with low vision or who require additional time to perceive information. This can be solved in 2 ways:</p><p><b>1. Add inline feedback</b> <br>Information in auto-dismissing snackbars must also be communicated using another accessible method inline or near the action that triggered the snackbar.</p><p>For example, update the label on a “Save” button to “Saved”, and trigger an auto-dismissing snackbar that communicates the same message.</p><p><b>2. Make the snackbar actionable</b> <br>Alternatively, add actions to the snackbar so it doesn't dismiss until acted on.</p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-16@3x.png",
+          "imgAlt": "Accessibility requirements for web"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Focus</h4><p>Snackbars have the following focus requirements:</p><ul><li>When a snackbar appears, announce the message but don't move focus.</li><li>Don't automatically move focus.</li><li>Don't trap focus in the snackbar. Users should be able to freely navigate in and out.</li><li>On web, a shortcut should exist for users to move focus to snackbars with actions (like Alt+G). Ensure that this shortcut is clearly documented, like in a help article.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and activate a snackbar with these keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Moves focus between interactive elements"},
+            {"keys": "Esc", "actions": "Dismisses the snackbar when in focus"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>Snackbars should be announced once they appear on the screen, but shouldn’t grab focus or prevent people from completing their current task. </p>",
+          "imgSrc": "./assets/images/components/snackbar/snackbar-19@3x.png",
+          "imgAlt": "Labeling elements",
+          "imgText": "Snackbars are announced when they appear, but don't trap focus"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

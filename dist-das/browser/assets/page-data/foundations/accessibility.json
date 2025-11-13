@@ -1,0 +1,78 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Accessibility",
+  "header": {
+    "title": "Accessibility",
+    "description": "Accessibility ensures everyone can perceive, understand, navigate, and interact with a product or environment, regardless of their abilities",
+    "backgroundImg": "foundations/accessibility/accessibility-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Consider users' diverse physical and cognitive needs",
+            "Follow established accessibility guidelines and regulation, such as the <a href=\"https://www.w3.org/WAI/standards-guidelines/wcag/\" target=\"_blank\">WCAG</a>",
+            "Make sure to never resize an icon, this ensures consistency across all products",
+            "Research different assistive technologies that might interface with your product",
+            "Test your product with different audiences to identify usability barriers"
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Accessibility and Atmosphere</h3><p>Understanding and anticipating a wide range of human experiences and disabilities helps to prevent costly redesigns, reduce tech and design debt, and conserve resources up front.</p><p>Accessibility standards built into components are designed to provide a foundation for inclusive product design. Understanding your product's accessibility can enhance usability for all users, including those with visual impairments, hearing impairments, cognitive impairments, motor impairments, or situational disabilities (such as a broken arm).</p>",
+          "imgSrc": "./assets/images/foundations/accessibility/accessibility-01@3x.png",
+          "imgAlt": "Accessibility and Atmosphere"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Get started</h3> <p>Component pages and guidelines describe relevant accessibility requirements and goals. Component accessibility standards are both implicit and explicit. Implicit standards are built into the design and code, whereas explicit standards describe considerations that require a judgment call.</p>   <p>Use this page as a starting point for understanding the accessibility standards applied across Atmosphere. Refer to this page throughout the design and development stages to make sure that you're meeting accessibility standards.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Accessibility principles</h3>  <h4 class=\"title-low\">Inclusion for all</h4> <p>Accessibility isn't just a technical hurdle; it's about ensuring that everyone can perceive, understand, navigate, interact with, and contribute to your product. It involves considering users of all abilities, including visual impairments, hearing loss, mobility limitations, or cognitive diversity.</p> <h4 class=\"title-low\">Following guidelines</h4> <p>Established guidelines such as the <a href=\"https://www.w3.org/WAI/standards-guidelines/wcag/\" target=\"_blank\">Web Content Accessibility Guidelines (WCAG)</a> provide a framework for creating accessible digital experiences. These guidelines outline specific criteria for color contrast, keyboard navigation, alternative text descriptions for images, and more.</p> <h4 class=\"title-low\">Beyond vision</h4> <p>Accessibility goes beyond just visual elements. Consider users with hearing impairments by providing captions for videos and transcripts for audio content. For users with motor limitations, ensure your interface can be navigated with a keyboard or assistive technologies.</p> <h4 class=\"title-low\">Testing is crucial</h4><p>Accessibility testing is essential to identify and address any barriers that might prevent users with disabilities from using your product effectively. Use automated testing tools alongside manual testing with assistive technologies to ensure a comprehensive evaluation.</p>",
+          "imgSrc": "./assets/images/foundations/accessibility/accessibility-02@3x.png",
+          "imgAlt": "Accessibility principles"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility basics",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Make sure that all users can perceive the content in your product",
+            "Consider all forms of navigation needs, such as physical navigation and labels",
+            "Avoid jargon and use everyday language that's easy to understand",
+            "Make sure that information in copy is logical, consistent, and predictable",
+            "Research and test compatible technologies with your product across platforms"
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Content</h3><h4 class=\"title-low\">Hierarchy</h4> <p>Structure your content using headings (H1, H2, H3) that accurately reflect the importance and hierarchy of information. Screen readers announce headings, which lets users understand the organization of the content.</p><h4 class=\"title-low\">Plain language</h4> <p>Use clear and simple language that's easy for everyone to understand. Avoid technical jargon and overly complex sentence structures.</p><h4 class=\"title-low\">Scannable content</h4> <p>Make your content structure logical and predictable so that users understand the layout and hierarchy of information. Use meaningful, descriptive headings to manage user expectations.</p> <h4 class=\"title-low\">Captions</h4> <p>Make visual and audio content accessible to all. Add captions to audio and video content to transcribe it for hearing impaired users. Add captions to images to describe the scene for visually impaired users.</p>",
+          "imgSrc": "./assets/images/foundations/accessibility/accessibility-03@3x.png",
+          "imgAlt": "Content accessibility"
+        },
+        {
+          "type": "image-text",
+          "text": "<h3 class=\"title-high\">Design</h3> <h4 class=\"title-low\">Hierarchy</h4> <p>Structure your content using headings (H1, H2, H3) that accurately reflect the importance and hierarchy of information. Screen readers announce headings, which lets users understand the organization of the content.</p><h4 class=\"title-low\">Plain language</h4> <p>Use clear and simple language that's easy for everyone to understand. Avoid technical jargon and overly complex sentence structures.</p><h4 class=\"title-low\">Scannable content</h4> <p>Make your content structure logical and predictable so that users understand the layout and hierarchy of information. Use meaningful, descriptive headings to manage user expectations.</p> <h4 class=\"title-low\">Captions</h4> <p>Make visual and audio content accessible to all. Add captions to audio and video content to transcribe it for hearing impaired users. Add captions to images to describe the scene for visually impaired users.</p> <h4 class=\"title-low\">Color and contrast</h4> <p>Use a color contrast checker to make sure the contrast between the text and background is sufficient for people with vision impairments. Use a website or plugin, such as the <a href=\"https://webaim.org/resources/contrastchecker/\" target=\"_blank\">WebAIM Color Contrast Checker</a> to make sure your designs meet the <a href=\"https://www.w3.org/WAI/standards-guidelines/wcag/\" target=\"_blank\">WCAG</a>.</p><h4 class=\"title-low\">Layout and hierarchy</h4> <p>Organize information in a clear layout to ensure that information is organized logically and predictably. Design a well-defined information hierarchy to help assistive technology users and people with diverse cognitive abilities to navigate and understand the content structure.</p>   <h4 class=\"title-low\">Typography</h4> <p>Make sure your typography prioritizes clear legibility for all users. Use fonts that are easy to read at appropriate sizes, with sufficient color contrast between the text and background.</p>   <h4 class=\"title-low\">Graphics and images</h4>  <p>Add descriptive alt text to graphics and images to illustrate the content for visually impaired people that use screen readers to consume the content. Consider using clear and simple visuals that are easy to understand for people of all cognitive abilities.</p> <h4 class=\"title-low\">Forms</h4> <p>Use clear labels, error messages in understandable language, and keyboard navigation to ensure users of all abilities can interact with and complete a form.</p> <h4 class=\"title-low\">Mobile</h4> <p>Consider touch target sizes and spacing on mobile devices so that users with motor limitations can also interact with the product. Ensure sufficient color contrast and text scaling so that the content remains legible on smaller screens.</p>",
+          "imgSrc": "./assets/images/foundations/accessibility/accessibility-04@3x.png",
+          "imgAlt": "Design accessibility"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Assistive technology</h3><p>Assistive technology helps to increase, maintain, or improve the functional capabilities of people with varying abilities. It empowers people to independently engage with technology through devices. Accessible design facilitates the use of a wide range of devices, such as keyboards, screen readers, braille displays, eye trackers, magnifiers, and voice input.</p>  <h4 class=\"title-low\">Screen readers</h4>  <p>Screen readers, used by blind or visually impaired users, convert on-screen text and elements into speech or braille, requiring websites and applications to be structured and coded with accessibility in mind  to ensure smooth navigation and content comprehension.</p> <h4 class=\"title-low\">Keyboard access</h4> <p>Keyboard access allows users who cannot use a mouse, like those with motor impairments, to navigate and interact with your interface. This means ensuring all interactive elements can be reached, focused, and activated using just the keyboard.</p> <h4 class=\"title-low\">Tab order</h4> <p>Tab order dictates the sequence in which users navigate a webpage using the Tab key. A logical tab order lets keyboard users move predictably through interactive elements like buttons and links, ensuring they can efficiently interact with the content.</p> <h4 class=\"title-low\">Focus</h4> <p>Focus visually indicates which element on the screen a user is currently interacting with using a keyboard or screen reader, ensuring users with motor limitations or visual impairments can understand their current location and navigate effectively.</p> <h4 class=\"title-low\">Touch targets</h4> <p>Touch targets are clickable or interactive areas on touchscreens. For users with motor limitations or those using assistive touch technologies, larger touch targets with sufficient space around them are crucial, allowing for easier and more precise interaction with your app or interface.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Develop</h3><h4 class=\"title-low\">Coding for assistive technologies</h4> <p>Screen readers rely on semantic HTML elements to help users navigate. In addition, make sure all interactive elements (buttons, links, forms) can be navigated and activated using just a keyboard.</p> <p>In some cases, ARIA (Accessible Rich Internet Applications) attributes can be used to provide additional information or functionality for assistive technologies, enhancing accessibility for complex UI components.</p> <h4 class=\"title-low\">Testing and maintenance</h4> <p>Leverage automated testing tools in order to identify accessibility issues in the code. These tools can help catch basic errors early on. Manual testing is also important to catch other accessibility limitations that automated testing may have missed.</p>  <p>Make sure to test your code across different browsers and devices to ensure consistent accessibility experience, regardless of the platform used.</p>",
+          "imgSrc": "./assets/images/foundations/accessibility/accessibility-05@3x.png",
+          "imgAlt": "Coding accessibility"
+        }
+      ]
+    }
+  ]
+}
