@@ -17,7 +17,6 @@
     "build:prod": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
-  
   },
   "private": true,
   "dependencies": {
@@ -31,6 +30,7 @@
     "@angular/platform-browser": "^20.3.11",
     "@angular/platform-browser-dynamic": "^20.3.11",
     "@angular/router": "^20.3.11",
+    "@jeppesen-foreflight/dls-global-assets": "^2.1.5",
     "@jeppesen-foreflight/dp-dls-global-angular": "^3.5.1-pre.a8542aa",
     "bootstrap": "^5.3.8",
     "rxjs": "~7.8.0",
