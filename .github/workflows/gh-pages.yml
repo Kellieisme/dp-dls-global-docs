@@ -25,6 +25,8 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm ci
+      - name: Install gh-pages CLI
+        run: npm install -g gh-pages
 
       # Build main docs
       - name: Build main docs
