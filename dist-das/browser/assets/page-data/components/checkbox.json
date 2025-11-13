@@ -1,0 +1,184 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Checkbox",
+  "storybookId": "components-checkbox",
+  "storybookDefaultStory": "single",
+  "storybookHeight": "250",
+  "header": {
+    "title": "Checkbox",
+    "description": "Checkboxes let users select one or more items from a list, or turn an item on or off",
+    "backgroundImg": "components/checkbox/checkbox-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Use Checkboxes if multiple options can be selected from a list",
+            "Selected items are more prominent than unselected items",
+            "Checkboxes can be used within other components such as tables and lists"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=8523-21176\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-01@3x.png",
+          "imgAlt": "States",
+          "textBefore": "<h3 class=\"title-high\">States</h3><p>Checkboxes appear in five different states to effectively communicate the status of the component.</p>",
+          "textAfter": "<ol><li>Enabled</li><li>Hovered</li><li>Pressed</li><li>Focused</li><li>Disabled</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The checkbox comes in two density modes: relaxed and condensed. </p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-02@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>",
+          "textAfter": "<ol><li>Checkbox size</li><li>State layer</li><li>Target size</li><li>Padding between check & label</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-03@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>",
+          "textAfter": "<ol><li>Checkbox size</li><li>State layer</li><li>Target size</li><li>Padding between check & label</li></ol>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><ul><li>Use checkboxes for selecting multiple options from a list.</li><li>They can be included in lists that have subsections.</li><li>The checkbox component comes in two types: interactive non-interactive.</li><li>Interactive checkboxes are used as standalone items or inside non-interactive list components.</li><li>Non-interactive checkboxes are used when the parent container is interactive, such as an interactive list component.</li><li>Use checkboxes instead of switches for turning an item on or off in a desktop environment.</li><li>Use checkboxes instead of switches when multiple related options can be selected from a list. They are more effective in grouping similar items and take up less space than switches.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-04@3x.png",
+          "imgAlt": "Anatomy",
+          "textAfter": "<ol><li>Checkbox</li><li>Label (optional)</li><li>State layer container</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Label</h4><p>By default, the checkbox component includes a text label.</p><ul><li>Use the default text label to give a short, meaningful description of the checkbox when it's used alone in a layout.</li><li>Turn off the default text label when the checkbox is part of another component. For example, in a list component, the checkbox description is provided by the list header label.</li></ul>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/checkbox/checkbox-05@3x.png",
+              "imgAlt": "Label - do",
+              "type": "success",
+              "text": "Checkbox description is provided by the list header label in the list component."
+            },
+            {
+              "imgSrc": "./assets/images/components/checkbox/checkbox-06@3x.png",
+              "imgAlt": "Label - don't",
+              "type": "error",
+              "text": "Avoid using the checkbox’s default text label when used inside a list component"
+            }
+          ]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Behavior</h4><p>Multiple checkboxes in a list can be selected.</p>",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-07@3x.png",
+          "imgAlt": "Behavior"
+        },
+        {
+          "type": "text-image",
+          "text": "<p>Checkboxes can have a parent-child relationship with other checkboxes.</p><ul><li>When you check a parent checkbox, all its child checkboxes are also checked.</li><li>When you uncheck a parent checkbox, all its child checkboxes are also unchecked.</li><li>If only some of the child checkboxes are checked, the parent checkbox will show as partially checked (indeterminate). checking this indeterminate checkbox will then check all child checkboxes.</li></ul>",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-08@3x.png",
+          "imgAlt": "Behavior"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Navigate to a checkbox with assistive technology.</li><li>Toggle the checkbox on and off.</li><li>Select either the text label or the checkbox to select an option.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and select an active item using the specified keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "To move to the next element in a group"},
+            {"keys": "Space", "actions": "Toggles a focused checkbox between selected and unselected"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Initial focus</h3><p>When in groups: Tab moves focus into the parent checkbox as it’s the first interactive element of the group.</p><p>Pressing the tab key again moves the focus to the first child checkbox of the group.</p>",
+          "imgSrc": "./assets/images/components/checkbox/checkbox-09@3x.png",
+          "imgAlt": "Initial focus"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>The accessibility label for an individual checkbox is typically the same as the adjacent text label.</p><p>If the UI text is correctly linked to the checkbox, assistive tech (such as a screenreader) will read the UI text followed by the component’s role.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

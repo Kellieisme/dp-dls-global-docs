@@ -1,0 +1,269 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Navigation rail",
+  "storybookId": "components-navigation-rail",
+  "storybookDefaultStory": "narrow",
+  "storybookHeight": "700",
+  "header": {
+    "title": "Navigation rail",
+    "description": "Navigation rails enable users to navigate between the first level of an app's navigation on mid-sized and large-sized devices",
+    "backgroundImg": "components/navigation-rail/navigation-rail-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Use navigation rails in medium, large, and extra-large screen sizes",
+            "Ideally, navigation rails should contain 3-7 destinations, plus an optional FAB, but they can accommodate up to 10 destinations",
+            "Navigation rails should always be placed at the same place, even on different screens of an app",
+            "Keep destination labels short and concise to avoid text truncation",
+            "Always use the provided <a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Atmosphere Design System Icons Library</a>"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=4830-15700\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3><p>The Navigation rail can be used in the following three configurations. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Narrow</li><li>Narrow (with labels)</li><li>Wide (with labels)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-02@3x.png",
+          "imgAlt": "States",
+          "textBefore": "<h3 class=\"title-high\">States</h3><p>The destinations within the navigation rail come in eight different states to effectively communicate the status of the component. Refer to the selection behavior guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Enabled (active)</li><li>Hovered (active)</li><li>Focused (active)</li><li>Pressed (active)</li><li>Enabled (inactive)</li><li>Hovered (inactive)</li><li>Focused (inactive)</li><li>Pressed (inactive)</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-03@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-04@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-05@3x.png",
+          "imgAlt": "Configurations",
+          "textBefore": "<h3 class=\"title-high\">Configurations</h3><p>Below are some commonly used configurations of the navigation rail component. However, the navigation rail component can accommodate other configurations to meet the app's requirements.</p>",
+          "textAfter": "<ol><li>Without logo</li><li>Without FAB</li><li>All destinations with text labels</li><li>Without profile</li><li>Without logo, profile, and icon button</li><li>Without label</li></ol>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-06@3x.png",
+          "imgAlt": "Usage",
+          "textBefore": "<h3 class=\"title-high\">Usage</h3><p>The navigation rail is a side navigation component that can display three to ten destinations, and can optionally contain a FAB button, a logo, an icon button, and a user profile.</p>",
+          "textAfter": "<p>Below are some of its usage characteristics:</p><ul><li>Each destination is represented by an icon and label text. The label text appears as a tooltip when hovering over the destination in the navigation rail, without a label.</li><li>One navigation destination is always active.</li><li>The navigation rail is recommended for medium, large, and extra-large viewports; it switches to a navigation bar on smaller devices.</li><li>Navigation rails should only be used for top-level destinations that need to be accessible anywhere in an app.</li></ul><p>Navigation rails should not be used for:</p><ul><li>Small and extra-small viewports</li><li>Secondary navigation destinations</li><li>Destinations with longer label text</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-07@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Container</li><li>Logomark (optional)</li><li>FAB (optional)</li><li>Icon - active</li><li>Active indicator</li><li>Label text - active (optional)</li><li>Icon - inactive</li><li>Label text - inactive (optional)</li><li>Small badge</li><li>Overflow menu</li><li>Icon button (optional)</li><li>Large badge</li><li>User profile (optional)</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Logomark</h4><p>By default, the Boeing logo mark should always remain visible inside the navigation rail.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-08@3x.png",
+          "imgAlt": "Logomark"
+        },
+        {
+          "type": "text-image",
+          "text": "<p>The logo mark could be hidden when the navigation rail is used in combination with the top app bar; in such cases, the logo should be visible in the top app bar.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-09@3x.png",
+          "imgAlt": "Logomark hidden"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Icon</h4><p>Navigation rail destinations should always be represented by icons that symbolize the content or the nature of a destination.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-10@3x.png",
+          "imgAlt": "Icon"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Active indicator</h4><p>The active indicator is a background shape communicating which destination of the navigation rail is currently being displayed.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-11@3x.png",
+          "imgAlt": "Active indicator"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Label text</h4><p>Label texts are short, meaningful descriptions of navigation destinations.</p><p>Labels should be kept short enough to avoid truncation.</p><p>If label texts cannot be further shortened, consider using a wide navigation rail or <a href=\"/design-system/dls-global-docs/components/navigation-drawer\">navigation drawer</a> instead.</p><p>Label text appears as a tooltip on hover action in the navigation rail without label.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-12@3x.png",
+          "imgAlt": "Label text"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Overflow menu</h4><p>The overflow menu appears when the listed navigation destinations do not fit within the device viewport height.</p><p>Place the more important destinations towards the top of the navigation rail, and the least used destinations towards the bottom.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-13@3x.png",
+          "imgAlt": "Overflow menu"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Badge</h4><p>Navigation rail icons can include badges on the upper right corner of the icon.</p><ol><li>Small badge</li><li>Large (single-digit)</li><li>Large (double-digit)</li><li>Large (more than double-digit)</li></ol>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-14@3x.png",
+          "imgAlt": "Badge"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Icon button</h4><p>The navigation rail features three icon buttons: notifications, settings, and help. By default, the notification icon button is enabled at the bottom section of the navigation rail.</p><ul><li>The notification icon button can be swapped with either of the remaining options.</li><li>The navigation rail should always display the most frequently used icon button, while the other two options can be configured within the user profile section.</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-15@3x.png",
+          "imgAlt": "Icon button"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">User profile</h4><p>The navigation rail also provides access to the user profile drop-down menu, represented by a thumbnail image of the user or the user's name initial, placed at the bottom of the navigation rail.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-16@3x.png",
+          "imgAlt": "User profile"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Placement</h3><p>The navigation rail should always run vertically along the side of a layout.</p><p>The navigation rail could be paired with a modal navigation drawer to display additional secondary destinations or actions.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-17@3x.png",
+          "imgAlt": "Placement"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Responsive layout</h3><p>When transitioning from medium and large viewports to small viewports, the navigation rail transforms into a <a href=\"/design-system/dls-global-docs/components/navigation-drawer\">modal navigation drawer</a>.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-18@3x.png",
+          "imgAlt": "Responsive layout"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Scrolling</h4><p>Destinations in the navigation rail should remain visible when scrolling vertically.</p><p>On smaller viewport heights, more than three destinations should get grouped inside overflow menu.</p><p>In the case of horizontal scroll layouts, the navigation rail should remain fixed and the content should scroll underneath the rail.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-19@3x.png",
+          "imgAlt": "Scrolling"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Selection</h4><p>When tapping a destination within the navigation rail, the destination screen should use a top-level transition pattern.</p><p>The navigation rail remains in active state while interacting within the rail, while interacting anywhere outside the navigation rail puts the rail into an inactive state.</p>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-20@3x.png",
+          "imgAlt": "Selection"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Use cases</h3><p>Users should be able to:</p><ul><li>Navigate between navigation destinations using assistive technology.</li><li>Select a particular navigation destination from a set or from an overflow menu dropdown.</li><li>Read the destination label through a tooltip upon hover and focus state on the navigation rail without label option.</li><li>Access the navigation rail with label option when switching from a large viewport to a medium viewport.</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p><b>Navigation rail (with label):</b> When hovering over a destination, the hover state appears, providing a visual cue that the destination is interactive.</p><p><b>Navigation rail (without label):</b> When hovering over a destination, a label tooltip appears along with the hover state, providing a visual cue of an interactive element.</p><p>Upon clicking, the icon of the selected destination switches from outlined to filled, along with a background color change.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and select an active item using the specified keys.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus lands on the first navigation destination"},
+            {"keys": "Space/Enter", "actions": "Selects the focused navigation destination"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Initial focus</h3><p>Initial focus lands directly on the first navigation item, as its the first interactive element of the component.</p><ul><li>First tab on first item</li><li>Second tab on second item</li><li>Space/enter on same item</li><li>First tab on first item (as Navigation rail doesn’t have a logo and a FAB button)</li></ul>",
+          "imgSrc": "./assets/images/components/navigation-rail/navigation-rail-21@3x.png",
+          "imgAlt": "Initial focus"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Labeling elements</h3><p>The accessibility label for a navigation item is typically the same as the adjacent text label.</p><p>If the UI text is correctly linked to the switch, assistive tech (such as a screenreader) will read the UI text followed by the component’s role.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

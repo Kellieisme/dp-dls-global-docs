@@ -1,0 +1,174 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Patterns - Tables",
+  "header": {
+    "title": "Data table",
+    "description": "Data tables are used to organize and display data efficiently across rows and columns.",
+    "backgroundImg": "patterns/tables/tables-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Data tables should:</p><ul><li>Keep information organized in a meaningful way, such as hierarchical or alphabetized</li><li>Allow user interaction so that a data display is customizable and interactive</li><li>Use with a logical structure that makes content easy to understand</li></ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-01@3x.png",
+          "imgAlt": "Main elements",
+          "textBefore": "<h3 class=\"title-high\">Main elements</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-02@3x.png",
+          "imgAlt": "States",
+          "textBefore": "<h3 class=\"title-high\">States</h3>",
+          "textAfter": "<ol><li>Enabled</li><li>On hover</li><li>Selected</li><li>Disabled</li></ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-03@3x.png",
+          "imgAlt": "Alignment",
+          "textBefore": "<h3 class=\"title-high\">Alignment</h3><p>For certain elements such as numerical values, percentages, etc., cells should be right-aligned to improve readability.</p>",
+          "textAfter": "<ol><li>Left-aligned</li><li>Center-aligned</li><li>Right-aligned</li></ul><p>Depending on the data, table cells can contain different types of content. For example, text, icons, checkboxes, tags, action buttons, and profiles.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Multiselect</h3><p>Multi-select lets users select multiple rows in a data table to do bulk actions. When users select a checkbox, the multi-select actions bar appears above the table.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-04@3x.png",
+              "imgAlt": "Multiselect"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-05@3x.png",
+              "imgAlt": "Multiselect"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Placement</h3><p>Always place checkboxes on the left side of the table. Always place the actions bar above the header row.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-06@3x.png",
+          "imgAlt": "Action bar and multiselect",
+          "textBefore": "<h4 class=\"title-low\">Action bar and multiselect</h4><p>The actions bar displays the number of selected items, icon buttons for bulk actions, and a close icon button. When users select the close icon, the selected rows are deselected and the table resets to its default state.</p>",
+          "textAfter": "<ol><li>Close icon button</li><li>Number of selected rows</li><li>Icon buttons for bulk actions</li></ul><p>The actions bar can contain many bulk actions. Actions can be hidden under a menu element to avoid overcrowding.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-07@3x.png",
+              "imgAlt": "Action bar and multiselect"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-08@3x.png",
+              "imgAlt": "Action bar and multiselect"
+            }
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-09@3x.png",
+          "imgAlt": "Action bar and multiselect",
+          "textBefore": "<p>If only one action is possible, use a default button instead of only an icon.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Enabing multi-select</h4><p>Users can trigger multi-select by clicking on any checkbox row. When at least one checkbox is selected, the header checkbox will switch to its indeterminate state.  The actions bar will appear above the header row, displaying the number of selected elements. </p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-10@3x.png",
+              "imgAlt": "Enabing multi-select"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-11@3x.png",
+              "imgAlt": "Enabing multi-select"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<ol><li>Actions bar - multi-select</li><li>Header checkbox - indeterminate</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Select/deselect all</h4><p>Users can  select and deselect all elements by manually checking and unchecking all of the row checkboxes. When all rows are selected the header checkbox will switch to its selected state.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-12@3x.png",
+              "imgAlt": "Select/deselect all"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-13@3x.png",
+              "imgAlt": "Select/deselect all"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<p>Users can select and deselect all elements by checking the header checkbox.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-14@3x.png",
+              "imgAlt": "Select/deselect all"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/tables/tables-15@3x.png",
+              "imgAlt": "Select/deselect all"
+            }
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-16@3x.png",
+          "imgAlt": "Disabled rows",
+          "textBefore": "<h4 class=\"title-low\">Disabled rows</h4><p>Users can't select disabled rows. Disabled rows also can't receive focus.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-17@3x.png",
+          "imgAlt": "Bulk actions",
+          "textBefore": "<h4 class=\"title-low\">Bulk actions</h4><p>Users can perform bulk actions on the selected rows. After selecting rows, users can perform a bulk action by selecting a button in the actions bar.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/tables/tables-18@3x.png",
+          "imgAlt": "Closing multi-select",
+          "textBefore": "<h4 class=\"title-low\">Closing multi-select</h4><p>After pressing the close button or after performing a bulk action, the data table will switch to its default state with all rows unselected.</p>"
+        }
+      ]
+    }
+  ]
+}

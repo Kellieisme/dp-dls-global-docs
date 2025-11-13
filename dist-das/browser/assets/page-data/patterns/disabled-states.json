@@ -1,0 +1,117 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Patterns - Disabled states",
+  "header": {
+    "title": "Disabled state",
+    "description": "Disabled states remove the interactive function",
+    "backgroundImg": "patterns/disabled-states/disabled-states-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>A disabled state removes the interactive function of a component  when the user is not allowed to interact with the component due to pre-requisites, dependencies or permissions.</p><p>It means that the user can’t interact with that part of the because:</p><ul><li>It is unavailable for some reason</li><li>It is irrelevant or currently not applicable</li></ul><p>Some possible reasons for using the disabled state can be:</p><ul><li>While loading a process</li><li>Restricted access to an area</li><li>Upcoming or not yet available features</li><li>When one part of an action relies on another</li><li>Helping users avoid unintentional user actions for error prevention</li></ul><p>The important thing is always provide feedback to the users:</p><ul><li>What is happening or has just happened</li><li>What will happen next</li><li>Possible next steps and benefits</li></ul><p>In many cases, disabled components should not be used, as the user will be frustrated about what went wrong and why he can’t proceed. A disabled element gives no feedback to the user. It is a dead end.</p><p>For these reasons, Atmosphere uses two types of options:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"type": "Disabled", "description": "The component ramains but it cannot be clicked, selected or interacted with.", "when-to-use": "<ul><li>When the element can change its state based on the user’s actions or time.</li><li>To promote discoverability</li><li>For read-only situations</li></ul>"},
+            {"type": "Hidden", "description": "The component is completely hidden from view. The user does not know the option is there.", "when-to-use": "<ul><li>When the user is never going to use the option</li><li>To declutter, if it doesn’t cause spatial inconsistencies</li>"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"}, 
+            {"label": "Description", "id": "description"},
+            {"label": "When to use", "id": "when-to-use"}
+          ],
+          "displayedColumns": ["type", "description", "when-to-use"]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-01@3x.png",
+          "imgAlt": "Hidden vs disabled",
+          "textBefore": "<h4 class=\"title-low\">Hidden vs disabled</h4><p>To disable some icon buttons in a top app bar (1), one option is to hide the elements that are not relevant in the given context (2). This declutters the UI, and removing irrelevant options might help users focus, but this also might cause spatial inconsistencies if the position of the icons, size or density of the top app bar changes, and might be confusing to users if they expect them to be there, as it doesn’t promote discoverability.</p><p>The other option (3) is to disable the feature that is not applicable in the given context. This supports discoverability and learnability, and might teach and motivate users, building anticipation . However, a disabled state might be frustrating as there is no feedback on why the given option is non-interactive at the moment.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Types</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-02@3x.png",
+          "imgAlt": "Disabled",
+          "textBefore": "<h4 class=\"title-low\">1. Disabled</h4><p>A default disabled state is used when a component is temporarily disabled due to dependencies or pre-requisites. This scenario is a temporary state change that is most commonly activated by a user’s action or inaction.</p><ul><li>The default disabled component becomes an enabled state once the dependencies are resolved and/or the pre-requisites are achieved</li><li>The user should still be able to see the component in a temporarily disabled state</li><li>Always add explanations, warnings or guidelines to help users move toward their goals. In cases where a temporarily disabled item affects multiple items or the primary action of the flow. The notification should describe how the user can enable or re-enable the disabled component.</li></ul>",
+          "textAfter": "<p>Disabled rows in a data table</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-04@3x.png",
+              "imgAlt": "Temporally disabled button with time guidelines",
+              "text": "Temporally disabled button with time guidelines"
+            },
+            {
+              "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-08@3x.png",
+              "imgAlt": "Disabled weekend days in a date picker calendar",
+              "text": "Disabled weekend days in a date picker calendar"
+            }
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-03@3x.png",
+          "imgAlt": "Exception - large forms",
+          "textBefore": "<p><b>*Exception:</b> In big forms with several required fields, the submit button or CTA will remain enabled by default even when all the fields are empty.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-05@3x.png",
+          "imgAlt": "Disabled state inheritance",
+          "textBefore": "<h4 class=\"body-low-highlight\">Disabled state inheritance</h4><p>Components can inherit a disabled state, such as radio buttons, switches, checkboxes, text fields, data tables, list/menu items, cards, chips, buttons and icon buttons.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<p>Disabled states cannot be inherited by: floating action buttons, side sheets, dialogs, menus, tooltips, and snackbars, or navigational components (such as app bars, tabs, etc.). </p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"body-low-highlight\">Style</h4><p>Default disabled states are most commonly styled by a decrease in opacity in the <a href=\"/design-system/dls-global-docs/color-system\">neutral color palette</a>. Apply the correct disabled state according to each individual component.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"token": "atmosphere.interactive.primary.textandicon.disabled", "light": "<ul><li>Base token: neutral.35</li><li>Hex value: #525254</li><li>Alpha: 0.38</li></ul>", "dark": "<ul><li>Base token: neutral.90</li><li>Hex value: #E2E2E4</li><li>Alpha: 0.38</li></ul>"},
+            {"token": "atmosphere.interactive.primary.background.disabled", "light": "<ul><li>Base token: neutral.35</li><li>Hex value: #525254</li><li>Alpha: 0.16</li></ul>", "dark": "<ul><li>Base token: neutral.90</li><li>Hex value: #E2E2E4</li><li>Alpha: 0.16</li></ul>"}
+          ],
+          "cols": [
+            {"label": "Color Token", "id": "token"}, 
+            {"label": "Light Mode", "id": "light"},
+            {"label": "Dark Mode", "id": "dark"}
+          ],
+          "displayedColumns": ["token", "light", "dark"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"body-low-highlight\">Behavior</h4><ul><li>Disabled components won't display state changes to the component or cursor when hovered over.</li><li>Disabled components don’t change state when tapped.</li><li>There may be zero, one, or multiple disabled components in a composition.</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"body-low-highlight\">Accessibility considerations</h4><ul><li>The disabled component states are exempt from current accessibility contrast requirements.</li><li>The keyboard accessibility will use disabled or aria-disabled attributes</li><li>The disabled state is not read by a screen reader</li></ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-06@3x.png",
+          "imgAlt": "Hidden",
+          "textBefore": "<h4 class=\"title-low\">1. Hidden</h4><p>The hidden disabled variation is used when something or someone does not have permission to view or interact with an element of the screen. This variation completely hides the component, page, action, etc. from the user’s interface. The only way to enable the hidden element and have it resurfaced is to change the assigned permission.</p><p>For example, when a user is an admin they are allowed to share content to the organization (1). Any other users that are not an admin would not be shown the “Share” option on the page/pane (2).</p>"
+        },
+        {
+          "type": "text-image",
+          "imgSrc": "./assets/images/patterns/disabled-states/disabled-states-07@3x.png",
+          "imgAlt": "Exception",
+          "text": "<h4 class=\"body-low-highlight\">*Exception</h4><p>An exception might be when you want to promote a new feature or when it is necessary to show a specific action to users who do not have permission. In this case, the default disabled state can be used.</p>"
+        }
+      ]
+    }
+  ]
+}

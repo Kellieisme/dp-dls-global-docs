@@ -1,0 +1,205 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Common Button",
+  "storybookId": "components-button",
+  "storybookDefaultStory": "filled",
+  "header": {
+    "title": "Common button",
+    "description": "Buttons help people take actions in a UI",
+    "backgroundImg": "components/button-common/common-button-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Common buttons prompt users to take most actions in a UI",
+            "Keep button labels concise and in sentence case",
+            "Can contain an optional leading icon either on left or right side",
+            "Always use the provided Atmosphere Design System <a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">icon library</a>"
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">What is a common button?</h3><p>Common buttons prompt users to take most actions in a UI. Atmosphere uses four styles: filled, outlined, text, and filled tonal. Within each style, the two types of buttons are primary and accent.</p><p>Use accent buttons for prominent page level actions, while primary buttons are used for most other on-screen interactions. All buttons have fully rounded corners and are wide enough to fit label text.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-01@3x.png",
+          "imgAlt": "Common button"
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=4260-36492\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-common/common-button-02@3x.png",
+          "imgAlt": "Button types",
+          "textBefore": "<h3 class=\"title-high\">Button types</h3><p>Common buttons fall into the following two types. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Primary button</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-common/common-button-03@3x.png",
+          "imgAlt": "Button styles",
+          "textBefore": "<h3 class=\"title-high\">Button types</h3><p>Common buttons are available in four styles. Each of these styles can be accompanied by a supporting icon, which can be used on either the left or right side of the label. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Filled button</li><li>Outlined button</li><li>Text button</li><li>Tonal filled button</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-common/common-button-04@3x.png",
+          "imgAlt": "Button states",
+          "textBefore": "<h3 class=\"title-high\">Button states</h3><p>Each of the four button styles has four different states. These button states are applicable to both the Primary and Accent buttons.</p>",
+          "textAfter": "<ol><li>Enabled button</li><li>Hovered button</li><li>Pressed button</li><li>Disabled button</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>The button component comes in two density modes: relaxed and condensed. By default, it's recommended to use the relaxed density mode for improved accessibility. However, the condensed density mode can be beneficial when presenting a large amount of information on a larger screen. It's advisable to avoid the use of condensed density mode when designing applications for small & medium viewports.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-common/common-button-06@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-common/common-button-07@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/button-common/common-button-08@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3><p>Common buttons fall into the following two types. Refer to the Usage section in Guidelines for their appropriate use cases.</p>",
+          "textAfter": "<ol><li>Label text</li><li>Container (non visible in text buttons)</li><li>Icon (optional)</li></ol>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Label text</h4><p>Label text is the most important element of a button. It describes the action that will occur when a user taps a button.</p><ol><li>The label text should be concise, using as few words as possible to clearly describe the button's purpose.</li><li>Consider beginning the label with a verb to effectively convey the button's action.</li><li>The first letter of the label text on a button should be capitalized.</li></ol>",
+          "imgSrc": "./assets/images/components/button-common/common-button-09@3x.png",
+          "imgAlt": "Label text"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like dialogs, modal windows, forms, cards, and toolbars.</p><p>Buttons are just one option for representing actions in a product and shouldn’t be overused. Too many buttons on a screen disrupt the visual hierarchy. Buttons should be used in instances where users are expected to take immediate action.</p><p>Accent buttons stand out significantly compared to the rest of the user interface. This type of button should be reserved for specific situations where the action requires emphasis among other buttons on a page. For example, these buttons can be used at page level interactions.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Filled button</h4><p>Filled buttons have the most visual impact after the FAB and should be used for important final actions that complete a flow, such as Save or Confirm.</p><p>Filled buttons should have containers with a solid fill color. The container width of the filled button can be set in two different ways:</p><ol><li>It could be set to the same size as the text label with consistent padding on the left and right.</li><li>It could be set relative to the responsive layout grid</li></ol><p> Refer to the Responsive behavior section for guidelines on how to scale buttons for different device sizes.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-10@3x.png",
+          "imgAlt": "Filled button"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Outlined button</h4><p>Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app. They pair well with filled buttons to indicate an alternative, secondary action.</p><p>Outlined buttons display a stroke around the button container, and by default have no fill.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-11@3x.png",
+          "imgAlt": "Outlined button"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Text button</h4><p>Text buttons are used for the lowest priority actions, especially when presenting multiple options.</p><p>Text buttons can be placed on a variety of backgrounds. Until the button is interacted with, its container isn’t visible. These buttons are often embedded in components like cards, dialogs, and snackbars. Because text buttons don’t have a visible container in their default state, they don’t distract from nearby content.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-12@3x.png",
+          "imgAlt": "Text button"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Tonal filled button</h4><p>Tonal buttons serve as alternatives to outlined buttons. They are particularly useful when multiple medium-emphasis action buttons are grouped together or used repeatedly. In terms of hierarchy, these buttons hold slightly more visual prominence than outlined buttons.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-13@3x.png",
+          "imgAlt": "Tonal filled button"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsive behavior</h3><p>When scaling layouts for different device sizes, buttons can adapt their visual presentation, alignment, and arrangement to fit different contexts and user needs.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Scaling with a parent container</h3><ol><li>The size and placement of buttons can change as parent containers</li><li>The position and alignment of button elements, such as text and icons, should always be defined in relation to their container. For example, the icon and label text within a button should remain centered and anchored to each other as the button width scales.</li></ol>",
+          "imgSrc": "./assets/images/components/button-common/common-button-14@3x.png",
+          "imgAlt": "Scaling with a parent container"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>Users can activate a button by clicking anywhere inside the button's container. The cursor will change to the hand cursor when :hovered & :pressed.</p><p>When the component is :disabled the cursor will not be displayed when hovering or pressing over it and there will be no interaction.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and activate a button using the specified keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus lands on (non-disabled) button"},
+            {"keys": "Space/Enter", "actions": "Activates the (non-disabled) button"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Using labels</h3><p>The accessibility label for a button ideally comes from the visible label text on the button such as Save, Confirm or Done. Consider aligning the accessibility label (used for assistive technology devices like screen readers) with the visible label text.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-15@3x.png",
+          "imgAlt": "Using labels"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Responsiveness & densities</h3><p>A group of similar components can be nested together inside a component or they can stand alone. To ensure accessibility, the height of target size of each button should always be at least 48px in mobile devices, even when nested together. </p><p>The Condensed density is an exception that shrinks the size of the button, and should be used only in desktop applications.</p>",
+          "imgSrc": "./assets/images/components/button-common/common-button-16@3x.png",
+          "imgAlt": "Responsiveness & densities"
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

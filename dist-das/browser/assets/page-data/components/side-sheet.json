@@ -1,0 +1,281 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Side sheet",
+  "storybookId": "components-sidesheet",
+  "storybookDefaultStory": "standard",
+  "storybookHeight": "600",
+  "header": {
+    "title": "Side sheet",
+    "description": "Side sheets show secondary content anchored to the side of the screen",
+    "backgroundImg": "components/side-sheet/side-sheet-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Provide optional content and actions without interrupting the main content",
+            "Two types: standard and modal",
+            "Users can navigate to another region within the sheet",
+            "Side sheets can contain a back icon for navigation"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=5685-6465\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-01@3x.png",
+          "imgAlt": "Types",
+          "textBefore": "<h3 class=\"title-high\">Types</h3>",
+          "textAfter": "<ol><li>Standard</li><li>Modal</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>Side sheet actionable parts will use <a href=\"/design-system/dls-global-docs/components/button-common\">text buttons</a> and <a href=\"/design-system/dls-global-docs/components/button-icon\">icon buttons</a>, so they will inherit the measurements of each component.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-02@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-03@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Standard</h4><p>Standard side sheets are supplementary surfaces for contextual actions and information, used mostly in medium to expanded screen sizes ike tablet and desktop.</p><p>They display content that complements the screen’s primary content, and <b>remain visible while users interact with primary content.</b></p><p><b>They can be closed or remain fixed, depending on the design necessities, and can push the main content width when opened or appear over it.</b></p><p>Common uses:</p><ul><li>Displaying a list of actions that affect the screen’s primary content, such as filters</li><li>Displaying supplemental content and features</li><ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Modal</h4><p>Modal side sheets are preferred in compact window sizes, like mobile, due to limited screen size. They can display the same types of content as standard side sheets, but <b>must be dismissed in order to interact with the underlying content.</b></p><p><b>They will always be used along with an overlay over the main content.</b></p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Anatomy</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-04@3x.png",
+          "imgAlt": "Standard",
+          "textBefore": "<h4 class=\"title-low\">Standard</h4>",
+          "textAfter": "<ol><li>Divider (optional)</li><li>Title (optional)</li><li>Close icon button (optional)</li><li>Container</li><li>Footer (optional)</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-05@3x.png",
+          "imgAlt": "Modal",
+          "textBefore": "<h4 class=\"title-low\">Modal</h4>",
+          "textAfter": "<ol><li>Back icon button (optional)</li><li>Title (optional)</li><li>Close icon button (optional)</li><li>Container</li><li>Footer (optional) </li><li>Overlay / Scrim</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Header</h4><p>The header can contain the sheet title, the close action icon button, and a back button if the side sheet has more than one level of depth.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Container</h4><p>The container is the only required element of a side sheet. All other elements are optional.</p><p>It holds all side sheet internal elements. Their size is determined by the space those elements occupy. Side sheets can display a wide variety of content and layouts, ranging from a list of actions to supplemental content in a tabular layout.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Footer</h4><p>The footer can contain actions available from a side sheet, and might include save, edit, cancel... Buttons are aligned to the trailing edge of the sheet for easier interaction. The confirmation button is always closest to the edge.</p>",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-06@3x.png",
+          "imgAlt": "Footer"
+        },
+        {
+          "type": "text-image",
+          "text": "<p>These actions will be aligned to the rignt in case of regular buttons, or can show an even distribution of text buttons forming an action bar, etc.</p>",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-07@3x.png",
+          "imgAlt": "Action alignment"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3><p>Side sheets have a default 320px width and a max-width of 500px, but their dimensions depend on the screen size and how the app’s layout is subdivided into UI regions.</p><p>They can align to the right or left side of the screen (modals can have a max 16px inset) and typically use all the vertical space available.</p>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-08@3x.png",
+              "imgAlt": "Sidesheet placement - do",
+              "type": "success",
+              "text": "Sheet placed along the edge of the screen"
+            },
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-09@3x.png",
+              "imgAlt": "Sidesheet placement - do",
+              "type": "success",
+              "text": "Sheet along the edge of the screen + 16px inset"
+            },
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-10@3x.png",
+              "imgAlt": "Dialog aspect ratio - don't",
+              "type": "error",
+              "text": "Side sheet far beyond the recomendend margin"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Behavior</h4><p>Side sheets can vertically scroll independent of the rest of the UI. This allows their scroll position and content to persist while the page is scrolled, and vice versa. The content will scroll under the header section if available.</p><p>Side sheets cannot scroll horizontally.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Back button</h4><p>If the side sheet has more than one level of depth, use the back button to allow users to navigate between levels.</p><p>This is especially useful when using the side sheet for containing a navigation drawer, or when an action like edit or search is activated inside the sheet.</p>",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-11@3x.png",
+          "imgAlt": "Back button"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Close button</h4><p>Ensure that a Close affordance is always present within a modal side sheet.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Customization</h3>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Background</h4><p>The standard side sheet that pushes the page content can adapt to the different types of UI background colors.</p><p>The modal side sheet can also change the thickness of its glass background to adapt to the global design.</p>",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-12@3x.png",
+          "imgAlt": "Background"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Close button</h4><p>In a standard side sheet that expands/collapses, the Close icon button can also be switched to another icon that represents the action.</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-13@3x.png",
+              "imgAlt": "Close button"
+            },
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-14@3x.png",
+              "imgAlt": "Close button"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Header</h4><p>The header can be customized to add a second support icon, a search bar, etc...</p>"
+        },
+        {
+          "type": "image-image",
+          "images": [
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-15@3x.png",
+              "imgAlt": "Close button"
+            },
+            {
+              "imgSrc": "./assets/images/components/side-sheet/side-sheet-16@3x.png",
+              "imgAlt": "Close button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>Users can activate each item by clicking anywhere inside its container. The cursor will change to the hand cursor when :pressed.</p><p>When the item is :disabled the cursor will not be displayed when hovering or pressing over it and there will be no interaction.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and activate an item inside a side sheet with these keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Tab", "actions": "Focus on the next available enabled item "},
+            {"keys": "Space/Enter", "actions": "Activates the focused item"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsiveness & densities</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/side-sheet/side-sheet-17@3x.png",
+          "imgAlt": "Responsive behavior",
+          "textBefore": "<h4 class=\"title-low\">Responsive behavior</h4><p>Standard side sheets can transition to modal side sheets in smaller screens.</p><p>Side sheets have a default width, but can be resized depending on the needs of the layout. When a standard side sheet opens, the body area shrinks to accommodate the sheet’s width while maintaining a margin on the body’s trailing edge.</p><p>They can also hide/collapse when resizing the window, so make sure that the component that triggers the action of opening the sheet is always accessible in small sizes.</p>"
+        },
+        {
+          "type": "text-table",
+          "text": "<h3 class=\"title-high\">Densities</h3><p>The header and footer of the side sheet will be reduced in height and the size of the buttons will shrink for condensed density. <b>Mobile screens should always use relaxed density to ensure touch accessibility.</b></p><p>All of these changes can be visually seen in the Measurements section.</p>",
+          "data": [
+            {"layer": "Header vertical padding", "relaxed": "12", "condensed": "8"},
+            {"layer": "Footer top padding", "relaxed": "16", "condensed": "12"},
+            {"layer": "Footer bottom padding", "relaxed": "24", "condensed": "20"},
+            {"layer": "Modal sheet border radius", "relaxed": "16", "condensed": "12"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed", "id": "relaxed"},
+            {"label": "Condensed", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+    "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Report a bug",
+    "header": {
+      "title": "Report a bug",
+      "description": "Submit code or component issues encountered in the Atmosphere ecosystem.",
+      "backgroundImg": "contact/report/report-bug-header@3x.png"
+    },
+    "sections": [
+      {
+        "type": "text-image",
+        "text": "<h3 class=\"title-high\">Developer feedback</h3><p>Developer feedback is vital to making the Atmosphere ecosystem even better. Bugs may be encountered through the code or related to design tokens and components. Submit a report with any issues you encounter.</p><ul><li>Make sure to file one issue per submission</li><li>Include any attachments or files to your report in order to help document the issue for review</li></ul><h4 class=\"title-low\">What to expect after submission</h4><p>Your feedback reviewed as soon as possible. We may also email you asking for additional information. We will contact you within 3 business days and work to resolve the issue.</p>",
+        "imgSrc": "./assets/images/contact/report/report-bug-01@3x.png",
+        "imgAlt": "Developer feedback"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "list",
+        "text": "<h3 class=\"title-high\">Report a bug</h3><p>To report a bug, contact <a href=\"mailto:jurrien.vanberkum@boeing.com\">jurrien.vanberkum@boeing.com</a> and make sure to include the following information and documentation:</p>",
+        "items": [
+          "Include your name, role and email",
+          "List topics or categories are related to the issue",
+          "Describe the issue",
+          "Include relevant screenshots or documentation"
+        ],
+        "name": "Email Jurriën Van Berkum",
+        "email": "jurrien.vanberkum@boeing.com"
+      }
+    ]
+  }
+  
