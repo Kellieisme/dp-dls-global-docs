@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Create .npmrc
+        run: |
+          echo "@jeppesen-foreflight:registry=https://${{ vars.NPM_REGISTRY_URL }}/" >> .npmrc
+          echo "//${{ vars.NPM_REGISTRY_URL }}/:_authToken=${{ secrets.GN_GITHUB_TOKEN }}" >> .npmrc
+          echo "Created the following .npmrc:"; cat .npmrc
 
       # Install Node
       - uses: actions/setup-node@v4
