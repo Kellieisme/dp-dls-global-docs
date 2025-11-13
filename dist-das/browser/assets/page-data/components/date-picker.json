@@ -1,0 +1,260 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Components - Date picker",
+  "storybookId": "components-date-picker",
+  "storybookDefaultStory": "basic",
+  "storybookHeight": "500",
+  "header": {
+    "title": "Date picker",
+    "description": "Date pickers let people select a date, or a range of dates",
+    "backgroundImg": "components/date-picker/date-picker-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Date pickers can display past, present, or future dates",
+            "Clearly indicate important dates, such as current and selected days",
+            "Allow to enter a date either through text input, or by choosing it from the calendar"
+          ]
+        },
+        {
+          "type": "storybook"
+        },
+        {
+          "type": "table",
+          "heading": "Resources",
+          "data": [
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0?node-id=12139-13606\" target=\"_blank\">Figma: Atmosphere Foundations and Components Library</a>", "status": "Available"},
+            {"type": "Design", "resource": "<a href=\"https://www.figma.com/design/aEF6NeIfFACLIXJ7srSvax/Atmosphere-Icons-Library\" target=\"_blank\">Figma: Atmosphere Icons Library</a>", "status": "Available"},
+            {"type": "Implementation", "resource": "<a href=\"https://git.web.boeing.com/design/design-system/dp-dls-global-angular\" target=\"_blank\">GitLab: Angular web component</a>", "status": "Available"}
+          ],
+          "cols": [
+            {"label": "Type", "id": "type"},
+            {"label": "Resource", "id": "resource"},
+            {"label": "Status", "id": "status"}
+          ],
+          "displayedColumns": ["type", "resource", "status"]
+        }
+      ]
+    },
+    {
+      "label": "Specs",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Types</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-01@3x.png",
+          "imgAlt": "Types",
+          "textAfter": "<ol><li>Date picker (single date selection)</li><li>Month year picker</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">States</h3>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-02@3x.png",
+          "imgAlt": "Date picker",
+          "textBefore": "<h4 class=\"title-low\">Date picker</h4>",
+          "textAfter": "<ol><li>Enabled (empty)</li><li>Hovered (empty)</li><li>Writing (empty)</li><li>Open - Days view (empty)</li><li>Open - Years view (empty)</li><li>Open - Months view (empty)</li><li>Error (empty)</li><li>Disabled (empty)</li><li>Enabled (populated)</li><li>Hovered (populated)</li><li>Writing (populated)</li><li>Open - Days view (populated)</li><li>Open - Years view (populated)</li><li>Open - Months view (populated)</li><li>Error (populated)</li><li>Disabled (populated)</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-03@3x.png",
+          "imgAlt": "Month/year picker",
+          "textBefore": "<h4 class=\"title-low\">Month/year picker</h4>",
+          "textAfter": "<ol><li>Enabled (empty)<li>Hovered (empty)</li><li>Writing (empty)</li><li>Open - Years view (empty)</li><li>Open - Months view (empty)</li><li>Error (empty)</li><li>Disabled (empty)</li><li>Enabled (filled)</li><li>Hovered (filled)</li><li>Writing (filled)</li><li>Open - Years view (filled)</li><li>Open - Months view (filled)</li><li>Error (filled)</li><li>Disabled (filled)</li></ol>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-04@3x.png",
+          "imgAlt": "Calendar items - Day button",
+          "textBefore": "<h4 class=\"title-low\">Calendar items - Day button</h4>",
+          "textAfter": "<ol><li>Default - Enabled</li><li>Default - Hovered</li><li>Default - Pressed/Active</li><li>Default - Disabled</li><li>Today - Enabled</li><li>Today - Hovered</li><li>Today - Pressed/Active</li><li>Today - Disabled</li><li>Selected - Enabled</li><li>Selected - Hovered</li><li>Selected - Pressed/Active</li><li>Selected - Disabled</li><ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-05@3x.png",
+          "imgAlt": "Calendar items - Month button",
+          "textBefore": "<h4 class=\"title-low\">Calendar items - Month button</h4>",
+          "textAfter": "<ol><li>Default - Enabled</li><li>Default - Hovered</li><li>Default - Pressed/Active</li><li>Default - Disabled</li><li>Today - Enabled</li><li>Today - Hovered</li><li>Today - Pressed/Active</li><li>Today - Disabled</li><li>Selected - Enabled</li><li>Selected - Hovered</li><li>Selected - Pressed/Active</li><li>Selected - Disabled</li><ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-06@3x.png",
+          "imgAlt": "Calendar items - Year button",
+          "textBefore": "<h4 class=\"title-low\">Calendar items - Year button</h4>",
+          "textAfter": "<ol><li>Default - Enabled</li><li>Default - Hovered</li><li>Default - Pressed/Active</li><li>Default - Disabled</li><li>Today - Enabled</li><li>Today - Hovered</li><li>Today - Pressed/Active</li><li>Today - Disabled</li><li>Selected - Enabled</li><li>Selected - Hovered</li><li>Selected - Pressed/Active</li><li>Selected - Disabled</li><ul>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Measurements</h3><p>Date picker component comes in two density modes: relaxed and condensed.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-07@3x.png",
+          "imgAlt": "Relaxed density",
+          "textBefore": "<h4 class=\"title-low\">Relaxed density</h4>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-08@3x.png",
+          "imgAlt": "Condensed density",
+          "textBefore": "<h4 class=\"title-low\">Condensed density</h4>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Date pickers let people select a past or future date. They  allow users to enter a date either through text input, or by choosing a date from the calendar.</p>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-09@3x.png",
+          "imgAlt": "Anatomy",
+          "textBefore": "<h3 class=\"title-high\">Anatomy</h3>",
+          "textAfter": "<ol><li>Container</li><li>Label</li><li>Calendar icon button</li><li>Supporting text (optional)</li><li>Placeholder text (optional)</li><li>Dropdown</li><li>Views navigation button</li><li>Lateral navigation buttons</li><li>Day/Year/Month buttons</li><li>Selected date text</li><li>Input date text</li><li>Caret</li></ol>"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Behavior</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Date picker</h4><p>Date pickers let people select a single date. They display a date input field by default, and allow users to enter a date either through text input, or by clicking on the calendar icon and choosing a date from the dropdown calendar, that shows the days of the current month view by default. </p><p><b>To select a date from in the date picker using the manual entry:</b></p><ol><li>When the date picker is empty, only the label will appear in the center of the field.</li><li>When the container is clicked, the label shrinks to the top left side, and the field allows the manual entry of dates using the numbers on a keyboard..An optional placeholder can be shown in the container to guide the user.</li><li>When the user presses enter or clicks outside the field, the date text shows the entered date.</li><li>The date can be deleted or changed using the same procedure or using the calendar.</li></ol><p><b>To select a date from in the date picker using the calendar dropdown:</b></p><ol><li>When the date picker is empty, only the label will appear in the center of the field.</li><li>When the calendar icon is clicked, the label shrinks to the top left side and a calendar dropdown appears. An optional placeholder can be shown in the container to guide the user.</li><li>The usera can then navigate between views to choose the date.</li><li>When the user selects one date, the dropdown closes and the date text shows the selected date.</li><li>Once selected, the date can’t be unselected, only changed. To delete the date the manual entry should be used.</li></ol><p>The calendar dropdown has three views:</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h5 class=\"body-low-highlight\">Days view</h5><p>This view shows the days of a month/year</p><ul><li>To navigate across months, click on the lateral navigation arrows</li><li>To navigate across years, click on the views navigation button</li><li>To select a day click on a day button</li></ul>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-10@3x.png",
+          "imgAlt": "Days view"
+        },
+        {
+          "type": "text-image",
+          "text": "<h5 class=\"body-low-highlight\">Years view</h5><p>This view shows a range of 24 years, including the current year.</p><ul><li>To navigate across year blocks, click on the lateral navigation arrows</li><li>To go back to the days view, click on the views navigation button</li><li>To select a year click on a year button and the calendar will change to the months view</li></ul>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-11@3x.png",
+          "imgAlt": "Years view"
+        },
+        {
+          "type": "text-image",
+          "text": "<h5 class=\"body-low-highlight\">Months view</h5><p>This view shows the months of a year</p><ul><li>To navigate across years, click on the lateral navigation arrows</li><li>To go back to the days view, click on the views navigation button</li><li>To select a month click on a month button and the calendar will change to the days view, showing the month+year selected.</li></ul>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-12@3x.png",
+          "imgAlt": "Months view"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Date validation</h4><p>Some dates can be disabled in the calendar, following the application needs:</p><ul><li><b>Min/Max:</b> Will disable all dates on the calendar popup before or after the respective values and prevent the user from advancing the calendar</li><li><b>Filter validation:</b> Will disable the dates on the calendar that are invalid (i.e: weekends). Will not prevent the user from advancing the calendar.</li></ul>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-13@3x.png",
+          "imgAlt": "Date validation"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Error states</h4><p>Any date in the calendar that shouldn’t be selected, will be disabled with the date validation methods so it doesn’t result in an error.</p><p>Other typical error causes in the date picker are:</p><p>Required fields: To indicate that a date is required, display an asterisk (*) next to the label text.</p><p>If the user interacts with the date picker but nothing gets selected, the container will change to an error state. The supporting text should be replaced with error text hat describes how to avoid the error.</p><p><b>Wrong data formatting:</b> In the specific case when the user inputs a date with a wrong data format.</p><p>See <a href=\"/design-system/dls-global-docs/patterns/error-handling\">error handling pattern</a> for more information.</p>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-16@3x.png",
+          "imgAlt": "Error states"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Calendar dropdown direction</h4><p>By default, dropdowns open downward, but they can open up depending on its position on the screen. If the calendar dropdown appears at the bottom and close to the edge of the interface, it will expand upward to avoid being cropped.</p>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Range selection</h4><p>To select a date range, the default behavior will be using two date pickers to select the starting and the ending date.</p>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-14@3x.png",
+          "imgAlt": "Range selection"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Month/year picker</h4><p>Month year pickers allow the selection of a specific month and year. They display an input field by default, and allow users to enter a month and year either through text input, or by clicking on the calendar icon and choosing them from the dropdown calendar.</p><p>Their behavior will be the same as the date pickers, without showing the day view or  views navigation button and changing the date format to MM/YYYY.</p>",
+          "imgSrc": "./assets/images/components/date-picker/date-picker-15@3x.png",
+          "imgAlt": "Month/year picker"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Cursor</h3><p>Users can activate the component by clicking on the cContainer element, or activate the calendar dropdown and selecting a date by clicking on an item in the calendar. The cursor will change to the hand cursor when :pressed.</p><p>When the component is :disabled the cursor will not be displayed when hovering or pressing over it and there will be no interaction.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Keyboard</h3><p>Users should be able to navigate to and activate a date picker with these keys:</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {"keys": "Alt + Down Arrow", "actions": "Open the calendar"},
+            {"keys": "Esc", "actions": "Close the calendar"},
+            {"keys": "Arrows", "actions": "Move between days, months or years"},
+            {"keys": "Home/End", "actions": "Go to the first/last  day, month or year"},
+            {"keys": "Shift + Page up/down", "actions": "Moves to the same date in the next/previous year"},
+            {"keys": "Enter", "actions": "Select current day, month or year"}
+          ],
+          "cols": [
+            {"label": "Keys", "id": "keys"},
+            {"label": "Actions", "id": "actions"}
+          ],
+          "displayedColumns": ["keys", "actions"]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Date format</h3><p><b>The default date format will be MM/DD/YYYY and the week will begin on Sunday, following the en-US convention.</b></p><p>In case of manual entry, the date will be automatically formatted after the user hits “Enter“ or navigates out of the text field. Don't automatically format the date by adding slashes as input masks while the user is typing. This may cause confusion for people using screen readers because it changes what they typed. To reduce errors, accept a range of formats including dashes, spaces, slashes, dots, and 0 to the left of a single digit month/day.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Label usage</h3><p>Labels must be clear, concise, unique, and accurately describe the field. Every date picker component must contain a label. The accessibility label for a date picker is typically the same as the label for the date picker.</p><p>Truncating labels isn't ideal, but tooltips allow the full text to be shown on hover or keyboard focus.Days of the week are not interactive and are therefore not focusable via keyboard, yet the tooltip is available on hover. The date picker relies on the conventionality of these abbreviations for some assistive technology users.</p><p>Labels, placeholders and supporting text should be in sentence case, but the MM/DD/YYYY format will be an exception.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Responsiveness & densities</h3>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Responsive behavior</h4><p>For smaller viewports the calendar will follow the default dropdown behavior.</p>"
+        },
+        {
+          "type": "text-table",
+          "text": "<h4 class=\"title-low\">Densities</h4><p>The date picker text field will be reduced in height for condensed versions. The calendar dropdown won't have density changes. <b>Mobile screens should always use Relaxed density to ensure touch accessibility.</b></p><p>All of these changes can be visually seen in the Measurements section.</p>",
+          "data": [
+            {"layer": "Container height", "relaxed": "48", "condensed": "40"},
+            {"layer": "Border radius", "relaxed": "8", "condensed": "4"}
+          ],
+          "cols": [
+            {"label": "Layer", "id": "layer"},
+            {"label": "Relaxed", "id": "relaxed"},
+            {"label": "Condensed", "id": "condensed"}
+          ],
+          "displayedColumns": ["layer", "relaxed", "condensed"]
+        }
+      ]
+    },
+    {
+      "label": "Angular",
+      "sections": [
+        {
+          "type": "storybook-docs"
+        }
+      ]
+    }
+  ]
+}

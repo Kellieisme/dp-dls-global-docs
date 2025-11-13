@@ -1,0 +1,34 @@
+{
+    "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Request a component",
+    "header": {
+      "title": "Request a component",
+      "description": "Submit a request for a new component or changes related to the Figma library",
+      "backgroundImg": "contact/request/request-component-header@3x.png"
+    },
+    "sections": [
+      {
+        "type": "text-image",
+        "text": "<h3 class=\"title-high\">Component feedback</h3><p>Design feedback is vital to help grow the system based on user needs and product capabilities. Submit a component request with any component states or interaction needs you encounter.</p><ul><li>Make sure to file a separate request for each component</li><li>Include any attachments or files in order to help bring context to your component request</li></ul><h4 class=\"title-low\">Requesting a new component</h4><p>Although Atmosphere has been designed for typical product functionalities, oftentimes new or unique interactions are needed to serve different users.</p><h4 class=\"title-low\">Identifying component modifications</h4><p>Many components include different interaction states within the Figma library. However, there may be a need to represent more states. If you encounter a component issue, you may report a bug.</p><h4 class=\"title-low\">What to expect after submission</h4><p>Our team will review each request and evaluate if the component can be applied to other products and use cases. We will contact you within 3 business days and develop a plan for a future release.</p>",
+        "imgSrc": "./assets/images/contact/request/request-component-01@3x.png",
+        "imgAlt": "Component feedback"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "list",
+        "text": "<h3 class=\"title-high\">Component requests</h3><p>To submit a new request, contact <a href=\"mailto:jurrien.vanberkum@boeing.com\">jurrien.vanberkum@boeing.com</a> and make sure to include the following information and documentation:</p>",
+        "items": [
+          "Include your name, role and email",
+          "List topics or categories are related to your request",
+          "Describe the new component, its purpose and related use cases",
+          "Is this component new or modified?",
+          "What is the timing and level of urgency of your request?",
+          "Include relevant screenshots or documentation"
+        ],
+        "name": "Jurriën Van Berkum",
+        "email": "jurrien.vanberkum@boeing.com"
+      }
+    ]
+  }
+  

@@ -1,0 +1,541 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Layout",
+  "header": {
+    "title": "Layout",
+    "description": "The layout promotes consistency across platforms, environments and screen sizes through the use of uniform elements and spacing",
+    "backgroundImg": "foundations/layout/layout-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Use layout to direct attention to the action users want to take",
+            "Adapt layouts to Atmosphere default screen sizes & devices",
+            "Use Atmosphere grids as helpers",
+            "Consider how spacing and the parts of the layout work together"
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-01@3x.png",
+          "imgAlt": "Layout diagram",
+          "textAfter": "<ol><li>Column: One or more vertical blocks of content within a pane</li> <li>Gutter: The space between columns</li><li>Margin: The space between the edge of the screen and any elements inside of it</li> <li>Pane: A layout container that houses other components and elements within a single app.  A pane can be: fixed, flexible, floating, or semi-permanent</li> <li>Spacer: the space between two panes</li> <li>Screen size: Inside a breakpoint, the screen size at which a layout needs to change to match available space, device conventions, and ergonomics</li></ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Screen sizes and breakpoints</h3> <p>Devices of different sizes and orientations need different layouts. This change in layout takes advantage of device capabilities and user expectations.</p> <p>A  breakpoint marks the change on the screen size at which a layout needs to change to match available space, device conventions, and ergonomics.</p> <p>All devices fall into one of five Atmosphere default screen sizes classes: extra-small, small, medium, large, or extra-large and components will be optimized to fit these sizes.</p> <p>Use this set of standard breakpoints to maintain layout integrity across screen sizes. For best results, test designs and code at each of these standard breakpoints.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {
+              "type": "Extra Small* (deprioritized)",
+              "frame": "360 x 640",
+              "breakpoint": "Width = 360 - 599",
+              "devices": "Phone in portrait"
+            },
+            {
+              "type": "Small* (deprioritized)",
+              "frame": "600 x 800",
+              "breakpoint": "Width = 360 - 839",
+              "devices": "Tablet in portrait"
+            },
+            {
+              "type": "Medium",
+              "frame": "1024 x 768",
+              "breakpoint": "Width = 840 - 1199",
+              "devices": "Phone/tablet in landscape"
+            },
+            {
+              "type": "Large",
+              "frame": "1280 x 720",
+              "breakpoint": "Width = 1200 - 1599",
+              "devices": "Desktop"
+            },
+            {
+              "type": "Extra Large",
+              "frame": "2560 x 1440",
+              "breakpoint": "Width = 1600 - 2560",
+              "devices": "Desktop ultra wide"
+            }
+          ],
+          "cols": [
+            {
+              "label": "Type",
+              "id": "type"
+            },
+            {
+              "label": "Frame",
+              "id": "frame"
+            },
+            {
+              "label": "Breakpoint",
+              "id": "breakpoint"
+            },
+            {
+              "label": "Devices",
+              "id": "devices"
+            }
+          ],
+          "displayedColumns": [
+            "type",
+            "frame",
+            "breakpoint",
+            "devices"
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<p>Notice that Atmosphere is not optimized for Extra Small and Small screen sizes, as it is a desktop-oriented Design System. These sizes are depicted only to show the responsiveness of a design, and designers should consider that the Navigation won’t follow the mobile default.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-02@3x.png",
+          "imgAlt": "Layout parts diagram",
+          "textBefore": "<h3 class=\"title-high\">Layout parts</h3><p>Most Layouts have two regions: Navigation and Body. The navigation region can be placed in different parts of the screen depending on screen size and device.</p>",
+          "textAfter": "<ol> <li>Navigation region</li>  <li>Body region</li> </ol>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Navigation region</h4><p>The navigation region holds primary navigation components and elements such as navigation drawers, navigation rails, navigation bars, tabs, etc.</p>  <p>Elements in this section help people navigate between destinations in an app or to access important actions, and the components used for that may vary in different device sizes and environments.</p> <h4 class=\"title-low\">Body region</h4> <p>The body region contains most of the content in an app, including: Images, text, lists, cards, buttons, app bar, search bar, etc.  <p>Content in the body region is grouped into one or more panes. The arrangement and relative size of the layout regions and panes will vary depending on the device’s screen size. A pane is different from a screen, which refers to the frame containing an app. <p>Content in a pane can be displayed in multiple columns to segment and align content. Columns are exclusive to a pane and are not used at the screen level. <p>There are two main pane types: <ol>   <li>Fixed: fixed width.</li>   <li>Flexible: responsive to available space, can grow and shrink.</li> </ol>  <p>The recommendation will be:</p>  <ul>  <li>Single-pane layout: use one flexible pane</li><li>Two-pane layouts: typically use one fixed and one flexible pane, which can appear in whatever order is best for the content.</li></ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-03@3x.png",
+          "imgAlt": "Layout parts arrangement diagram",
+          "textAfter": "<p>The arrangement and relative size of the layout regions and panes will vary depending on the screen size. Atmosphere reccomends this distribution:</p>  <ul>   <li>Extra Small: 1 pane</li>   <li>Small: 1 or 2 panes</li>   <li>Medium: 1 or 2 panes</li>   <li>Large: 1 to 2 panes with standard side sheet serving as a potential additional 3rd pane.</li>  <li>Extra-large: 1 to 2 panes with standard side sheet serving as a potential additional 3rd pane.</li>  </ul>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-04@3x.png",
+          "imgAlt": "Default layout types diagram",
+          "textBefore": "<h3 class=\"title-high\">Default layout types</h3><p>Use the default layouts as starting points for organizing common elements in an app.</p> <p>Each layout considers common use cases and components to address expectations and user needs for how apps adapt across window class sizes and breakpoints.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Grid",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Grid</h3><p>All grid styles are designed to work with the default screen sizes, classes, and breakpoints and follow the same naming for easier use: extra-small, small, medium, large, or extra-large.</p> <p>Note that these grids are for guidance only, and will vary depending on the type of layout, navigation components, and panes applied.</p>"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Exponential grid (default)</h3><p>The width of the grid and content area grows exponentially and the margin is fixed for each screen size. The width of each column continuously grows and gutters vary for each screen size.</p>",
+          "imgSrc": "./assets/images/foundations/layout/layout-05@3x.png",
+          "imgAlt": "Exponential grid diagram"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Left nav variation</h3><p>When a left navigation rail is used in the screen the provided grid should be applied. This left nav grid is optimized for the default screen sizes. For other sizes it should be customized maintaining the margin/gutter balance.</p>",
+          "imgSrc": "./assets/images/foundations/layout/layout-06@3x.png",
+          "imgAlt": "Left nav variation diagram"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Centered grid</h3><p>The margins are 200px fixed width and the columns will grow exponentially for the large screen size width range with a fixed gutter of 20px. This kind of distribution will be used for web pages or mobile apps that can be opened in a desktop device.</p>",
+          "imgSrc": "./assets/images/foundations/layout/layout-07@3x.png",
+          "imgAlt": "Centered grid diagram"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Condensed and relaxed grid</h3><p>The condensed grid follows the same rules as the relaxed grid, but with a reduced gutter.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {
+              "size": "Extra Small",
+              "columns": "4",
+              "margin": "16",
+              "gutterRelaxed": "16",
+              "gutterCondensed": "12"
+            },
+            {
+              "size": "Small",
+              "columns": "8",
+              "margin": "24",
+              "gutterRelaxed": "16",
+              "gutterCondensed": "12"
+            },
+            {
+              "size": "Medium",
+              "columns": "12",
+              "margin": "24",
+              "gutterRelaxed": "20",
+              "gutterCondensed": "16"
+            },
+            {
+              "size": "Large",
+              "columns": "12",
+              "margin": "32",
+              "gutterRelaxed": "20",
+              "gutterCondensed": "16"
+            },
+            {
+              "size": "Large (centered)",
+              "columns": "12",
+              "margin": "200",
+              "gutterRelaxed": "20",
+              "gutterCondensed": "16"
+            },
+            {
+              "size": "Extra large",
+              "columns": "12",
+              "margin": "32",
+              "gutterRelaxed": "24",
+              "gutterCondensed": "20"
+            },
+            {
+              "size": "Extra large (centered)",
+              "columns": "12 (72px fixed)",
+              "margin": "%",
+              "gutterRelaxed": "24",
+              "gutterCondensed": "20"
+            }
+          ],
+          "cols": [
+            {
+              "label": "Size",
+              "id": "size"
+            },
+            {
+              "label": "Columns",
+              "id": "columns"
+            },
+            {
+              "label": "Margin",
+              "id": "margin"
+            },
+            {
+              "label": "GutterRelaxed",
+              "id": "gutterRelaxed"
+            },
+            {
+              "label": "Guttercondensed",
+              "id": "gutterCondensed"
+            }
+          ],
+          "displayedColumns": [
+            "size",
+            "columns",
+            "margin",
+            "gutterRelaxed",
+            "gutterCondensed"
+          ]
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-08@3x.png",
+          "imgAlt": "Relaxed grid diagram"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-09@3x.png",
+          "imgAlt": "Condensed grid diagram"
+        },
+        {
+          "type": "image-full",
+          "textBefore": "<h3 class=\"title-high\">Max width grid</h3><p>The max width is between 1600px and 2560px. The margins will grow once they exceed 2560px. Gutter and columns are fixed width and centered on the page, while the margins grow equally on left and right of content. The total width of the centered container will be 1128px.</p>",
+          "imgSrc": "./assets/images/foundations/layout/layout-10@3x.png",
+          "imgAlt": "Max width grid diagram"
+        }
+      ]
+    },
+    {
+      "label": "Spacing",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Sizing, spacing &amp; densities</h3><p>Spacing is the negative area between elements and components. It is controlled with margins and padding, aligned with the development way of working.</p> <p>Sizing represents the dimensions of an element in terms of width and height.</p> <p>Knowing the sizing &amp; spacing before designing will be extremely important, because Atmosphere has two different information density modes: relaxed and condensed, and it has to be designed using the right tokens to quickly apply the change on the screen.</p> <p>Relaxed mode is the default mode, and will use a 16px base, and condensed mode will use a 12px base. In condensed mode, the space decreases, creating higher density. Each token represents an increase/decrease in the height of a component by 4px.</p>"
+        },
+        {
+          "type": "table",
+          "data": [
+            {
+              "token": "Sizing.none",
+              "relaxed1": "0px",
+              "condensed1": "0px"
+            },
+            {
+              "token": "Sizing.3xs",
+              "relaxed1": "2px",
+              "condensed1": "0px"
+            },
+            {
+              "token": "Sizing.2xs",
+              "relaxed1": "4px",
+              "condensed1": "2px"
+            },
+            {
+              "token": "Sizing.xs",
+              "relaxed1": "8px",
+              "condensed1": "4px"
+            },
+            {
+              "token": "Sizing.s",
+              "relaxed1": "12px ",
+              "condensed1": "8px"
+            },
+            {
+              "token": "Sizing.m (BASE)",
+              "relaxed1": "16px",
+              "condensed1": "12px"
+            },
+            {
+              "token": "Sizing.l",
+              "relaxed1": "20px",
+              "condensed1": "16px"
+            },
+            {
+              "token": "Sizing.xl",
+              "relaxed1": "24px",
+              "condensed1": "20px"
+            },
+            {
+              "token": "Sizing.2xl",
+              "relaxed1": "32px",
+              "condensed1": "24px"
+            },
+            {
+              "token": "Sizing.3xl",
+              "relaxed1": "40px",
+              "condensed1": "32px"
+            },
+            {
+              "token": "Sizing.4xl",
+              "relaxed1": "48px",
+              "condensed1": "40px"
+            },
+            {
+              "token": "Sizing.5xl",
+              "relaxed1": "56px",
+              "condensed1": "48px"
+            },
+            {
+              "token": "Sizing.6xl",
+              "relaxed1": "64px",
+              "condensed1": "56px"
+            },
+            {
+              "token": "Sizing.7xl",
+              "relaxed1": "72px",
+              "condensed1": "64px"
+            },
+            {
+              "token": "Sizing.8xl",
+              "relaxed1": "80px",
+              "condensed1": "72px"
+            },
+            {
+              "token": "Sizing.9xl",
+              "relaxed1": "96px",
+              "condensed1": "80px"
+            },
+            {
+              "token": "Sizing.10xl",
+              "relaxed1": "112px",
+              "condensed1": "96px"
+            }
+          ],
+          "cols": [
+            {
+              "label": "Alias Token",
+              "id": "token"
+            },
+            {
+              "label": "Relaxed",
+              "id": "relaxed1"
+            },
+            {
+              "label": "Condensed",
+              "id": "condensed1"
+            }
+          ],
+          "displayedColumns": [
+            "token",
+            "relaxed1",
+            "condensed1"
+          ]
+        },
+        {
+          "type": "table",
+          "data": [
+            {
+              "alias_token": "Spacing.none",
+              "relaxed": "0px",
+              "condensed": "0px"
+            },
+            {
+              "alias_token": "Spacing.3xs",
+              "relaxed": "2px",
+              "condensed": "0px"
+            },
+            {
+              "alias_token": "Spacing.2xs",
+              "relaxed": "4px",
+              "condensed": "2px"
+            },
+            {
+              "alias_token": "Spacing.xs",
+              "relaxed": "8px",
+              "condensed": "4px"
+            },
+            {
+              "alias_token": "Spacing.s",
+              "relaxed": "12px ",
+              "condensed": "8px"
+            },
+            {
+              "alias_token": "Spacing.m (BASE)",
+              "relaxed": "16px",
+              "condensed": "12px"
+            },
+            {
+              "alias_token": "Spacing.l",
+              "relaxed": "20px",
+              "condensed": "16px"
+            },
+            {
+              "alias_token": "Spacing.xl",
+              "relaxed": "24px",
+              "condensed": "20px"
+            },
+            {
+              "alias_token": "Spacing.2xl",
+              "relaxed": "32px",
+              "condensed": "24px"
+            },
+            {
+              "alias_token": "Spacing.3xl",
+              "relaxed": "40px",
+              "condensed": "32px"
+            },
+            {
+              "alias_token": "Spacing.4xl",
+              "relaxed": "48px",
+              "condensed": "40px"
+            },
+            {
+              "alias_token": "Spacing.5xl",
+              "relaxed": "56px",
+              "condensed": "48px"
+            },
+            {
+              "alias_token": "Spacing.6xl",
+              "relaxed": "64px",
+              "condensed": "56px"
+            },
+            {
+              "alias_token": "Spacing.7xl",
+              "relaxed": "72px",
+              "condensed": "64px"
+            },
+            {
+              "alias_token": "Spacing.8xl",
+              "relaxed": "80px",
+              "condensed": "72px"
+            },
+            {
+              "alias_token": "Spacing.9xl",
+              "relaxed": "96px",
+              "condensed": "80px"
+            },
+            {
+              "alias_token": "Spacing.10xl",
+              "relaxed": "112px",
+              "condensed": "96px"
+            }
+          ],
+          "cols": [
+            {
+              "label": "Alias token",
+              "id": "alias_token"
+            },
+            {
+              "label": "Relaxed",
+              "id": "relaxed"
+            },
+            {
+              "label": "Condensed",
+              "id": "condensed"
+            }
+          ],
+          "displayedColumns": [
+            "alias_token",
+            "relaxed",
+            "condensed"
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Applying sizing</h3><p>The sizing scale can be applied to width or height Figma/code properties. The token (variable in Figma) takes the place of the values normally assigned to width and height. The corner radius values will be applied using the radius tokens to form different shapes.</p>"
+        },
+        {
+          "type": "image-annotated",
+          "images": [
+            {
+              "type": "image",
+              "imgSrc": "./assets/images/foundations/layout/layout-11@3x.png",
+              "imgAlt": "Applying sizing",
+              "textAfter": "<p>These values are applied only when needed to change the size of an element between<br>the condensed and relaxed modes.</p>"
+            },
+            {
+              "type": "image",
+              "imgSrc": "./assets/images/foundations/layout/layout-12@3x.png",
+              "imgAlt": "Applying sizing - relaxed and condensed",
+              "textAfter": "<p>The spacing changes for each mode are documented inside each component.\\</p>"
+            }
+          ]
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Applying spacing</h3><p>The spacing scale can be applied to margin or padding Figma/code properties. The token (variable in Figma) takes the place of the values normally assigned to margin and padding.</p>   <p>Every part of a UI should be intentional including the empty space between elements. The amount of space between items creates relationships and hierarchy. Elements in a design that are near each other are seen as being meaningfully related. As more space is added between elements, their perceived relationship weakens.</p>   <p>Use Atmosphere spacing tokens when spacing elements horizontally as you lay out page content and when creating typography combinations to ensure that every element of the screen adheres to the same system.</p>   <p>White space is important in design. It can be used to break up sections on a page or to help create focus on certain elements. White space helps with information processing; too much dense information can be disorienting or overwhelming for a user.</p>   <p>Sections of a UI are allowed to be dense, but the whole page should not be crowded; there should be white space to let the user’s eye rest. If you feel that you have a lot of content, consider using the condensed mode.</p>"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-13@3x.png",
+          "imgAlt": "Applying spacing",
+          "textAfter": "<p>The spacing changes for each mode are documented inside each component.</p>"
+        },
+        {
+          "textBefore": "<h3 class=\"title-high\">Relaxed vs. condensed mode</h3><p>Applying the condensed mode on a layout can be useful when users need to scan, view, or compare a lot of information, such as in a data table. Increasing the layout density of lists, tables, and long forms makes more content available on-screen.</p>   <p>By changing the spacing mode in the Figma frame or page, one can see the height of a component increase/decrease by 4px.</p>",
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-14@3x.png",
+          "imgAlt": "Relaxed vs. condensed mode",
+          "textAfter": "<p>The grids will change too, so its important to use the right horizontal and vertical spacing tokens inside autolayouts if an automatic change is needed.</p>"
+        }
+      ]
+    },
+    {
+      "label": "Viewport & safe areas",
+      "sections": [
+        {
+          "type": "list",
+          "items": [
+            "Make sure to consider screen types and viewports that may affect your designs",
+            "Safe areas are sections within a screen that won't be cropped or cut off",
+            "Atmosphere provides viewport templates in the <a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0\" target=\"_blank\">Component Library</a>"
+          ]
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Viewport</h3><p>In Desktop apps, and browser-based apps, the viewport is the area of the interface that is truly visible to the user, and that has to be taken into account when setting the main action elements of each screen. Depending on the operating system and browser used, this area may vary.</p><p>To quickly know your viewport you can use online tools such as whatismyviewport.com.</p>",
+          "imgSrc": "./assets/images/foundations/layout/layout-15@3x.png",
+          "imgAlt": "Viewport"
+        },
+        {
+          "type": "image-full",
+          "imgSrc": "./assets/images/foundations/layout/layout-16@3x.png",
+          "imgAlt": "Safe areas diagram",
+          "textBefore": "<h3 class=\"title-high\">Safe areas</h3><p>In mobile devices, these are the areas within the screen that are considered &quot;safe&quot; to place content without being clipped or overlapped by other elements such as status bars, navigation bars or other interface elements of the operating system itself.</p><p>In case you are using mobile devices with Android OS or iOS, you have to review their own safe areas as the type of device, OS and browser type may further restrict the working area available to design the UI.</p><p>These are the safe areas adapted to the Atmosphere components sizes. To avoid layout issues, Atmosphere designers can also use the System parts provided in the System assets section of the Components Library.</p>",
+          "textAfter": "<p>Mobile safe areas examples</p>"
+        }
+      ]
+    }
+  ]
+}

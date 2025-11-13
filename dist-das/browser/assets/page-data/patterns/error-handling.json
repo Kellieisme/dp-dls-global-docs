@@ -1,0 +1,94 @@
+{
+  "metaTitle": "The Boeing Atmosphere Global Documentation Hub - Patterns - Error handling",
+  "header": {
+    "title": "Error handling",
+    "description": "Error handling is the process of identifying, managing, and resolving errors or exceptions",
+    "backgroundImg": "patterns/error-handling/error-handling-header@3x.png"
+  },
+  "tabs": [
+    {
+      "label": "Overview",
+      "sections": [
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Usage</h3><p>Standardized practices for handling errors across different components and interfaces is essential for a smooth and intuitive user experience.</p><ul><li>Apply the designated error patterns to components and follow the guidelines outlined in the Atmosphere documentation</li><li>Make sure that error messages, visuals, and interactions align with the specified patterns</li><li>Maintain consistency in error handling across different platforms and devices for a seamless user experience</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Consistency and clarity</h4><p>To maintain a cohesive visual language, use consistent styling and formatting for error messages across different components and contexts.</p><p>Users should be able to instantly recognize errors.</p><ul><li>Use consistent visual cues, such as colors, icons, and messages, to indicate errors. For example, a red text field border and a red error icon.</li><li>Use a color that distinguishes errors from the rest of the UI. In general, red is used to indicate errors.</li><li>Use universally recognized error icons to draw attention to the error, such as a red exclamation mark.</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Messages</h3><p>Messages must be easy to understand. Use simple, plain language that is easily understood by the user. Avoid complex sentences or technical terms that might confuse the user.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Language and tone</h4><p>Write error messages in a friendly yet professional voice to help users address the issue effectively.</p><ul><li>Maintain a friendly and empathetic tone in error messages to reassure users.</li><li>Never blame users. Avoid language that might cause unnecessary panic.</li><li>Keep your messages straightforward and informative, to help the user move forward as quickly as possible.</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Guidance</h4><p>Help users to instantly understand the issue and provide a solution or guidance that empowers them to resolve it.</p><p>Apply progressive disclosure to give users access to additional information or assistance. For example, include links to relevant help documentation, FAQs, or support resources.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Placement</h3><p>Proper placement of error messages helps users to easily notice and identify them.</p><ul><li>Place error messages close to where the error occurred to provide immediate context.</li><li>Use visual design elements, such as lines or arrows, to associate the error message to the relevant input field.</li><li>Place error messages consistently across the application, so that users know where to look for error information.</li></ul>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Prioritization</h3><p>To help users focus on resolving the most critical issues first, prioritize error messages when multiple issues occur at the same time.</p><ul><li>Determine which errors are most critical to the user's task. Highlight those errors first.</li><li>Apply visual design techniques such as color intensity, font weight, or font size to indicate the severity of errors.</li><li>Organize error messages in a logical sequence that makes sense to the user.</li></ul>"
+        }
+      ]
+    },
+    {
+      "label": "Guidelines",
+      "sections": [
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Text fields</h3><p>Forms have a specific format to give users feedback on their completion and possible errors.</p><p>Errors are always specific to the input they refer to, telling users with as much as precision as possible the information they need to complete it successfully. Use concise but helpful language for these messages and avoid being vague or too general.</p><p>In the specific case of the date field with limited date range, the error should always be shown when the user selects an invalid range.</p><p>Also take into account that form errors related with login are an exception to this rule. They shouldn’t point out a specific form element to avoid any possible unauthorized access. Show these errors with a general message in an alert instead.</p><p>Form field error messages are persistent until the form is resubmitted.</p>",
+          "imgSrc": "./assets/images/patterns/error-handling/error-handling-01@3x.png",
+          "imgAlt": "Text fields"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Guidelines</h4><ul><li>Define how input fields should react when users submit invalid data, highlighting the border in red and displaying an error message below it.</li><li>Explain how inputs should validate data as users type, providing immediate feedback on the input's validity.</li><li>Specify whether error messages should appear inline or as tooltips when users hover over the input field with invalid data.</li><li>Include guidelines to ensure error messages are accessible to all users, including those relying on screen readers.</li></ul>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Scenarios</h4><p>Error states can appear in input fields related to user input validation or system constraints. Here are some common scenarios where error states may occur in input fields:</p><p><b>Invalid Input</b><br>When users enter data that does not meet the specified format, constraints, or validation rules for the input field. For example, entering alphabetic characters in a numeric field or leaving a required field blank.</p><p><b>Out-of-Range Values</b><br>When users input values that fall outside the acceptable range defined for the input field. This could include numeric values that exceed maximum or minimum limits or dates that are not within a valid range.</p><p><b>Duplicate Entries</b><br>In scenarios where input fields require unique values, error states may appear if users attempt to enter a value that already exists within the system. For instance, when registering a username or email address that is already in use.</p><p><b>Data Format Errors</b><br>Errors may occur when users input data in an incorrect format, such as providing a date in an unsupported format (e.g., MM/DD/YYYY instead of YYYY-MM-DD) or entering text in a field expecting numerical data.</p><p><b>Server-Side Validation Failures</b><br>Errors may be triggered during server-side validation when submitted data fails additional checks or constraints beyond client-side validation. This could include validation against database constraints or business logic rules.</p>",
+          "imgSrc": "./assets/images/patterns/error-handling/error-handling-02@3x.png",
+          "imgAlt": "Scenarios"
+        },
+        {
+          "type": "text-column",
+          "text": "<h3 class=\"title-high\">Checkbox</h3><p>Checkbox errors often occur in forms when mandatory selections are not made by users. Proper handling of these errors is crucial to ensure a smooth user experience and to guide users effectively to complete required actions.</p>"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Guidelines</h4><ul><li>Include the checkbox at the end of the form.</li><li>Ensure the checkbox is clearly labeled as mandatory.</li><li>When the user submits the form without marking the checkbox, trigger an error.</li><li>Display an alert or dialog component indicating that the Terms & Conditions must be accepted.</li></ul>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Scenarios</h4><p><b>Required Check</b><br>When using a checkbox solely for accepting or rejecting conditions, it operates in a binary manner. This checkbox is mandatory.</p><p><b>Terms & Conditions</b><br>In a form that includes a required check, an error should always be triggered if the user does not mark the checkbox. If we only use a checkbox for accepting or rejecting conditions, this checkbox will work in a binary manner.</p><p>This error is typically displayed using an alert or dialog component.</p><p><b>Privacy policy</b><br>In a registration form, users are required to accept a privacy policy by marking a mandatory checkbox. If the user does not mark the checkbox, an error message should be displayed.</p><p><b>Checkbox list</b><br>In a survey form, users are presented with a list of options. They must select at least one option before submitting the form. Include validation if no options are selected, an error message should be displayed.lude validation against database constraints or business logic rules.</p>",
+          "imgSrc": "./assets/images/patterns/error-handling/error-handling-03@3x.png",
+          "imgAlt": "Scenarios"
+        },
+        {
+          "type": "text-image",
+          "text": "<h3 class=\"title-high\">Dialogs</h3><p>Error dialogs are essential for communicating high-priority messages that users must see immediately. While displaying errors on the same screen is usually preferred, there are situations where using an error dialog is necessary, such as when technical limitations exist or when extensive information and multiple actions are required.</p>",
+          "imgSrc": "./assets/images/patterns/error-handling/error-handling-04@3x.png",
+          "imgAlt": "Dialogs"
+        },
+        {
+          "type": "text-column",
+          "text": "<h4 class=\"title-low\">Guidelines</h4><ul><li>Reserve error dialogs for high priority messages that must be seen by users, regardless of context.</li><li>Whenever possible, display error messages on the same screen where the error occurred. If displaying errors on the same screen is not technically feasible, use an error dialog.</li><li>Use error dialogs when you need to provide extensive information or multiple actions.</li><li>Limit the actions in an error dialog to a maximum of two to guide users effectively.</li></ul>"
+        },
+        {
+          "type": "text-image",
+          "text": "<h4 class=\"title-low\">Scenarios</h4><p><b>Form Submission Error</b><br>A user is submitting a form and something goes wrong. Display an error dialog because the message is critical and the user needs to see it immediately. This error dialog ensures the user is aware of the issue and provides immediate actions to resolve it.</p><p><b>Temporary Network Error</b><br>A user is uploading a document, but the upload fails due to a temporary network issue. Display an error message on the same screen, if possible. If not, use an error dialog. This error dialog allows the user to retry the upload easily, addressing the temporary nature of the issue.</p>",
+          "imgSrc": "./assets/images/patterns/error-handling/error-handling-05@3x.png",
+          "imgAlt": "Scenarios"
+        }
+      ]
+    }
+  ]
+}
