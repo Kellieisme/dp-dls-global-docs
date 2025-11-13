@@ -11,10 +11,11 @@
   },
   "changelog": {
     "data": [
-      {"platform": "Angular 20", "version": "4.0.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>", "date": "October 31, 2025"},
-      {"platform": "Angular 19", "version": "3.3.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>", "date": "September 27, 2025"},
-      {"platform": "Angular 18", "version": "2.5.8", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>","date": "March 25, 2025"},
-      {"platform": "Figma Library", "version": "2.0", "notes": "Latest release", "status": "<span class=\"status status--success\">Available</span>","date": "February 21, 2025"},
+      {"platform": "Starterkit", "version": "20.*", "notes": "Latest release", "status": "<a href=\"https://github.com/jeppesen-foreflight/dp-dls-global-starterkit\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"status status--success\">Available</span></a>", "date": "October 31, 2025"},
+      {"platform": "Angular 20", "version": "4.0.0", "notes": "Latest release", "status": "<a href=\"https://github.com/jeppesen-foreflight/dp-dls-global-angular\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"status status--success\">Available</span></a>", "date": "October 31, 2025"},
+      {"platform": "Angular 19", "version": "3.3.0", "notes": "Latest release", "status": "<a href=\"https://github.com/jeppesen-foreflight/dp-dls-global-angular/tree/angular-19\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"status status--success\">Available</span></a>", "date": "September 27, 2025"},
+      {"platform": "Angular 18", "version": "2.5.8", "notes": "Latest release", "status": "<a href=\"https://github.com/jeppesen-foreflight/dp-dls-global-angular/tree/angular-18\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"status status--success\">Available</span></a>","date": "March 25, 2025"},
+      {"platform": "Figma Library", "version": "2.0", "notes": "Latest release", "status": "<a href=\"https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library?m=auto&node-id=0-1&t=1NIJmH4Pm3BsWxrm-1\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"status status--success\">Available</span></a>","date": "February 21, 2025"},
       {"platform": "Angular 17", "version": "1.0.1", "notes": "Latest release", "status": "<span class=\"status status--warning\">No longer supported</span>", "date": "December 9, 2024"}
     ],
     "cols": [
