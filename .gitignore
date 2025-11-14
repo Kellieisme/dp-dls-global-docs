@@ -3,9 +3,13 @@
 # Compiled output
 /public
 /dist
+/dist-das
 /tmp
 /out-tsc
 /bazel-out
+
+/publish/*
+!/publish/index.html
 
 # Node
 /node_modules
