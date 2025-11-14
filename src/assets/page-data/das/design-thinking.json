@@ -1,0 +1,37 @@
+{
+  "metaTitle": "DAS | Design thinking",
+  "header": {
+    "title": "Design thinking",
+    "description": "Use established Atmosphere guidance to understand problems, co-create solutions, and deliver measured outcomes across Boeing experiences."
+  },
+  "sections": [
+    {
+      "title": "Understand the challenge",
+      "description": "Kick off new engagements with shared discovery, leverage existing research, and align on the problem statement before you ideate.",
+      "links": [
+        { "label": "Request discovery support", "href": "/contact/request-component", "external": false },
+        { "label": "Review design principles", "href": "/foundations/design-principles", "external": false }
+      ]
+    },
+    {
+      "title": "Co-create and iterate",
+      "description": "Prototype in Figma, test with real users, and document experience decisions using Atmosphere foundations, styles, and components.",
+      "links": [
+        { "label": "Access Atmosphere libraries", "href": "/get-started", "external": false },
+        { "label": "Browse ready-made components", "href": "/components", "external": false }
+      ]
+    },
+    {
+      "title": "Deliver and learn",
+      "description": "Partner with engineering, measure impact, and feed insights back into the backlog so the experience keeps improving.",
+      "links": [
+        { "label": "Developer documentation", "href": "/develop", "external": false },
+        { "label": "Track product updates", "href": "/resources/changelog", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Atmosphere getting started guide", "href": "/get-started", "external": false },
+    { "label": "Contact the team", "href": "/contact", "external": false }
+  ]
+}

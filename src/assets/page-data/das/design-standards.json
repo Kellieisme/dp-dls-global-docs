@@ -1,0 +1,37 @@
+{
+  "metaTitle": "DAS | Design standards",
+  "header": {
+    "title": "Design standards",
+    "description": "Apply Atmosphere foundations, styles, and patterns to produce cohesive Boeing experiences across programs."
+  },
+  "sections": [
+    {
+      "title": "Start from shared foundations",
+      "description": "Use strategy, typography, spacing, and layout guidance to ground every screen in the same language and hierarchy.",
+      "links": [
+        { "label": "Explore foundations", "href": "/foundations", "external": false },
+        { "label": "Plan your layout", "href": "/foundations/layout", "external": false }
+      ]
+    },
+    {
+      "title": "Extend the visual system",
+      "description": "Reference color, shape, iconography, and motion guidance so new work aligns with Atmosphere’s visual identity.",
+      "links": [
+        { "label": "Styles guidance", "href": "/styles", "external": false },
+        { "label": "Download brand assets", "href": "/resources/downloads", "external": false }
+      ]
+    },
+    {
+      "title": "Assemble experiences with patterns",
+      "description": "Combine production-ready components and patterns to solve common aviation workflows without reinventing them.",
+      "links": [
+        { "label": "Browse components", "href": "/components", "external": false },
+        { "label": "Use navigation pattern", "href": "/patterns/navigation", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Design tokens", "href": "/foundations/design-tokens", "external": false },
+    { "label": "Accessibility guidance", "href": "/foundations/accessibility", "external": false }
+  ]
+}

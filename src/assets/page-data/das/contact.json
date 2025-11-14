@@ -1,0 +1,29 @@
+{
+  "metaTitle": "DAS | Contact",
+  "header": {
+    "title": "Contact the Digital Aviation Studio",
+    "description": "Reach DAS leads for new work, collaboration, and ongoing updates to the Atmosphere design system."
+  },
+  "sections": [
+    {
+      "title": "Start a new engagement",
+      "description": "Share the background, audience, and timing for your request so the right DAS partners can respond.",
+      "links": [
+        { "label": "Submit a request", "href": "/contact/request-component", "external": false },
+        { "label": "Report a bug", "href": "/contact/report-bug", "external": false }
+      ]
+    },
+    {
+      "title": "Connect with the team",
+      "description": "Meet the people behind Atmosphere, ask questions, and stay plugged into the latest releases.",
+      "links": [
+        { "label": "Meet the team", "href": "/contact/meet-the-team", "external": false },
+        { "label": "Contribute to Atmosphere", "href": "/contact/contribute", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Atmosphere changelog", "href": "/resources/changelog", "external": false },
+    { "label": "Downloads & assets", "href": "/resources/downloads", "external": false }
+  ]
+}

@@ -14,6 +14,7 @@ import { ResourcesPageComponent } from './pages/resources-page/resources-page.co
 import { ResourcesDetailPageComponent } from './pages/resources-detail-page/resources-detail-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { DasHomePageComponent } from './pages/das-home-page/das-home-page.component';
+import { DasSectionPageComponent } from './pages/das-section-page/das-section-page.component';
 import { StylesDetailPageComponent } from './pages/styles-detail-page/styles-detail-page.component';
 
 const routerOptions: ExtraOptions = {
@@ -106,6 +107,41 @@ export const routes: Routes = [
   {
     path: 'contact/:id',
     component: ContactDetailPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/design-thinking',
+    component: DasSectionPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/design-standards',
+    component: DasSectionPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/research',
+    component: DasSectionPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/analytics',
+    component: DasSectionPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/tools',
+    component: DasSectionPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/careers-and-training',
+    component: DasSectionPageComponent,
+    resolve: { pageData: routeDataResolver },
+  },
+  {
+    path: 'das/contact',
+    component: DasSectionPageComponent,
     resolve: { pageData: routeDataResolver },
   },
   {

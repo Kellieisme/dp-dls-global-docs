@@ -1,0 +1,37 @@
+{
+  "metaTitle": "DAS | Research",
+  "header": {
+    "title": "Research",
+    "description": "Blend qualitative and quantitative inputs to shape the roadmap, reduce risk, and advocate for customer value."
+  },
+  "sections": [
+    {
+      "title": "Intake & scoping",
+      "description": "Capture the problem space, audience, and desired outcomes before you field a study or workshop.",
+      "links": [
+        { "label": "Submit a research request", "href": "/contact/request-component", "external": false },
+        { "label": "Review strategy guidance", "href": "/foundations/strategy", "external": false }
+      ]
+    },
+    {
+      "title": "Field and synthesize",
+      "description": "Use moderated sessions, surveys, and usability testing to collect evidence and translate observations into insights.",
+      "links": [
+        { "label": "Plan accessibility testing", "href": "/foundations/accessibility", "external": false },
+        { "label": "Leverage content playbook", "href": "/foundations/content-design", "external": false }
+      ]
+    },
+    {
+      "title": "Operationalize learnings",
+      "description": "Share readouts, update artifacts, and align backlog priorities so teams can execute with confidence.",
+      "links": [
+        { "label": "Partner with analytics", "href": "/das/analytics", "external": false },
+        { "label": "Keep stakeholders informed", "href": "/resources/changelog", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Meet the research team", "href": "/contact/meet-the-team", "external": false },
+    { "label": "Contribute insights", "href": "/contact/contribute", "external": false }
+  ]
+}

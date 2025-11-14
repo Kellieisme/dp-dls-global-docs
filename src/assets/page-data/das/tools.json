@@ -1,0 +1,37 @@
+{
+  "metaTitle": "DAS | Tools",
+  "header": {
+    "title": "Tools",
+    "description": "Find the Atmosphere toolchain that supports collaboration, prototyping, engineering, and release management across DAS."
+  },
+  "sections": [
+    {
+      "title": "Design & prototyping",
+      "description": "Enable the Atmosphere Figma libraries, download brand assets, and use templates to accelerate visual exploration.",
+      "links": [
+        { "label": "Figma UI kits", "href": "/get-started", "external": false },
+        { "label": "Download assets", "href": "/resources/downloads", "external": false }
+      ]
+    },
+    {
+      "title": "Development",
+      "description": "Install the Angular component library, review Storybook examples, and integrate tokens into your codebase.",
+      "links": [
+        { "label": "Angular implementation", "href": "/develop", "external": false },
+        { "label": "Component Storybook", "href": "https://design.pages.boeing.com/design-system/dp-dls-global-angular", "external": true }
+      ]
+    },
+    {
+      "title": "Delivery & support",
+      "description": "Access checklists, report issues, and stay informed about release cadence across the design system.",
+      "links": [
+        { "label": "Report a bug", "href": "/contact/report-bug", "external": false },
+        { "label": "Follow the changelog", "href": "/resources/changelog", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Meet the engineering partners", "href": "/contact/meet-the-team", "external": false },
+    { "label": "Contribute to Atmosphere", "href": "/contact/contribute", "external": false }
+  ]
+}
