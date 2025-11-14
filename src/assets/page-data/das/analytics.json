@@ -1,0 +1,37 @@
+{
+  "metaTitle": "DAS | Analytics",
+  "header": {
+    "title": "Analytics",
+    "description": "Close the loop on Atmosphere releases by defining success metrics, instrumenting experiences, and sharing results."
+  },
+  "sections": [
+    {
+      "title": "Define what success looks like",
+      "description": "Align designers, researchers, and product leads on the outcomes you expect from new work before it ships.",
+      "links": [
+        { "label": "Use strategy frameworks", "href": "/foundations/strategy", "external": false },
+        { "label": "Reference content standards", "href": "/foundations/content-design", "external": false }
+      ]
+    },
+    {
+      "title": "Instrument the experience",
+      "description": "Collaborate with engineering to capture events, log accessibility checks, and share dashboards with stakeholders.",
+      "links": [
+        { "label": "Developer implementation guidance", "href": "/develop", "external": false },
+        { "label": "Accessibility checkpoints", "href": "/foundations/accessibility", "external": false }
+      ]
+    },
+    {
+      "title": "Report and iterate",
+      "description": "Tell the story of what changed, publish learnings, and prioritize the next release based on evidence.",
+      "links": [
+        { "label": "Share findings with DAS", "href": "/contact/contribute", "external": false },
+        { "label": "Log updates in the changelog", "href": "/resources/changelog", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Coordinate with research", "href": "/das/research", "external": false },
+    { "label": "Meet the analytics partners", "href": "/contact/meet-the-team", "external": false }
+  ]
+}

@@ -1,0 +1,67 @@
+@if (pageData$ | async; as pageData) {
+  <header class="das-section__header">
+    <div class="das-section__header-content">
+      <h1 class="display-high">{{ pageData.header.title }}</h1>
+      <p class="body-low-default">{{ pageData.header.description }}</p>
+    </div>
+  </header>
+
+  <main class="das-section__main">
+    @if (pageData.sections?.length) {
+      <section class="das-section__grid">
+        @for (section of pageData.sections; track section.title) {
+          <mat-card appearance="outlined" class="das-section__card">
+            <mat-card-header>
+              <mat-card-title>{{ section.title }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ section.description }}</p>
+            </mat-card-content>
+            @if (section.links?.length) {
+              <mat-card-actions>
+                @for (link of section.links; track link.label) {
+                  @if (link.external) {
+                    <a mat-flat-button color="primary" [href]="link.href" target="_blank" rel="noopener noreferrer">
+                      {{ link.label }}
+                      <mat-icon fontIcon="open_in_new" aria-hidden="true"></mat-icon>
+                    </a>
+                  } @else {
+                    <a mat-flat-button color="primary" [routerLink]="link.href">
+                      {{ link.label }}
+                    </a>
+                  }
+                }
+              </mat-card-actions>
+            }
+          </mat-card>
+        }
+      </section>
+    } @else {
+      <section class="das-section__placeholder">
+        <p>Content for this section is coming soon.</p>
+      </section>
+    }
+
+    @if (pageData.resources?.length) {
+      <section class="das-section__resources">
+        <h2 class="title-high">Related resources</h2>
+        <ul>
+          @for (resource of pageData.resources; track resource.label) {
+            <li>
+              @if (resource.external) {
+                <a [href]="resource.href" target="_blank" rel="noopener noreferrer">
+                  {{ resource.label }}
+                  <mat-icon fontIcon="open_in_new" aria-hidden="true"></mat-icon>
+                </a>
+              } @else {
+                <a [routerLink]="resource.href">{{ resource.label }}</a>
+              }
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  </main>
+
+  <app-das-footer />
+}

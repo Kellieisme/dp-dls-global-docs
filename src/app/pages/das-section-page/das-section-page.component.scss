@@ -1,0 +1,88 @@
+.das-section__header {
+  background: linear-gradient(135deg, rgba(0, 90, 160, 0.15), rgba(0, 130, 130, 0.15));
+  padding: 4rem 1.5rem 3rem;
+
+  .das-section__header-content {
+    margin: 0 auto;
+    max-width: 960px;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0;
+      max-width: 720px;
+    }
+  }
+}
+
+.das-section__main {
+  padding: 3rem 1.5rem 4rem;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.das-section__grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.das-section__card {
+  height: 100%;
+
+  mat-card-title {
+    font-size: 1.25rem;
+  }
+
+  mat-card-content {
+    font-size: 0.95rem;
+  }
+
+  mat-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+}
+
+.das-section__resources {
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  a {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.25rem;
+  }
+}
+
+.das-section__placeholder {
+  text-align: center;
+  font-size: 1.05rem;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.04);
+}

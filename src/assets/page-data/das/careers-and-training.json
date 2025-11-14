@@ -1,0 +1,37 @@
+{
+  "metaTitle": "DAS | Careers and training",
+  "header": {
+    "title": "Careers and training",
+    "description": "Grow your craft inside the Digital Aviation Studio with shared learning paths, mentorship, and onboarding resources."
+  },
+  "sections": [
+    {
+      "title": "Build core skills",
+      "description": "Use Atmosphere guidance to strengthen strategy, content, accessibility, and visual foundations on every project.",
+      "links": [
+        { "label": "Atmosphere foundations", "href": "/foundations", "external": false },
+        { "label": "Content design playbook", "href": "/foundations/content-design", "external": false }
+      ]
+    },
+    {
+      "title": "Learn from the community",
+      "description": "Meet the DAS team, join community sessions, and collaborate on future releases and research.",
+      "links": [
+        { "label": "Meet the team", "href": "/contact/meet-the-team", "external": false },
+        { "label": "How to contribute", "href": "/contact/contribute", "external": false }
+      ]
+    },
+    {
+      "title": "Support new teammates",
+      "description": "Share onboarding kits, tool access, and design system context so new contributors can start quickly.",
+      "links": [
+        { "label": "Get started with Atmosphere", "href": "/get-started", "external": false },
+        { "label": "Developer onboarding", "href": "/develop", "external": false }
+      ]
+    }
+  ],
+  "resources": [
+    { "label": "Apply at Boeing", "href": "https://jobs.boeing.com/", "external": true },
+    { "label": "Request mentorship", "href": "/contact/contribute", "external": false }
+  ]
+}
