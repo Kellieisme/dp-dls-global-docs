@@ -16,6 +16,12 @@ on:
       - dochub-19
       - dochub-20
       - dochub-21
+  workflow_dispatch:
+    inputs:
+      folder_to_delete:
+        description: 'Folder name to delete from pages'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -66,110 +72,68 @@ jobs:
         with:
           path: branch
 
-  build-static-site:
-    name: Build Develop
-    runs-on: ubuntu-latest
-    if: github.ref_name == 'main'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  # build-static-site and pages jobs disabled - gh-pages.yml handles main branch deployment
+  # build-static-site:
+  #   name: Build Develop
+  #   runs-on: ubuntu-latest
+  #   if: github.ref_name == 'main'
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+  #     - name: Set up Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20
 
-      - name: Create .npmrc
-        run: |
-          echo "@jeppesen-foreflight:registry=https://${{ vars.NPM_REGISTRY_URL }}/" >> .npmrc
-          echo "//${{ vars.NPM_REGISTRY_URL }}/:_authToken=${{ secrets.GN_GITHUB_TOKEN }}" >> .npmrc
-          echo "Created the following .npmrc:"; cat .npmrc
+  #     - name: Create .npmrc
+  #       run: |
+  #         echo "@jeppesen-foreflight:registry=https://${{ vars.NPM_REGISTRY_URL }}/" >> .npmrc
+  #         echo "//${{ vars.NPM_REGISTRY_URL }}/:_authToken=${{ secrets.GN_GITHUB_TOKEN }}" >> .npmrc
+  #         echo "Created the following .npmrc:"; cat .npmrc
 
-      - name: Install dependencies
-        run: npm install --loglevel verbose
+  #     - name: Install dependencies
+  #       run: npm install --loglevel verbose
 
-      - name: Build for develop
-        run: |
-          echo "Build storybook for develop."
-          npm run build:prod
-          rm -rf dist/server
-          mv -v dist/browser public
-          ls -la "public/" || echo "Directory does not exist yet"
+  #     - name: Build for develop
+  #       run: |
+  #         echo "Build storybook for develop."
+  #         npm run build:prod
+  #         rm -rf dist/server
+  #         mv -v dist/browser public
+  #         ls -la "public/" || echo "Directory does not exist yet"
 
-      - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
+  #     - name: Upload artifacts
+  #       uses: actions/upload-pages-artifact@v3
+  #       with:
+  #         path: public
 
-  deploy-branch-url:
-    name: Deploy Branch URL
-    runs-on: ubuntu-latest
-    needs: build-repo
-    env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-    if: github.ref_name != 'main'
-    steps:
-      - name: Output URL
-        run: echo "Branch URL will be ${{ github.pages_url }}/$BRANCH_NAME/"
+  # pages:
+  #   name: Deploy to GitHub Pages
+  #   runs-on: ubuntu-latest
+  #   needs: build-static-site
+  #   if: github.ref_name == 'main'
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     - name: Download develop artifact
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: github-pages
+  #         path: public
 
-    environment:
-      name: $BRANCH_NAME/branch
-      url: ${{ github.pages_url }}/$BRANCH_NAME/
+  #     - name: List public directory
+  #       run: |
+  #         echo "public"
+  #         ls -la "public/" || echo "Directory does not exist yet"
 
-  deploy-main-url:
-    name: Deploy Main URL
-    runs-on: ubuntu-latest
-    needs: build-static-site
-    if: github.ref_name == 'main'
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-    environment:
-      name: "Pages"
-      url: ${{ github.pages_url }}
-
-  pages:
-    name: Deploy Branch Pages
-    runs-on: ubuntu-latest
-    needs: build-repo
-    env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-    if: github.ref_name != 'main'
-    environment:
-      name: github-pages
-      url: ${{ github.pages_url }}
-    steps:
-    - name: Deploy
-      uses: jeppesen-foreflight/dp-actions-gh-pages@v1.1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: $BRANCH_NAME
-
-  pages-main:
-    name: Deploy Main Pages
-    runs-on: ubuntu-latest
-    needs: build-static-site
-    environment:
-      name: github-pages
-      url: ${{ github.pages_url }}
-    if: github.ref_name == 'main'
-    steps:
-      - name: Download develop artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: public
-
-      - name: List public directory
-        run: |
-          echo "public"
-          ls -la "public/" || echo "Directory does not exist yet"
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
-          # commit_message: Deploy main to GitHub Pages
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
+  #       with:
+  #         artifact_name: github-pages
+  #         # commit_message: Deploy main to GitHub Pages
 
   pages-clean-preview:
     name: Clean Preview Environment

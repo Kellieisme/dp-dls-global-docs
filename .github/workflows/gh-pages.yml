@@ -36,10 +36,10 @@ jobs:
       # Prepare deployment folder
       - name: Prepare publish directory
         run: |
-          mkdir -p publish/original
-          mkdir -p publish/das
-          cp -r dist/browser/* publish/original/
-          cp -r dist-das/browser/* publish/das/
+          mkdir -p publish/dp-dls-global-docs/original
+          mkdir -p publish/dp-dls-global-docs/das
+          cp -r dist/browser/* publish/dp-dls-global-docs/original/
+          cp -r dist-das/browser/* publish/dp-dls-global-docs/das/
 
       # Deploy
       - uses: peaceiris/actions-gh-pages@v4
