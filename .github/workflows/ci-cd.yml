@@ -17,12 +17,6 @@ on:
       - dochub-20
       - dochub-21
   workflow_dispatch:
-    inputs:
-      folder_to_delete:
-        description: 'Folder name to delete from pages'
-        required: true
-        type: string
-
 permissions:
   contents: write
   id-token: write
