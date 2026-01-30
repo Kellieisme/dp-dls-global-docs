@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Level-2 sidenav left alignment override using the level2-nav class
+.level2-nav {
+  .mdc-list-item {
+    justify-content: flex-start !important;
+  }
+  
+  .mdc-list-item__content {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  
+  .mdc-list-item__primary-text {
+    text-align: left !important;
+  }
+  
+  mat-list-item {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+}

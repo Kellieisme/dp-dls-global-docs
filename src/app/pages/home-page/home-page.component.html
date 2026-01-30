@@ -1,122 +1,120 @@
 @if (pageData$ | async; as pageData) {
-  <header>
-    <div>
-      <h1>
-        <span class="display-high">{{pageData.header.title}}</span>
-        <span class="h4">2.0.0</span>
-      </h1>
-      <h2 class="h5">{{pageData.header.subtitle}}</h2>
-      <p class="body-low-default">{{pageData.header.description}}</p>
-      <p><a class="theme-atmo" mat-flat-button color="accent" routerLink={{pageData.header.ctaButton.link}}>{{pageData.header.ctaButton.text}}</a></p>
+<header>
+  <div>
+    <h1>
+      <span class="display-high m-0 p-0">{{pageData.header.title}}</span>
+      <span class="title-medium">2.0.0</span>
+    </h1>
+    <h2 class="title-high mt-0 pt-0">{{pageData.header.subtitle}}</h2>
+    <p class="body-low-default">{{pageData.header.description}}</p>
+    <p><a class="theme-atmo" mat-flat-button color="accent"
+        routerLink={{pageData.header.ctaButton.link}}>{{pageData.header.ctaButton.text}}</a></p>
+  </div>
+</header>
+<main class="main">
+  <section class="section__cards">
+    <div class="section__header">
+      <h3 class="title-high">Links and resources</h3>
     </div>
-  </header>
-  <main class="main">
-    <section>
-      <div class="section__header section__header--link">
-        <h3 class="title-high">Changelog</h3>
-        <!-- <div>
-          <a class="body-low-default" routerLink="/resources/changelog">See more</a>
-        </div> -->
-      </div>
-      <table mat-table [dataSource]="pageData.changelog.data">
-        @for (col of pageData.changelog.cols; track col) {
-          <ng-container [matColumnDef]="col.id">
-            <th mat-header-cell *matHeaderCellDef>{{col.label}} </th>
-            <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
-          </ng-container>
-        }
-        <tr mat-header-row *matHeaderRowDef="pageData.changelog.displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: pageData.changelog.displayedColumns;"></tr>
-      </table>
-    </section>
-    <section class="section__cards">
-      <div class="section__header">
-        <h3 class="title-high">Links and resources</h3>
-      </div>
-      <div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          <div class="col">
-            <a href="https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0" target="_blank" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/home-01@3x.png" alt="Figma design kit">
-                <mat-card-header>
-                  <mat-card-title>Figma design kit</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Components and styles to help you design.</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
-          </div>
-          <div class="col">
-            <a routerLink="/get-started" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/home-02@3x.png" alt="Get started">
-                <mat-card-header>
-                  <mat-card-title>Get started</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Links and tools to start building products.</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
-          </div>
-          <div class="col">
-            <a routerLink="/develop" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/home-03@3x.png" alt="Develop">
-                <mat-card-header>
-                  <mat-card-title>Develop</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Code and developer documentation.</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
-          </div>
-          <div class="col">
-            <a routerLink="/components" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/home-04@3x.png" alt="Components">
-                <mat-card-header>
-                  <mat-card-title>Components</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Explore Atmosphere's buttons, cards, and more.</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
-          </div>
-          <div class="col">
-            <a routerLink="/report-bug" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/home-05@3x.png" alt="Report a bug">
-                <mat-card-header>
-                  <mat-card-title>Report a bug</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Submit code or component issues.</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
-          </div>
-          <div class="col">
-            <a routerLink="/request-component" class="mat-card-wrapper">
-              <mat-card appearance="outlined">
-                <img mat-card-image src="./assets/images/home-06@3x.png" alt="New component request">
-                <mat-card-header>
-                  <mat-card-title>New component request</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>Request additions to the Atmosphere library.</p>
-                </mat-card-content>
-              </mat-card>
-            </a>
-          </div>
+    <div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col">
+          <a href="https://www.figma.com/design/lKCK94JMIgRl52nWS2IB5G/Atmosphere-Foundations-and-Components-Library-1.0"
+            target="_blank" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/home-01@3x.png" alt="Figma design kit">
+              <mat-card-header>
+                <mat-card-title>Figma design kit</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Components and styles to help you design.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+        <div class="col">
+          <a routerLink="/get-started" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/home-02@3x.png" alt="Get started">
+              <mat-card-header>
+                <mat-card-title>Get started</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Links and tools to start building products.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+        <div class="col">
+          <a routerLink="/develop" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/home-03@3x.png" alt="Develop">
+              <mat-card-header>
+                <mat-card-title>Develop</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Code and developer documentation.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+        <div class="col">
+          <a routerLink="/components" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/home-04@3x.png" alt="Components">
+              <mat-card-header>
+                <mat-card-title>Components</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Explore Atmosphere's buttons, cards, and more.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+        <div class="col">
+          <a routerLink="/report-bug" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/home-05@3x.png" alt="Report a bug">
+              <mat-card-header>
+                <mat-card-title>Report a bug</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Submit code or component issues.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+        <div class="col">
+          <a routerLink="/request-component" class="mat-card-wrapper">
+            <mat-card appearance="outlined">
+              <img mat-card-image src="./assets/images/home-06@3x.png" alt="New component request">
+              <mat-card-header>
+                <mat-card-title>New component request</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Request additions to the Atmosphere library.</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
         </div>
       </div>
-    </section>
-  </main>
-  <app-footer />
+    </div>
+  </section>
+  <section>
+    <div class="section__header">
+      <h3 class="title-high">Changelog</h3>
+    </div>
+    <table mat-table [dataSource]="pageData.changelog.data">
+      @for (col of pageData.changelog.cols; track col) {
+      <ng-container [matColumnDef]="col.id">
+        <th mat-header-cell *matHeaderCellDef>{{col.label}} </th>
+        <td mat-cell *matCellDef="let element" [innerHTML]="element[col.id]"></td>
+      </ng-container>
+      }
+      <tr mat-header-row *matHeaderRowDef="pageData.changelog.displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: pageData.changelog.displayedColumns;"></tr>
+    </table>
+  </section>
+</main>
+<app-footer />
 }
-

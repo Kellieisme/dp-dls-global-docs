@@ -17,7 +17,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: $size-relaxed-spacing-xl;
     flex: 1 0 0;
     align-self: stretch;
     border-radius: $size-relaxed-radius-xl;
@@ -32,8 +31,9 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: $size-relaxed-spacing-2xl;
-    }
+      gap: $size-relaxed-spacing-xl;
+      margin-bottom: $size-relaxed-spacing-none;
+      padding: $size-relaxed-spacing-none;
   }
 
-}
+}}
