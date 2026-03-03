@@ -19,6 +19,13 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "baseUrl": ".",
+    "paths": {
+      "@jeppesen-foreflight/dp-dls-global-angular": ["../dp-dls-global-angular/dist/design/dp-dls-global-angular/index.d.ts"],
+      "@jeppesen-foreflight/dp-dls-global-angular/*": ["../dp-dls-global-angular/dist/design/dp-dls-global-angular/*"],
+      "@jeppesen-foreflight/dls-global-assets": ["../dp-dls-global-assets/dist"],
+      "@jeppesen-foreflight/dls-global-assets/*": ["../dp-dls-global-assets/dist/*"]
+    },
     "lib": [
       "ES2022",
       "dom"
