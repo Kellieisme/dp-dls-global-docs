@@ -54,7 +54,6 @@
               }
             ],
             "styles": [
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/fonts.scss",
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
               "src/styles.scss"
@@ -158,7 +157,6 @@
               }
             ],
             "styles": [
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/fonts.scss",
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
               "src/styles.scss"
