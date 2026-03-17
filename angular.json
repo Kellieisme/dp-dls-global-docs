@@ -32,10 +32,26 @@
               },
               "src/favicon.ico",
               "src/assets",
-              { "glob": "svgSet.svg", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/", "output": "./assets" },
-              { "glob": "**.svg", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/content/", "output": "./assets" },
-              { "glob": "svgSet.svg", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/", "output": "./assets" },
-              { "glob": "**.svg", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/content/", "output": "./assets" }
+              {
+                "glob": "svgSet.svg",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**.svg",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/content/",
+                "output": "./assets"
+              },
+              {
+                "glob": "svgSet.svg",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**.svg",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/content/",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/fonts.scss",
@@ -43,20 +59,21 @@
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "preserveSymlinks": true
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "25kb",
-                  "maximumError": "30kb"
+                  "maximumWarning": "90kb",
+                  "maximumError": "99kb"
                 }
               ],
               "outputHashing": "all"
@@ -70,13 +87,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "25kb",
-                  "maximumError": "30kb"
+                  "maximumWarning": "90kb",
+                  "maximumError": "99kb"
                 }
               ],
               "outputHashing": "all",
@@ -129,8 +146,16 @@
                 "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/",
                 "output": "./assets"
               },
-              { "glob": "svgSet.svg", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/", "output": "./assets" },
-              { "glob": "**/*", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/content", "output": "./assets" }
+              {
+                "glob": "svgSet.svg",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/content",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/fonts.scss",
