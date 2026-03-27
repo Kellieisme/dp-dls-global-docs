@@ -3,8 +3,11 @@
   "version": "4.0.0",
   "scripts": {
     "ng": "ng",
+    "dedupe-angular": "mkdir -p ../dp-dls-global-angular/dist/design/dp-dls-global-angular/node_modules && ln -sf \"$(pwd)/node_modules/@angular\" ../dp-dls-global-angular/dist/design/dp-dls-global-angular/node_modules/@angular",
+    "postinstall": "npm run dedupe-angular",
+    "prestart": "npm run dedupe-angular",
     "start": "ng serve",
-    "start:das": "ng serve --configuration=das --port 4201 --base-href /",
+    "start:das": "ng serve --configuration=das --port 4201",
     "build": "ng build",
     "build:original": "ng build --configuration=production",
     "build:das": "ng build --configuration=das",

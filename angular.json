@@ -49,8 +49,8 @@
               }
             ],
             "styles": [
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
+              "@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
+              "@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,6 +103,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "prebundle": {
+              "exclude": ["@jeppesen-foreflight/dp-dls-global-angular"]
+            }
+          },
           "configurations": {
             "production": {
               "buildTarget": "dls-global-docs:build:production"
@@ -151,8 +156,8 @@
               }
             ],
             "styles": [
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
+              "@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
+              "@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
               "src/styles.scss"
             ],
             "scripts": []
