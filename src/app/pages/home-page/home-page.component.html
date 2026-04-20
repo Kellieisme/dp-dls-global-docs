@@ -1,11 +1,11 @@
 @if (pageData$ | async; as pageData) {
   <header>
     <div>
-      <h1>
+      <h1 style="padding-bottom: 0;">
         <span class="display-high">{{pageData.header.title}}</span>
         <span class="h4">2.0.0</span>
       </h1>
-      <h2 class="h5">{{pageData.header.subtitle}}</h2>
+      <h2 class="h2" style="margin-bottom: 0; padding-bottom: 0;margin-bottom: 0">{{pageData.header.subtitle}}</h2>
       <p class="body-low-default">{{pageData.header.description}}</p>
       <p><a class="theme-atmo" mat-flat-button color="accent" routerLink={{pageData.header.ctaButton.link}}>{{pageData.header.ctaButton.text}}</a></p>
     </div>
@@ -14,9 +14,6 @@
     <section>
       <div class="section__header section__header--link">
         <h3 class="title-high">Changelog</h3>
-        <!-- <div>
-          <a class="body-low-default" routerLink="/resources/changelog">See more</a>
-        </div> -->
       </div>
       <table mat-table [dataSource]="pageData.changelog.data">
         @for (col of pageData.changelog.cols; track col) {

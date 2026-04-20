@@ -4,22 +4,22 @@
 
 header {
   display: flex;
-  min-height: 370px;
-  padding: $size-relaxed-spacing-s;
+  min-height: 270px;
+  // padding: $size-relaxed-spacing-s;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  align-items: start;
   align-self: stretch;
   text-align: center;
   > div {
     display: flex;
     padding: $size-relaxed-spacing-none $size-relaxed-spacing-3xl;
     flex-direction: column;
-    justify-content: center;
+//  justify-content: center;
     align-items: center;
     gap: $size-relaxed-spacing-xl;
     flex: 1 0 0;
-    align-self: stretch;
+//    align-self: stretch;
     border-radius: $size-relaxed-radius-xl;
     background: url('../../../assets/images/home-header-dark@3x.png') 50% / cover no-repeat;
     @include composition-dark-ui-glass-background-blur;
